@@ -38,7 +38,7 @@ When the Figma connector is available, use it: read the owner's frames and varia
 4. **Look at it.** Screenshot at 390×844 and 1440×900, light and dark (Playwright if available). Actually look and fix what's off.
 5. **Check it.** Impeccable checks and the web-design-guidelines audit; WCAG 2.2 AA contrast, visible focus, 44 px tap targets, `prefers-reduced-motion`, sensible performance (image weight, font loading).
 6. **Show the owner** the screenshots and get approval.
-7. **Hand over** only approved work, packaged exactly as `handoff/README.md` describes, and add a line to `handoff/CHANGELOG.md`.
+7. **Hand over** only approved work, following the delivery flow in `handoff/README.md`: complete the page folder with direct Figma frame links, data bindings and every state; update tokens; add a CHANGELOG line; commit, push, and tag (`<page>-v<n>`, never moving a published tag); mark the Figma frames "Ready for dev". Then either tell the owner the tag to pass on, or — if you have GitHub access to `Yariandres/cleaning-sell-system` — open an issue there titled "Handoff ready: <tag>" with the links and issue numbers.
 
 ## Hard rules
 

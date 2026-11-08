@@ -7,6 +7,7 @@ This repo is the **design studio** for a one-person mobile cleaning business in 
 - All design work goes to the **web-designer** agent (`.claude/agents/web-designer.md`).
 - Read first: `design/brief.md`, `DESIGN.md`, `design/references/`, `docs/prd.md`.
 - Work in progress lives in `prototypes/`. Only owner-approved work goes into `handoff/`, in the format of `handoff/README.md`.
+- **GitHub is the contract, Figma is the visuals.** Each approved handover is tagged (`stroller-v1`); the developer reads this repo at that tag and pulls visuals from the linked Figma frames. Nothing is copied between repos.
 - This repo never contains the production app, its stack or its server logic.
 - Package manager, if one is ever needed for tooling here: **pnpm**.
 
@@ -22,5 +23,5 @@ This repo is the **design studio** for a one-person mobile cleaning business in 
 
 1. Snapshot the owner's **Pinterest board** into `design/references/` (one image + note per pin).
 2. Connect **Figma** in Claude Code and read the owner's file, if any.
-3. First job: the **stroller counter** (`/poznan/pranie-wozkow`) — directions → approved design → `handoff/pages/stroller-counter/` + `handoff/tokens/`.
+3. First job: the **stroller counter** (`/poznan/pranie-wozkow`) — directions → approved design → `handoff/pages/stroller-counter/` + `handoff/tokens/` → tag `stroller-v1`.
 4. Then: counter template states, quote form, homepage, sofa counter, admin screens (order in `docs/prd.md` §9).

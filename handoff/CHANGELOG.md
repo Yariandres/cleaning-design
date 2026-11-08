@@ -1,3 +1,3 @@
 # Handoff changelog
 
-_Nothing handed over yet._ Format: `YYYY-MM-DD — what — issues — notes`.
+_Nothing handed over yet._ Format: `YYYY-MM-DD — tag — what — issues — notes`.

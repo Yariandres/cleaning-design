@@ -26,4 +26,4 @@ Then, for example: *"Use the web-designer agent. Snapshot my Pinterest board <li
 | `prototypes/` | Work in progress |
 | `handoff/` | Approved work for the developer, in a fixed format |
 
-Figma: connect the Figma MCP in Claude Code to let the agent read and write your files.
+Figma: connect the Figma MCP in Claude Code to let the agent read and write your files. The developer session needs it too: it builds from the Figma frames linked in each tagged handover.
