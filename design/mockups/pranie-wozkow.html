@@ -1,0 +1,404 @@
+<title>Pranie wózków Poznań</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one warm, airy column; hero splits copy vs. a live "photo quote" chat; bands alternate paper and mint. */
+:root{
+  --paper:#F5FAF8;
+  --band:#E3F2EC;
+  --card:#FFFFFF;
+  --ink:#12302B;
+  --muted:#4E6B65;
+  --line:#CFE3DB;
+  --accent:#0E6E5C;
+  --accent-ink:#FFFFFF;
+  --sun:#FFD45C;
+  --sun-ink:#3A2A00;
+  --bubble-in:#FFFFFF;
+  --bubble-out:#D7F3E6;
+  --display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body:"Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono:"DM Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r:18px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0D1B19; --band:#132724; --card:#18302C; --ink:#E7F4EF; --muted:#9DBAB2;
+    --line:#284540; --accent:#5FD1B5; --accent-ink:#06231D; --sun:#F3C845; --sun-ink:#2A1E00;
+    --bubble-in:#1E3934; --bubble-out:#1F4A3E; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0D1B19; --band:#132724; --card:#18302C; --ink:#E7F4EF; --muted:#9DBAB2;
+  --line:#284540; --accent:#5FD1B5; --accent-ink:#06231D; --sun:#F3C845; --sun-ink:#2A1E00;
+  --bubble-in:#1E3934; --bubble-out:#1F4A3E; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
+h1,h2,h3{font-family:var(--display);line-height:1.08;text-wrap:balance;margin:0;letter-spacing:-0.01em}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.band{background:var(--band)}
+section{padding-block:clamp(56px,8vw,96px)}
+.eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.lede{color:var(--muted);font-size:1.1rem;max-width:60ch}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid transparent;font-size:1rem;cursor:pointer;font-family:var(--body)}
+.btn-main{background:var(--accent);color:var(--accent-ink)}
+.btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+
+/* mockup ribbon */
+.mock{background:var(--sun);color:var(--sun-ink);font-family:var(--mono);font-size:12.5px;text-align:center;padding-block:7px}
+
+/* header */
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px;flex-wrap:wrap}
+.logo{font-family:var(--display);font-weight:800;font-size:1.25rem;display:flex;align-items:center;gap:10px}
+.logo i{width:30px;height:30px;border-radius:50% 50% 50% 8px;background:var(--accent);display:inline-block}
+.head-actions{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.tel{font-family:var(--mono);font-size:15px;color:var(--muted)}
+.head-actions .btn{padding:10px 18px;font-size:.95rem}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,64px);align-items:center;padding-block:clamp(28px,5vw,64px) clamp(56px,7vw,88px)}
+.hero h1{font-size:clamp(2.3rem,5.4vw,4.1rem);font-weight:800;margin-block:14px 18px}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%, var(--sun) 62%);padding-inline:2px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.chips{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;padding:0;list-style:none;color:var(--muted);font-size:.95rem}
+.chips li::before{content:"✓";color:var(--accent);font-weight:700;margin-right:7px}
+.rating{display:inline-flex;align-items:center;gap:8px;font-size:.95rem;color:var(--muted)}
+.rating b{color:var(--ink)}
+.stars{color:#E4A400;letter-spacing:2px}
+
+/* chat mock */
+.chat{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:18px;box-shadow:0 24px 60px -30px rgba(14,60,50,.45);max-width:420px;justify-self:end;width:100%}
+.chat-top{display:flex;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:14px}
+.chat-top i{width:38px;height:38px;border-radius:50%;background:var(--accent);flex:none}
+.chat-top b{display:block;font-size:.98rem}
+.chat-top small{color:var(--muted);font-size:.8rem}
+.msgs{display:grid;gap:10px}
+.msg{max-width:84%;padding:10px 14px;border-radius:16px;font-size:.95rem;line-height:1.4}
+.in{background:var(--bubble-in);border:1px solid var(--line);border-bottom-left-radius:4px}
+.out{background:var(--bubble-out);justify-self:end;border-bottom-right-radius:4px}
+.time{display:block;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:4px;text-align:right}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:6px;justify-self:end;width:70%}
+.ph{aspect-ratio:1;border-radius:12px;max-width:100%;display:flex;align-items:flex-end;padding:8px;font-family:var(--mono);font-size:11px;color:#3a2f12;
+  background:radial-gradient(circle at 70% 30%, #f1e2a8 0 22%, transparent 23%),linear-gradient(160deg,#cfc6b4,#a99e86)}
+.ph.b{background:radial-gradient(circle at 35% 60%, #d9c9a2 0 18%, transparent 19%),linear-gradient(160deg,#6d7b86,#3e4a54);color:#f0f0f0}
+.price-tag{font-family:var(--mono);font-weight:500}
+
+/* problems */
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:36px}
+.prob{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:grid;gap:10px;align-content:start}
+.prob h3{font-size:1.2rem;font-weight:700}
+.prob p{color:var(--muted);font-size:.96rem}
+.sec-head{display:grid;gap:12px;max-width:760px}
+.sec-head h2{font-size:clamp(1.8rem,3.6vw,2.7rem);font-weight:800}
+
+/* prices */
+.price-wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(28px,4vw,56px);margin-top:36px;align-items:start}
+.plist{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.plist li{display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding-block:16px;border-bottom:1px solid var(--line)}
+.plist span{min-width:0}
+.plist small{display:block;color:var(--muted);font-size:.88rem}
+.plist b{font-family:var(--mono);font-weight:500;font-size:1.15rem;white-space:nowrap;font-variant-numeric:tabular-nums}
+.pnote{color:var(--muted);font-size:.9rem;margin-top:14px}
+.safety{background:var(--ink);color:var(--paper);border-radius:24px;padding:28px;display:grid;gap:14px}
+.safety h3{font-size:1.45rem;font-weight:700}
+.safety p{color:var(--paper);opacity:.85;font-size:.98rem}
+.safety ul{margin:0;padding-left:20px;display:grid;gap:6px;font-size:.98rem}
+.brands{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.brands span{border:1px solid currentColor;border-radius:999px;padding:4px 12px;font-family:var(--mono);font-size:12.5px;opacity:.9}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:40px;counter-reset:s;list-style:none;padding:0}
+.steps li{display:grid;gap:10px;align-content:start}
+.steps li::before{counter-increment:s;content:counter(s);font-family:var(--display);font-weight:800;font-size:2.4rem;color:var(--accent);line-height:1}
+.steps h3{font-size:1.25rem;font-weight:700}
+.steps p{color:var(--muted)}
+
+/* packages */
+.packs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:36px}
+.pack{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;display:grid;gap:12px;align-content:start}
+.pack.hot{border:2px solid var(--accent)}
+.pack .tag{justify-self:start;background:var(--sun);color:var(--sun-ink);font-family:var(--mono);font-size:12px;padding:4px 10px;border-radius:999px}
+.pack h3{font-size:1.5rem;font-weight:800}
+.pack ul{margin:0;padding-left:20px;color:var(--muted);display:grid;gap:4px}
+.pack .pr{display:flex;align-items:baseline;gap:12px;margin-top:6px}
+.pack .pr b{font-family:var(--display);font-size:2.4rem;font-weight:800}
+.pack .pr s{color:var(--muted);font-family:var(--mono)}
+
+/* area */
+.area{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:36px}
+.zone{border-top:4px solid var(--accent);padding-top:16px;display:grid;gap:8px;align-content:start}
+.zone.z2{border-color:var(--sun)}
+.zone.z3{border-color:var(--line)}
+.zone h3{font-size:1.15rem;font-weight:700}
+.zone .fee{font-family:var(--mono);font-size:.95rem}
+.zone p{color:var(--muted);font-size:.95rem}
+
+/* faq + form */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:start;margin-top:36px}
+details{border-bottom:1px solid var(--line);padding-block:16px}
+details:first-child{border-top:1px solid var(--line)}
+summary{cursor:pointer;font-weight:700;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--mono);color:var(--accent);font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin-top:10px}
+form{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;display:grid;gap:18px}
+form h3{font-size:1.5rem;font-weight:800}
+label,legend{font-weight:600;font-size:.95rem}
+fieldset{border:0;padding:0;margin:0;display:grid;gap:8px}
+.checks{display:flex;flex-wrap:wrap;gap:8px}
+.checks label{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:500;cursor:pointer}
+.checks input{accent-color:var(--accent)}
+.field{display:grid;gap:6px}
+select,input[type=tel],input[type=file],input[type=text]{width:100%;font:inherit;font-size:1rem;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+.hint{color:var(--muted);font-size:.86rem}
+.zone-hint{font-family:var(--mono);font-size:.85rem;background:var(--band);border-radius:10px;padding:10px 12px}
+
+/* final */
+.final{background:var(--accent);color:var(--accent-ink)}
+.final .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding-block:clamp(44px,6vw,72px)}
+.final h2{font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:800;max-width:20ch}
+.final .btn{background:var(--accent-ink);color:var(--accent)}
+footer .wrap{padding-block:28px;color:var(--muted);font-size:.9rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (max-width:900px){
+  .hero .wrap,.price-wrap,.two{grid-template-columns:1fr}
+  .chat{justify-self:start}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .area{grid-template-columns:1fr}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .grid4,.steps,.packs{grid-template-columns:1fr}
+  .tel{display:none}
+}
+@media (prefers-reduced-motion:no-preference){
+  .msg,.photos{animation:pop .5s ease both}
+  .msgs>*:nth-child(2){animation-delay:.25s}
+  .msgs>*:nth-child(3){animation-delay:.9s}
+  .msgs>*:nth-child(4){animation-delay:1.5s}
+  .msgs>*:nth-child(5){animation-delay:2.1s}
+  @keyframes pop{from{transform:translateY(6px)}to{transform:none}}
+}
+</style>
+
+<div class="mock">MAKIETA STRONY · treści i ceny robocze · formularz nie wysyła danych</div>
+
+<header>
+  <div class="wrap">
+    <div class="logo"><i aria-hidden="true"></i>[Nazwa firmy]</div>
+    <div class="head-actions">
+      <span class="tel">tel. 500 000 000</span>
+      <a class="btn btn-main" href="#wycena">Wycena ze zdjęć</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" style="padding-block:0">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Pranie wózków i fotelików · Poznań i okolice</span>
+      <h1>Wózek, fotelik i kanapa <em>jak nowe</em> – bez wychodzenia z domu</h1>
+      <p class="lede">Pierzemy gondole, spacerówki, foteliki samochodowe i meble po maluchach u Ciebie w domu. Hipoalergiczne środki, foteliki według instrukcji producenta, wózek gotowy jeszcze tego samego dnia.</p>
+      <div class="ctas">
+        <a class="btn btn-main" href="#wycena">Wyślij 2–3 zdjęcia – wycena dziś</a>
+        <a class="btn btn-ghost" href="#cennik">Zobacz cennik</a>
+      </div>
+      <ul class="chips">
+        <li>Gotowe tego samego dnia</li>
+        <li>Dojazd gratis: Poznań, Suchy Las, Swarzędz, Luboń</li>
+        <li>Gwarancja poprawki</li>
+      </ul>
+    </div>
+
+    <div class="chat" aria-label="Przykładowa rozmowa o wycenie">
+      <div class="chat-top"><i aria-hidden="true"></i><div><b>[Nazwa firmy]</b><small>zwykle odpowiada w kilka minut</small></div></div>
+      <div class="msgs">
+        <div class="msg in">Dzień dobry, gondola zrobiła się żółta od oliwki, a fotelik jest po wakacjach. Ile za całość?<span class="time">09:12</span></div>
+        <div class="photos"><div class="ph">gondola.jpg</div><div class="ph b">fotelik.jpg</div></div>
+        <div class="msg out">Dzień dobry! Wózek 2w1 ze stelażem i kołami + fotelik: <span class="price-tag">200 zł</span>, dojazd do Suchego Lasu gratis.<span class="time">09:16</span></div>
+        <div class="msg out">Mogę jutro o 10:00. Wózek będzie gotowy na popołudniowy spacer.<span class="time">09:16</span></div>
+        <div class="msg in">Super, zapraszam!<span class="time">09:18</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Z czym przychodzą do nas rodzice</span>
+      <h2>Zanim kupisz nowy zestaw, zadzwoń</h2>
+    </div>
+    <div class="grid4">
+      <div class="prob"><h3>Gondola żółta od oliwki</h3><p>Tłuste plamy i przebarwienia na podszewce, których pralka nie rusza.</p></div>
+      <div class="prob"><h3>Fotelik po podróży</h3><p>Choroba lokomocyjna, okruchy w bazie i soki wsiąknięte w pianę.</p></div>
+      <div class="prob"><h3>Spacerówka po lecie</h3><p>Krem z filtrem, lody i piasek z plaży w każdym szwie.</p></div>
+      <div class="prob"><h3>Drugie dziecko w drodze</h3><p>Cały zestaw po starszym rodzeństwie gotowy na nowy początek.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="cennik">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Cennik</span>
+      <h2>Ceny brutto, bez niespodzianek</h2>
+    </div>
+    <div class="price-wrap">
+      <div>
+        <ul class="plist">
+          <li><span>Wózek spacerowy<small>siedzisko, budka, pasy, stelaż i koła</small></span><b>90 zł</b></li>
+          <li><span>Wózek 2w1<small>gondola + spacerówka, stelaż i koła</small></span><b>120 zł</b></li>
+          <li><span>Wózek 3w1<small>z fotelikiem-nosidełkiem</small></span><b>160 zł</b></li>
+          <li><span>Wózek bliźniaczy</span><b>150 zł</b></li>
+          <li><span>Fotelik samochodowy<small>pokrowiec, skorupa, baza</small></span><b>80 zł</b></li>
+          <li><span>Krzesełko, leżaczek lub mata</span><b>60 zł</b></li>
+        </ul>
+        <p class="pnote">Minimalne zamówienie 150 zł. Przy silnych zabrudzeniach (pleśń, wymioty) wycenimy ze zdjęć przed przyjazdem.</p>
+      </div>
+      <aside class="safety">
+        <span class="eyebrow" style="color:inherit;opacity:.75">Foteliki samochodowe</span>
+        <h3>Fotelik to sprzęt bezpieczeństwa. Tak go traktujemy.</h3>
+        <ul>
+          <li>Pokrowiec i skorupę czyścimy według instrukcji producenta.</li>
+          <li>Pasy czyścimy tylko powierzchniowo – moczenie osłabia ich wytrzymałość.</li>
+          <li>Środki hipoalergiczne, bezpieczne dla niemowląt po wyschnięciu.</li>
+        </ul>
+        <div class="brands"><span>Cybex</span><span>Maxi-Cosi</span><span>Britax Römer</span><span>Joie</span><span>Kinderkraft</span></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Jak to działa</span>
+      <h2>Trzy kroki, zero wychodzenia z domu</h2>
+    </div>
+    <ol class="steps">
+      <li><h3>Wyślij zdjęcia</h3><p>2–3 zdjęcia przez WhatsApp, SMS lub formularz. Napisz, gdzie mieszkasz.</p></li>
+      <li><h3>Dostań cenę i termin</h3><p>Zwykle w kilka minut. Wolne terminy często już na następny dzień.</p></li>
+      <li><h3>Pierzemy u Ciebie</h3><p>Przywozimy sprzęt i środki. Potrzebujemy tylko wody i gniazdka. Jeśli coś pokaże się po wyschnięciu, wrócimy bezpłatnie.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Pakiety rodzinne</span>
+      <h2>Jedna wizyta, cały dom gotowy</h2>
+    </div>
+    <div class="packs">
+      <div class="pack">
+        <span class="tag">przed porodem</span>
+        <h3>Pakiet Nowy Członek Rodziny</h3>
+        <ul><li>Materac dwuosobowy</li><li>Wózek 2w1</li><li>Fotelik samochodowy</li></ul>
+        <div class="pr"><b>319 zł</b><s>350 zł</s></div>
+      </div>
+      <div class="pack hot">
+        <span class="tag">najczęściej wybierany</span>
+        <h3>Pakiet Rodzinny</h3>
+        <ul><li>Kanapa 3-osobowa</li><li>Wózek 2w1</li><li>Fotelik samochodowy</li></ul>
+        <div class="pr"><b>339 zł</b><s>380 zł</s></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Obszar działania</span>
+      <h2>Poznań i okolice – tam, gdzie mieszkają rodziny</h2>
+    </div>
+    <div class="area">
+      <div class="zone"><h3>Strefa 1</h3><span class="fee">dojazd gratis</span><p>Poznań, Suchy Las, Swarzędz, Luboń, Komorniki, Plewiska, Skórzewo, Tarnowo Podgórne, Rokietnica, Czerwonak</p></div>
+      <div class="zone z2"><h3>Strefa 2</h3><span class="fee">25 zł · gratis od 400 zł</span><p>Kórnik, Mosina, Puszczykowo, Dopiewo, Murowana Goślina, Pobiedziska, Buk, Stęszew, Kleszczewo</p></div>
+      <div class="zone z3"><h3>Dalej</h3><span class="fee">1,50 zł/km</span><p>Poza powiatem poznańskim – wycenimy dojazd indywidualnie.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="wycena">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Pytania i wycena</span>
+      <h2>Najczęstsze pytania rodziców</h2>
+    </div>
+    <div class="two">
+      <div>
+        <details open><summary>Ile schnie wózek po praniu?</summary><p>Zwykle 3–5 godzin w ciepłym, przewietrzonym mieszkaniu. Rano pierzemy, po południu wózek jest gotowy na spacer.</p></details>
+        <details><summary>Czy środki są bezpieczne dla niemowlęcia?</summary><p>Tak. Używamy środków hipoalergicznych i dokładnie je odsysamy. Po wyschnięciu tapicerka jest bezpieczna dla dziecka.</p></details>
+        <details><summary>Czy czyścicie też stelaż i koła?</summary><p>Tak, stelaż, koła i kosz są w cenie każdego wózka.</p></details>
+        <details><summary>Czy usuniecie pleśń z gondoli?</summary><p>Często tak, ale stare przebarwienia po pleśni mogą nie zejść w całości. Ocenimy to uczciwie na podstawie zdjęć, zanim przyjedziemy.</p></details>
+        <details><summary>Jak czyścicie foteliki samochodowe?</summary><p>Zgodnie z instrukcją producenta: pokrowiec i skorupa dokładnie, pasy tylko powierzchniowo.</p></details>
+        <details><summary>Co muszę przygotować?</summary><p>Dostęp do wody, gniazdko i trochę miejsca. Resztę przywozimy.</p></details>
+      </div>
+
+      <form aria-label="Formularz wyceny">
+        <h3>Wycena w kilka minut</h3>
+        <fieldset>
+          <legend>Co mamy wyprać?</legend>
+          <div class="checks">
+            <label><input type="checkbox" id="c-wozek" checked> Wózek</label>
+            <label><input type="checkbox" id="c-fotelik" checked> Fotelik</label>
+            <label><input type="checkbox" id="c-kanapa"> Kanapa</label>
+            <label><input type="checkbox" id="c-materac"> Materac</label>
+            <label><input type="checkbox" id="c-auto"> Auto</label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="gdzie">Gdzie mamy przyjechać?</label>
+          <select id="gdzie">
+            <optgroup label="Poznań">
+              <option>Piątkowo</option><option>Winogrady</option><option>Naramowice</option><option>Jeżyce</option><option>Grunwald</option><option>Łazarz</option><option>Rataje</option><option>Wilda</option><option>Stare Miasto</option>
+            </optgroup>
+            <optgroup label="Okolice – dojazd gratis">
+              <option selected>Suchy Las</option><option>Swarzędz</option><option>Luboń</option><option>Komorniki</option><option>Plewiska</option><option>Skórzewo</option><option>Tarnowo Podgórne</option><option>Rokietnica</option><option>Czerwonak</option>
+            </optgroup>
+            <optgroup label="Okolice – Strefa 2 (25 zł)">
+              <option>Kórnik</option><option>Mosina</option><option>Puszczykowo</option><option>Dopiewo</option><option>Murowana Goślina</option><option>Pobiedziska</option>
+            </optgroup>
+            <option>Inna miejscowość – wpiszę w wiadomości</option>
+          </select>
+          <span class="zone-hint">Suchy Las · Strefa 1 · dojazd gratis</span>
+        </div>
+        <div class="field">
+          <label for="zdjecia">Zdjęcia (2–3)</label>
+          <input type="file" id="zdjecia" accept="image/*" multiple>
+        </div>
+        <div class="field">
+          <label for="telefon">Telefon</label>
+          <input type="tel" id="telefon" placeholder="np. 600 123 456">
+          <span class="hint">Oddzwonimy albo napiszemy z ceną i najbliższym terminem.</span>
+        </div>
+        <button class="btn btn-main" type="button">Wyślij zapytanie</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="final" style="padding-block:0">
+  <div class="wrap">
+    <h2>Wózek gotowy na popołudniowy spacer</h2>
+    <a class="btn" href="#wycena">Wyślij zdjęcia teraz</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>[Nazwa firmy] · Pranie wózków, fotelików, tapicerki i aut · Poznań i okolice</span>
+    <span>tel. 500 000 000 · pn–sob 8–20</span>
+  </div>
+</footer>

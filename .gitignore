@@ -1,0 +1,5 @@
+node_modules
+.DS_Store
+.impeccable/
+.claude/skills/impeccable/scripts/bin/
+.claude/settings.local.json
