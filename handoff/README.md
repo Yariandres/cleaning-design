@@ -34,7 +34,8 @@ handoff/
 6. **States** — empty (no reviews/photos yet), loading, error, success, long text, phone/desktop, light/dark — each with its frame or screenshot
 7. **Accessibility** — focus order, labels, alt text, reduced-motion behaviour
 8. **Assets and licences** — owner's own, licensed (named), or generated (labelled)
-9. **Open questions** — anything the developer must decide with the owner
+9. **SEO** — link to the SEO brief; title, meta description, H1 and structured-data notes as agreed
+10. **Open questions** — anything the developer must decide with the owner
 
 ## Talking to each other
 
@@ -42,6 +43,7 @@ handoff/
 |---|---|---|
 | Design → dev: handover ready | issue in cleaning-sell-system | "Handoff ready: `<tag>`" · `handoff` |
 | Dev → design: question about a handover | comment on that issue | — |
+| SEO → design: page brief | issue in **this** repo, brief in cleaning-seo | "SEO brief: `<page>`" · `seo-brief` |
 | Dev → design: technical change (UI library, icons, fonts, breakpoints…) | issue in **this** repo, plus `docs/design-constraints.md` in cleaning-sell-system | "Dev note: `<topic>`" · `dev-note` |
 
 ## Delivery flow

@@ -9,6 +9,7 @@ This repo is the **design studio** for a one-person mobile cleaning business in 
 - Work in progress lives in `prototypes/`. Only owner-approved work goes into `handoff/`, in the format of `handoff/README.md`.
 - **GitHub is the contract, Figma is the visuals.** Each approved handover is tagged (`stroller-v1`); the developer reads this repo at that tag and pulls visuals from the linked Figma frames. Nothing is copied between repos.
 - **Listen to the developer.** Before every job, read `docs/design-constraints.md` in cleaning-sell-system and any open issues here labelled `dev-note`. Technical constraints (UI library, icons, fonts, breakpoints, image formats, animation, forms) are binding; if one conflicts with `DESIGN.md` or hurts the design, raise it with the owner instead of ignoring it. Apply each dev note, comment what changed, and close it.
+- **Work from the SEO brief.** Each page starts with an "SEO brief: <page>" issue from the SEO desk ([cleaning-seo](https://github.com/Yariandres/cleaning-seo)). Its headings, FAQ questions and layout needs (visible price, real-text H1 and FAQ) are requirements; wording stays in the brand voice. Ask questions on that issue. Don't start a page without its brief unless the owner says so.
 - This repo never contains the production app, its stack or its server logic.
 - Package manager, if one is ever needed for tooling here: **pnpm**.
 
