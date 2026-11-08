@@ -26,7 +26,7 @@ handoff/
 
 ## Page README (required sections)
 
-1. **Tag and status** — e.g. `stroller-v1`, approved by the owner on YYYY-MM-DD
+1. **Tag and status** — e.g. `stroller-v1`, approved by the owner on YYYY-MM-DD, designed against `design-constraints.md` at commit `<sha>`
 2. **Issues** — developer issue numbers and PRD IDs it covers (e.g. #41, #42 · S2–S6, S9)
 3. **Figma** — direct links to the exact frames (one per section and state), not just the file
 4. **Sections in order** — with notes the frames can't show (behaviour, sticky bar, scroll, motion with durations and easing)
@@ -35,6 +35,14 @@ handoff/
 7. **Accessibility** — focus order, labels, alt text, reduced-motion behaviour
 8. **Assets and licences** — owner's own, licensed (named), or generated (labelled)
 9. **Open questions** — anything the developer must decide with the owner
+
+## Talking to each other
+
+| Direction | Where | Title / label |
+|---|---|---|
+| Design → dev: handover ready | issue in cleaning-sell-system | "Handoff ready: `<tag>`" · `handoff` |
+| Dev → design: question about a handover | comment on that issue | — |
+| Dev → design: technical change (UI library, icons, fonts, breakpoints…) | issue in **this** repo, plus `docs/design-constraints.md` in cleaning-sell-system | "Dev note: `<topic>`" · `dev-note` |
 
 ## Delivery flow
 
