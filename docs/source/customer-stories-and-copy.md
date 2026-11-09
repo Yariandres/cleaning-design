@@ -6,7 +6,7 @@ Nov 5, 2026 · @Yari
 
 Four customer types, each built from the Poznań research: real search questions, Facebook posts and 389 competitor reviews. Each persona has a profile, a story in the Lean Storytelling structure (Context, Target, Empathy, Problem, Consequences, Solution, Benefits, Why) for ads and posts, and ready Polish copy. The homepage and FAQ copy at the end pulls it together.
 
-Names are illustrative. Replace **\[Nazwa firmy\]** with your business name throughout.
+Names are illustrative. Replace **Nowiutko** with your business name throughout.
 
 | Persona | Who | What triggers the call | Lead offer |
 | --- | --- | --- | --- |
@@ -36,7 +36,7 @@ The biggest gap in Poznań: parents search for stroller cleaning and Google send
 | Empathy | She looks at a carrycot yellowed by baby oil and a car seat with crumbs in the base. Friends say "just buy a new one". She doesn't want harsh chemicals near a newborn. |
 | Problem | Washing it herself risks water marks and shrinking, and car seat straps must not be soaked. Sofa cleaners don't know car seats. |
 | Consequences | She spends thousands on a new set, or the new baby starts life in stained, smelly gear. |
-| Solution | \[Nazwa firmy\] comes to her door and cleans the carrycot, seat unit, car seat and frame, following each brand's instructions, with baby-safe products. |
+| Solution | Nowiutko comes to her door and cleans the carrycot, seat unit, car seat and frame, following each brand's instructions, with baby-safe products. |
 | Benefits | The set looks new the same day, she saves the cost of replacing it, and the sofa can be done in the same visit. |
 | Why | Every baby deserves a clean start, even in a hand-me-down stroller. |
 
@@ -80,7 +80,7 @@ Pets come up in about a quarter of local reviews, and these customers call in a 
 | Empathy | He has tried vinegar, baking soda and shop sprays. The stain fades, but the smell is back as soon as the heating is on. He is embarrassed when friends come round. |
 | Problem | Urine soaks deep into the foam. Surface cleaning only hides it, and the pet goes back to the spot it can still smell. |
 | Consequences | A new sofa at 3,000 zł or more, or a lost deposit when he moves out. |
-| Solution | \[Nazwa firmy\] comes the same or next day, deep-cleans with an enzyme treatment that breaks urine down, removes the hair and neutralises the odour. |
+| Solution | Nowiutko comes the same or next day, deep-cleans with an enzyme treatment that breaks urine down, removes the hair and neutralises the odour. |
 | Benefits | The smell is gone rather than masked, the pet is less likely to re-mark, and he keeps his sofa and his deposit. |
 | Why | Nobody should have to choose between their pet and a home that smells fresh. |
 
@@ -125,7 +125,7 @@ Based on a real request in the Piątkowo Facebook group, which drew 23 replies i
 | Empathy | There are no stains, but she can't stop thinking about who slept on the mattress before her. She doesn't own a Kärcher and doesn't want to rent one for a day. |
 | Problem | She wants a quick hygiene refresh, not an expensive deep-clean, and doesn't know whom to trust. |
 | Consequences | Weeks of sleeping badly, or buying a new mattress for a flat that isn't hers. |
-| Solution | \[Nazwa firmy\] gives a fixed price from the mattress size, comes within days and cleans it on the spot, removing dust mites, sweat and odour. |
+| Solution | Nowiutko gives a fixed price from the mattress size, comes within days and cleans it on the spot, removing dust mites, sweat and odour. |
 | Benefits | A fresh bed in a few hours, for less than a tenth of a new mattress. |
 | Why | A new home should feel like yours from the first night. |
 
@@ -169,7 +169,7 @@ Car owners care about not losing a day without the car, and about drying in cold
 | Empathy | Every school run adds crumbs and juice. He notices the damp smell when the heater is on and knows buyers will notice it too. |
 | Problem | A garage visit costs him a day. Doing it himself in November means seats that stay wet and smell worse. |
 | Consequences | A lower price when he sells, and a car the family doesn't enjoy until then. |
-| Solution | \[Nazwa firmy\] comes to his home or office car park and cleans the interior only, with nothing washed into the street. He gets clear drying advice for the season. |
+| Solution | Nowiutko comes to his home or office car park and cleans the interior only, with nothing washed into the street. He gets clear drying advice for the season. |
 | Benefits | No lost day, a fresh interior, and a better first impression on buyers. |
 | Why | A clean car is a small daily pleasure, and money back when you sell. |
 
@@ -331,7 +331,7 @@ Where to post it: neighbourhood Facebook groups (Piątkowo, Winogrady, Rataje, G
 
 ## Before you publish
 
-- [ ] Replace \[Nazwa firmy\] with your business name
+- [ ] Replace Nowiutko with your business name
 - [ ] Only promise what you will actually do: enzyme cleaner for urine, hypoallergenic products, ozone treatment
 - [ ] Decide whether you offer the free return visit and the "we call ahead" punctuality promise, as written in "Why us"
 - [ ] Confirm OC insurance and invoicing, then fill in the last FAQ answer

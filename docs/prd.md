@@ -80,7 +80,7 @@ The suburbs (Swarzędz, Suchy Las, Luboń, Komorniki…) are the core market.
 
 ### Out of scope
 
-- Brand name, logo, visual design (separate work)
+- Logo and visual design (separate work). Brand name decided: **Nowiutko** (`docs/brand.md`)
 - Marketing content production (posts, ads)
 - Native mobile apps
 
@@ -231,7 +231,7 @@ Priority: **P0** = launch blocker · **P1** = needed soon after launch · **P2**
 
 | Risk / question | Mitigation / owner |
 |---|---|
-| Brand name and domain not chosen | Build with `[Nazwa firmy]`; switch before launch. Owner |
+| Trademark not yet filed for Nowiutko | Patent attorney clearance, then UPRP filing (class 37). Owner |
 | Cash register setup and PKWiU code unconfirmed | Accountant before launch. Owner |
 | Meta verification delay | Manual WhatsApp at launch; Telegram fallback |
 | Low early review count weakens proof | Hide empty proof; ask every customer for a review |

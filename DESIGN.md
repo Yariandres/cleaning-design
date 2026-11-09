@@ -57,6 +57,22 @@ Real photos of the owner's own items and jobs only (first photos: own stroller, 
 
 Subtle and fast: 150–250 ms, ease-out for entering, no motion on load beyond a single fade. Always respect `prefers-reduced-motion`.
 
+
+## Brand and per-service accents
+
+Brand: **Nowiutko** (`docs/brand.md`). Symbol: chamomile flower — white petals around a `--sun` centre on mint. **One look across all services**; each service varies only inside the system:
+
+| Service | Accent (from the palette) | Icon (one consistent style) |
+|---|---|---|
+| Strollers and car seats (flagship) | `--sun` (soft yellow) | stroller |
+| Sofas, armchairs, rugs | `--accent` (teal) | sofa |
+| Pets (urine, hair, smell) | to define within the palette | paw |
+| Mattresses | to define within the palette | mattress |
+| Car interiors | deeper teal (to define) | car |
+
+Accent use is limited to small surfaces (icon, eyebrow, highlight underline, illustration tint). Buttons, type, layout and components never change per service. No sub-brands.
+
 ## Changelog
 
 - 2026-11-08 — Created from the approved stroller mockup.
+- 2026-11-09 — Brand Nowiutko: chamomile symbol, one look with per-service accents (accent values for pets, mattresses and car still to define).

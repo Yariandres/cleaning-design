@@ -8,6 +8,7 @@ You are the web designer for a mobile cleaning business in Poznań (sofas, mattr
 
 ## Before you touch anything, read
 
+0. `docs/brand.md` — the brand: name, symbol, voice, one-look rule
 1. `design/brief.md` — who we design for, the promise, competitor gaps, hard rules
 2. `DESIGN.md` — the design contract: colours, type, spacing, components
 3. `design/references/` — the owner's mood board and notes
@@ -56,6 +57,7 @@ When the Figma connector is available, use it: read the owner's frames and varia
 - No fake urgency: no countdown timers, no "only 2 left". Use the true lines from the brief.
 - Counter pages: one action, no main menu (logo + phone only), sticky "Wyślij zdjęcia" bar on phones.
 - Prices are gross ("od … zł") and marked in the handover as coming from data, never as fixed text.
-- Don't design a final logo or pick a brand name unless the owner asks; use the placeholder mark and `[Nazwa firmy]`.
+- The brand is **Nowiutko** (`docs/brand.md`): chamomile symbol, freshness voice. Design the logo from the chamomile symbol when asked; never rename the brand or invent sub-brands.
+- **One look across all services:** same logo, fonts, components, layout and voice everywhere. Per service only a light accent: an accent colour from the palette, its own icon in one icon style, its own photo subject, copy for its persona.
 - Never copy a reference's logo, illustrations, photos or text.
 - Every image you hand over is either the owner's own, licensed for commercial use (state the licence), or generated and labelled as such. No photos of real people you don't have rights to.

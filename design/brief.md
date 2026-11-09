@@ -6,7 +6,7 @@ Read this before designing anything. Full sources are in `docs/source/`; product
 
 *We clean what your family lives on (sofa, mattress, stroller, car seat and car) at your door in Poznań and the suburbs, at the price quoted from your photos, and usable the same day.*
 
-One-person, mobile cleaning business. Launching in Poznań; built to add partner cleaners and a second city (Wrocław) later. Working brand name: **[Nazwa firmy]** — not chosen yet, so never design a logo; use the placeholder mark from the mockup.
+One-person, mobile cleaning business. Launching in Poznań; built to add partner cleaners and a second city (Wrocław) later. Brand name: **Nowiutko** (nowiutko.pl). Symbol: a **chamomile flower**; voice: **freshness**; one look across all services with a light accent per service. Everything is in `docs/brand.md` — read it first.
 
 ## Who we design for
 
