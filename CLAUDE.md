@@ -13,6 +13,14 @@ This repo is the **design studio** for a one-person mobile cleaning business in 
 - This repo never contains the production app, its stack or its server logic.
 - Package manager, if one is ever needed for tooling here: **pnpm**.
 
+## How we work: one job at a time, owner reviews
+
+1. Work on **one job** at a time (from "What's next" below, or what the owner asks).
+2. Design it in `prototypes/` (and Figma), screenshot and run the checks; commit locally.
+3. **Stop and hand over for review:** screenshots, what you decided and why, open questions.
+4. **Don't push, tag, mark Figma frames "Ready for dev" or open issues until the owner says "go".** If they ask for changes, make them and hand over again.
+5. After approval: push, tag the handover, open "Handoff ready" in cleaning-sell-system, close the issues you resolved, update "What's next". Then propose the next job.
+
 ## Rules
 
 - Polish UI copy, "Ty" voice. English in notes and comments.
