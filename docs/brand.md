@@ -43,6 +43,14 @@ No sub-brands ("Nowiutko Baby", "Nowiutko Auto"), no different fonts or logos pe
 - [ ] Business email on nowiutko.pl
 - [ ] Google Business Profile, Facebook Page and Telegram bot under the name Nowiutko
 
+## Raising a brand issue
+
+The brand strategist works in the owner's claude.ai chat, not in a repo, so it can't receive issues directly. When any agent finds a brand problem (wrong or inconsistent name, tagline, voice, offer, price or messaging; a placeholder left behind; something in `docs/brand.md` that seems wrong):
+
+1. Open a GitHub issue **in the repo where you found it**, titled **"Brand: <short problem>"**, with the label **`brand`** (create it if missing). Include the file and line, what's wrong, and what you suggest.
+2. Don't fix brand wording yourself unless it's an obvious typo; say in your hand-over that a "Brand:" issue is waiting.
+3. The owner brings open `brand` issues to the brand strategist (claude.ai), who fixes the shared files in all four repos and closes the issues with a comment.
+
 ## Checked and rejected (so nobody suggests them again)
 
 | Name | Why not |

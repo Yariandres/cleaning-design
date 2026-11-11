@@ -6,7 +6,7 @@ Nov 5, 2026 · @Yari
 
 Four customer types, each built from the Poznań research: real search questions, Facebook posts and 389 competitor reviews. Each persona has a profile, a story in the Lean Storytelling structure (Context, Target, Empathy, Problem, Consequences, Solution, Benefits, Why) for ads and posts, and ready Polish copy. The homepage and FAQ copy at the end pulls it together.
 
-Names are illustrative. Replace **Nowiutko** with your business name throughout.
+Names of customers are illustrative. The brand is **Nowiutko** (decided 9 Nov 2026, see `docs/brand.md`).
 
 | Persona | Who | What triggers the call | Lead offer |
 | --- | --- | --- | --- |
@@ -331,7 +331,7 @@ Where to post it: neighbourhood Facebook groups (Piątkowo, Winogrady, Rataje, G
 
 ## Before you publish
 
-- [ ] Replace Nowiutko with your business name
+- [x] Brand name decided: **Nowiutko** (9 Nov 2026)
 - [ ] Only promise what you will actually do: enzyme cleaner for urine, hypoallergenic products, ozone treatment
 - [ ] Decide whether you offer the free return visit and the "we call ahead" punctuality promise, as written in "Why us"
 - [ ] Confirm OC insurance and invoicing, then fill in the last FAQ answer

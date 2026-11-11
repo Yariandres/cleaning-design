@@ -21,6 +21,8 @@ This repo is the **design studio** for a one-person mobile cleaning business in 
 4. **Don't push, tag, mark Figma frames "Ready for dev" or open issues until the owner says "go".** If they ask for changes, make them and hand over again.
 5. After approval: push, tag the handover, open "Handoff ready" in cleaning-sell-system, close the issues you resolved, update "What's next". Then propose the next job.
 
+- **Brand problems** (name, tagline, voice, offers, prices, messaging, leftover placeholders): open a "Brand: …" issue with label `brand` in this repo, as described in `docs/brand.md` → "Raising a brand issue". The owner takes them to the brand strategist.
+
 ## Rules
 
 - Polish UI copy, "Ty" voice. English in notes and comments.

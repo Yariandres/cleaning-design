@@ -245,7 +245,7 @@ Reusable lines, so every page and ad sounds the same.
 ### Decisions before Layer 3 · Content
 
 - [x] **"Ty" vs "Państwo":** go with "Ty" across the site?
-- [ ] **Business name:** we need it to finish headlines, the logo and the Google profile. Parked: we research names after Layer 5; Nowiutko stays as the placeholder until then.
+- [x] **Business name:** decided 9 Nov 2026 — **Nowiutko** (nowiutko.pl). See `docs/brand.md`.
 - [x] **Native-speaker check:** who will read the Polish copy once before it goes live? Decided: a native speaker checks all copy before launch.
 - [x] **Old prices elsewhere:** update the price list doc and the stroller mockup to the new stroller prices and packages (319 / 339 / 569 zł)?
 
