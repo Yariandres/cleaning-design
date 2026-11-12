@@ -10,15 +10,15 @@ How approved design reaches the developer agent (repo [cleaning-sell-system](htt
 handoff/
   CHANGELOG.md                 one line per handover: date, tag, what, issues
   tokens/
-    tokens.json                colours (light + dark), type, radius, spacing, motion — names match DESIGN.md and Figma variables
-    tokens.css                 the same as CSS custom properties
+    tokens.json                colours (light only; Nuxt UI names, 50–950 scales), type, radius, spacing, motion — names match DESIGN.md and Figma variables
+    tokens.css                 the same as CSS: `@theme static` colour scales plus the `:root` overrides
     fonts.md                   families, weights, source and licence
   components/
     <component>.md             anatomy, states, behaviour, spacing, motion, accessibility; Figma link to the component
   pages/
     <page>/                    e.g. stroller-counter, homepage, quote-form, admin-today
       README.md                the brief for the developer (see below)
-      screens/                 PNGs: 390-light, 390-dark, 1440-light, 1440-dark, plus extra states
+      screens/                 PNGs: 390 and 1440 (light only), plus extra states
       copy.md                  final Polish copy, keyed (e.g. hero.title), alt texts, which parts are data
       assets/                  optimised images (AVIF/WebP + 2× fallback), SVG icons — also exportable from Figma
       prototype.html           optional static reference when Figma isn't used for this page
@@ -31,7 +31,7 @@ handoff/
 3. **Figma** — direct links to the exact frames (one per section and state), not just the file
 4. **Sections in order** — with notes the frames can't show (behaviour, sticky bar, scroll, motion with durations and easing)
 5. **Data bindings** — everything from the database marked, e.g. `{price:stroller-single}` → "od 90 zł", `{nextFreeSlot}`, `{faq:stroller}`, `{reviews:stroller}`. Never hard-coded.
-6. **States** — empty (no reviews/photos yet), loading, error, success, long text, phone/desktop, light/dark — each with its frame or screenshot
+6. **States** — empty (no reviews/photos yet), loading, error, success, long text, phone/desktop — each with its frame or screenshot (no dark frames: light mode only)
 7. **Accessibility** — focus order, labels, alt text, reduced-motion behaviour
 8. **Assets and licences** — owner's own, licensed (named), or generated (labelled)
 9. **SEO** — link to the SEO brief; title, meta description, H1 and structured-data notes as agreed
