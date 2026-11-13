@@ -38,6 +38,24 @@ PRICE = f'''<section id="cennik" class="{{band}}"><div class="wrap"><div class="
 <div class="pack hot"><span class="tag">najczęściej wybierany</span><h3>Rodzinny</h3><ul><li>Kanapa 3-osobowa</li><li>Wózek 2w1</li><li>Fotelik samochodowy</li></ul><div class="pr"><b class="num">339&nbsp;zł</b><s class="num">380&nbsp;zł</s></div></div>
 <div class="pack"><span class="tag" style="background:var(--p100);color:var(--p800)">auto i maluch</span><h3>Auto i Maluch</h3><ul><li>Pranie tapicerki auta</li><li>Wózek 2w1</li><li>Fotelik samochodowy</li></ul><div class="pr"><b class="num">409&nbsp;zł</b><s class="num">460&nbsp;zł</s></div></div></div></div></section>'''
 
+
+PROOF2 = f"""<div class="proof2"><div class="wrap"><ul>
+<li class="lead">{ico("clock")}<div><b>Tego samego dnia</b><span>Rano pierzemy, po południu idziecie na spacer.</span></div></li>
+<li><span class="ci">{ico("house")}</span><div><b>U Ciebie w domu</b><span>Własny sprzęt. Potrzebujemy wody i gniazdka.</span></div></li>
+<li><span class="ci">{ico("shield-check")}</span><div><b>Według instrukcji producenta</b><span>Foteliki: pasy tylko powierzchniowo.</span></div></li>
+<li><span class="ci">{ico("badge-check")}</span><div><b>Poprawka gratis</b><span>Jeśli coś wyjdzie po wyschnięciu, wracamy.</span></div></li></ul></div></div>"""
+
+def _card(cls, tag, title, fix, extra=""):
+    return f"""<article class="pc {cls}"><div class="ph pic" role="img" aria-label="Miejsce na własne zdjęcie: {tag}">zdjęcie własne<br>{tag}</div><div class="pc-body"><span class="eyebrow">Problem</span><h3>{title}</h3><p class="fix"><b>Co robimy.</b> {fix}</p>{extra}</div></article>"""
+
+HEADACHE2 = f"""<section class="{{band}}"><div class="wrap"><div class="sec-head"><span class="eyebrow">Z czym przychodzą rodzice</span><h2>Dlaczego nie wyprać wózka samemu?</h2><p class="lede">Pralka i szczotka zostawiają zacieki na podszewce, a moczenie osłabia pasy. Dlatego robimy to inaczej.</p></div>
+<div class="bento">
+{_card("big", "gondola, podszewka", "Gondola żółta od oliwki", "Czyścimy podszewkę hipoalergicznym środkiem i odsysamy wodę, więc nic nie moczy się w pralce.")}
+{_card("", "fotelik, baza", "Fotelik po podróży", "Pokrowiec i skorupa według instrukcji producenta. Pasy tylko powierzchniowo.")}
+{_card("", "spacerówka, szwy", "Spacerówka po lecie", "Siedzisko, budka i szwy. Stelaż i koła są w cenie.")}
+<a class="pc wide" href="#cennik"><div class="ph pic" role="img" aria-label="Miejsce na własne zdjęcie: wózek i fotelik">zdjęcie własne<br>wózek i fotelik</div><div class="pc-body"><span class="eyebrow">Problem</span><h3>Drugie dziecko w drodze</h3><p class="fix"><b>Co robimy.</b> Cały zestaw po starszym rodzeństwie, gotowy na nowy początek.</p><span class="more">Pakiet Nowy Członek Rodziny od 319&nbsp;zł {ico("arrow-right")}</span></div></a>
+</div></div></section>"""
+
 STEPS = '''<section><div class="wrap"><div class="sec-head"><span class="eyebrow">Jak to działa</span><h2>Trzy kroki, zero wychodzenia z domu</h2></div><ol class="steps">
 <li><h3>Wyślij zdjęcia</h3><p>2–3 zdjęcia przez WhatsApp, SMS lub formularz. Napisz, gdzie mieszkasz.</p></li>
 <li><h3>Dostań cenę i termin</h3><p>Zwykle w kilka minut. Wolne terminy często już na następny dzień.</p></li>
@@ -64,10 +82,10 @@ AREA = '''<section class="{band}"><div class="wrap"><div class="sec-head"><span 
 FINAL = f'''<section id="wycena" class="final on-dark"><div class="wrap"><h2>Wyślij 2–3 zdjęcia. Cenę podamy dziś.</h2><p>Przyjeżdżamy na czas. Płacisz tyle, ile podaliśmy ze zdjęć. Jeśli coś wyjdzie po wyschnięciu, wracamy za darmo.</p><a class="btn btn-main" href="#">{ico("camera")}Wyślij zdjęcia</a></div></section>
 <footer><div class="wrap">Nowiutko · pranie tapicerki, wózków i aut u Ciebie · Poznań</div></footer>'''
 
-def lower(alt):
+def lower(alt, proof=None, headache=None):
     # alt: which sections sit on the mint band, so each direction keeps its rhythm
     a, b = alt
-    return (PROOF + HEADACHE.replace("{band}", a) + PRICE.replace("{band}", b) + STEPS + SEATS.replace("{band}", a) + FAQ + AREA.replace("{band}", a) + FINAL)
+    return ((proof or PROOF) + (headache or HEADACHE).replace("{band}", a) + PRICE.replace("{band}", b) + STEPS + SEATS.replace("{band}", a) + FAQ + AREA.replace("{band}", a) + FINAL)
 
 # ---------- hero 1: Rozmowa ----------
 H1_B = "Wózek i fotelik jak nowe – pranie u Ciebie w domu, w Poznaniu i okolicach"
@@ -136,6 +154,34 @@ CSS2 = '''
 @media(min-width:900px){.hero2 .wrap{grid-template-columns:1fr 480px;gap:72px;align-items:center;padding-block:56px 72px}.hero2 .pcard{padding:30px}}
 '''
 
+
+CSS2 += """
+.proof2{background:#fff;border-block:1px solid var(--border);padding-block:clamp(24px,4vw,40px)}
+.proof2 ul{list-style:none;padding:0;margin:0;display:grid;gap:20px}
+.proof2 li{display:flex;gap:14px;align-items:flex-start}
+.proof2 b{display:block;font:700 1.05rem/1.25 var(--body)}.proof2 span:not(.ci){display:block;color:var(--text-muted);font-size:.93rem;line-height:1.4;margin-top:2px}
+.ci{flex:none;width:44px;height:44px;border-radius:50%;background:var(--p100);color:var(--p700);display:grid;place-items:center}
+.proof2 .lead{padding-bottom:20px;border-bottom:1px solid var(--border);align-items:center}
+.proof2 .lead>.ico{width:44px;height:44px;padding:10px;border-radius:50%;background:var(--s300);color:var(--s950);flex:none}
+.proof2 .lead b{font:800 clamp(1.6rem,4.2vw,2.3rem)/1.05 var(--display)}
+.proof2 .lead span{font-size:1rem}
+@media(min-width:900px){.proof2 ul{grid-template-columns:1.3fr 1fr 1.15fr 1fr;gap:0}.proof2 li{padding-inline:24px;border-left:1px solid var(--border)}.proof2 li.lead{padding:0 32px 0 0;border:0}.proof2 li:nth-child(2){border-left:1px solid var(--border)}}
+.bento{display:grid;gap:16px}
+.pc{display:grid;background:#fff;border:1px solid var(--border);border-radius:var(--r-2xl);overflow:hidden;text-decoration:none;color:inherit;transition:transform .2s ease,box-shadow .2s ease}
+.pc .pic{border:0;border-radius:0;aspect-ratio:2/1;transition:transform .35s ease}.pc .pic{overflow:hidden}
+.pc-body{padding:20px 22px 24px;display:grid;gap:8px;align-content:start}
+.pc h3{font-size:1.3rem}.pc .fix{color:var(--text-muted);font-size:.97rem}.pc .fix b{color:var(--text)}
+.pc .more{display:inline-flex;gap:8px;align-items:center;font-weight:700;color:var(--p600);min-height:44px;margin-top:4px}
+.pc.wide .more{text-decoration:underline;text-decoration-color:transparent;text-underline-offset:4px;transition:text-decoration-color .2s}
+a.pc:hover{transform:translateY(-2px);box-shadow:0 18px 40px -26px rgba(14,60,50,.45)}a.pc:hover .more{text-decoration-color:currentColor}a.pc:hover .pic{transform:scale(1.03)}
+.pc .pic-wrap{overflow:hidden}
+@media(min-width:900px){
+ .bento{grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:auto auto;gap:20px}
+ .pc.big{grid-row:span 2}.pc .pic{aspect-ratio:16/10}.pc.big .pic{aspect-ratio:auto;min-height:320px;height:100%}.pc.big{grid-template-rows:1fr auto}.pc.big h3{font-size:1.7rem}
+ .pc.wide{grid-column:span 2;grid-template-columns:.8fr 1.2fr}.pc.wide .pic{aspect-ratio:auto;height:100%;min-height:200px}.pc.wide .pc-body{align-content:center}
+}
+"""
+
 # ---------- hero 3: Dzień ----------
 TL = [("09:12", "Wysyłasz 2–3 zdjęcia", "camera"), ("09:16", "Dostajesz cenę i termin", "message-circle"), ("10:00", "Jesteśmy u Ciebie i pierzemy", "droplets"), ("15:00", "Wózek suchy, czas na spacer", "sun")]
 def timeline():
@@ -165,8 +211,9 @@ CSS3 = '''
 
 PAGES = {"direction-1-rozmowa": (HERO1, CSS1, ("", "band")), "direction-2-cennik": (HERO2, CSS2, ("band", "")), "direction-3-dzien": (HERO3, CSS3, ("", "band"))}
 for name, (hero, css, alt) in PAGES.items():
+    d2 = name.startswith("direction-2")
     html = f'''<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Pranie wózków i fotelików Poznań – u Ciebie, od 80 zł</title><link rel="stylesheet" href="base.css"><style>{css}</style></head><body>
-{HEADER}<main>{hero}{lower(alt)}</main>{STICKY}</body></html>'''
+{HEADER}<main>{hero}{lower(alt, PROOF2, HEADACHE2) if d2 else lower(alt)}</main>{STICKY}</body></html>'''
     open(os.path.join(os.path.dirname(__file__), name + ".html"), "w").write(html)
 print("built", list(PAGES))

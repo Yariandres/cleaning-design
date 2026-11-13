@@ -12,6 +12,31 @@
 .pc-rows b{font:800 1.7rem/1 var(--display);white-space:nowrap}.pc-rows b i{font:500 .9rem var(--body);font-style:normal;color:var(--text-muted)}
 .pc-link{text-align:center;font-weight:700;color:var(--p600);min-height:44px;display:grid;place-items:center}
 @media(min-width:900px){.hero2 .wrap{grid-template-columns:1fr 480px;gap:72px;align-items:center;padding-block:56px 72px}.hero2 .pcard{padding:30px}}
+
+.proof2{background:#fff;border-block:1px solid var(--border);padding-block:clamp(24px,4vw,40px)}
+.proof2 ul{list-style:none;padding:0;margin:0;display:grid;gap:20px}
+.proof2 li{display:flex;gap:14px;align-items:flex-start}
+.proof2 b{display:block;font:700 1.05rem/1.25 var(--body)}.proof2 span:not(.ci){display:block;color:var(--text-muted);font-size:.93rem;line-height:1.4;margin-top:2px}
+.ci{flex:none;width:44px;height:44px;border-radius:50%;background:var(--p100);color:var(--p700);display:grid;place-items:center}
+.proof2 .lead{padding-bottom:20px;border-bottom:1px solid var(--border);align-items:center}
+.proof2 .lead>.ico{width:44px;height:44px;padding:10px;border-radius:50%;background:var(--s300);color:var(--s950);flex:none}
+.proof2 .lead b{font:800 clamp(1.6rem,4.2vw,2.3rem)/1.05 var(--display)}
+.proof2 .lead span{font-size:1rem}
+@media(min-width:900px){.proof2 ul{grid-template-columns:1.3fr 1fr 1.15fr 1fr;gap:0}.proof2 li{padding-inline:24px;border-left:1px solid var(--border)}.proof2 li.lead{padding:0 32px 0 0;border:0}.proof2 li:nth-child(2){border-left:1px solid var(--border)}}
+.bento{display:grid;gap:16px}
+.pc{display:grid;background:#fff;border:1px solid var(--border);border-radius:var(--r-2xl);overflow:hidden;text-decoration:none;color:inherit;transition:transform .2s ease,box-shadow .2s ease}
+.pc .pic{border:0;border-radius:0;aspect-ratio:2/1;transition:transform .35s ease}.pc .pic{overflow:hidden}
+.pc-body{padding:20px 22px 24px;display:grid;gap:8px;align-content:start}
+.pc h3{font-size:1.3rem}.pc .fix{color:var(--text-muted);font-size:.97rem}.pc .fix b{color:var(--text)}
+.pc .more{display:inline-flex;gap:8px;align-items:center;font-weight:700;color:var(--p600);min-height:44px;margin-top:4px}
+.pc.wide .more{text-decoration:underline;text-decoration-color:transparent;text-underline-offset:4px;transition:text-decoration-color .2s}
+a.pc:hover{transform:translateY(-2px);box-shadow:0 18px 40px -26px rgba(14,60,50,.45)}a.pc:hover .more{text-decoration-color:currentColor}a.pc:hover .pic{transform:scale(1.03)}
+.pc .pic-wrap{overflow:hidden}
+@media(min-width:900px){
+ .bento{grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:auto auto;gap:20px}
+ .pc.big{grid-row:span 2}.pc .pic{aspect-ratio:16/10}.pc.big .pic{aspect-ratio:auto;min-height:320px;height:100%}.pc.big{grid-template-rows:1fr auto}.pc.big h3{font-size:1.7rem}
+ .pc.wide{grid-column:span 2;grid-template-columns:.8fr 1.2fr}.pc.wide .pic{aspect-ratio:auto;height:100%;min-height:200px}.pc.wide .pc-body{align-content:center}
+}
 </style></head><body>
 <header class="site-h"><div class="wrap"><a href="#" aria-label="Nowiutko, strona główna"><img src="assets/logo.svg" alt="Nowiutko" width="190" height="46"></a>
 <div style="display:flex;gap:20px;align-items:center"><a class="tel" href="tel:+48500000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg><span class="num">500 000 000</span></a><a class="btn btn-main" href="#wycena">Wyślij zdjęcia</a></div></div></header><main><section class="hero2"><div class="wrap">
@@ -23,17 +48,22 @@
 <ul class="pc-rows"><li><span>Wózek spacerowy</span><b class="num"><i>od</i> 90&nbsp;zł</b></li><li><span>Wózek 2w1</span><b class="num"><i>od</i> 120&nbsp;zł</b></li><li><span>Fotelik samochodowy</span><b class="num"><i>od</i> 80&nbsp;zł</b></li><li><span>Wózek 3w1</span><b class="num"><i>od</i> 160&nbsp;zł</b></li></ul>
 <a class="btn btn-main" href="#wycena"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
   <circle cx="12" cy="13" r="3" /></svg>Wyślij 2–3 zdjęcia – cena dziś</a>
-<a class="pc-link" href="#cennik">Pełny cennik i pakiety</a></div></div></section><div class="proof"><div class="wrap"><ul>
-<li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" />
-  <polyline points="12 6 12 12 16 14" /></svg>Gotowe tego samego dnia</li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
-  <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg>Pierzemy u Ciebie w domu</li>
-<li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
-  <path d="m9 12 2 2 4-4" /></svg>Foteliki według instrukcji producenta</li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
-  <path d="m9 12 2 2 4-4" /></svg>Wrócimy za darmo, jeśli coś wyjdzie po wyschnięciu</li></ul></div></div><section class="band"><div class="wrap"><div class="sec-head"><span class="eyebrow">Z czym przychodzą rodzice</span><h2>Dlaczego nie wyprać wózka samemu?</h2><p class="lede">Pralka i szczotka zostawiają zacieki na podszewce, a moczenie osłabia pasy. Dlatego robimy to inaczej.</p></div>
-<div class="cards4"><div class="card"><h3>Gondola żółta od oliwki</h3><p>Tłuste plamy na podszewce, których pralka nie rusza.</p></div>
-<div class="card"><h3>Fotelik po podróży</h3><p>Choroba lokomocyjna, okruchy w bazie, sok wsiąknięty w piankę.</p></div>
-<div class="card"><h3>Spacerówka po lecie</h3><p>Krem z filtrem, lody i piasek w każdym szwie.</p></div>
-<div class="card"><h3>Drugie dziecko w drodze</h3><p>Cały zestaw po starszym rodzeństwie gotowy na nowy początek.</p></div></div></div></section><section id="cennik" class=""><div class="wrap"><div class="sec-head"><span class="eyebrow">Cennik</span><h2>Pranie wózka i fotelika – cena</h2><p class="lede">Ceny brutto, z dojazdem w Strefie 1. Dokładną kwotę podajemy ze zdjęć, zanim przyjedziemy.</p></div>
+<a class="pc-link" href="#cennik">Pełny cennik i pakiety</a></div></div></section><div class="proof2"><div class="wrap"><ul>
+<li class="lead"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" />
+  <polyline points="12 6 12 12 16 14" /></svg><div><b>Tego samego dnia</b><span>Rano pierzemy, po południu idziecie na spacer.</span></div></li>
+<li><span class="ci"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+  <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg></span><div><b>U Ciebie w domu</b><span>Własny sprzęt. Potrzebujemy wody i gniazdka.</span></div></li>
+<li><span class="ci"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+  <path d="m9 12 2 2 4-4" /></svg></span><div><b>Według instrukcji producenta</b><span>Foteliki: pasy tylko powierzchniowo.</span></div></li>
+<li><span class="ci"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+  <path d="m9 12 2 2 4-4" /></svg></span><div><b>Poprawka gratis</b><span>Jeśli coś wyjdzie po wyschnięciu, wracamy.</span></div></li></ul></div></div><section class="band"><div class="wrap"><div class="sec-head"><span class="eyebrow">Z czym przychodzą rodzice</span><h2>Dlaczego nie wyprać wózka samemu?</h2><p class="lede">Pralka i szczotka zostawiają zacieki na podszewce, a moczenie osłabia pasy. Dlatego robimy to inaczej.</p></div>
+<div class="bento">
+<article class="pc big"><div class="ph pic" role="img" aria-label="Miejsce na własne zdjęcie: gondola, podszewka">zdjęcie własne<br>gondola, podszewka</div><div class="pc-body"><span class="eyebrow">Problem</span><h3>Gondola żółta od oliwki</h3><p class="fix"><b>Co robimy.</b> Czyścimy podszewkę hipoalergicznym środkiem i odsysamy wodę, więc nic nie moczy się w pralce.</p></div></article>
+<article class="pc "><div class="ph pic" role="img" aria-label="Miejsce na własne zdjęcie: fotelik, baza">zdjęcie własne<br>fotelik, baza</div><div class="pc-body"><span class="eyebrow">Problem</span><h3>Fotelik po podróży</h3><p class="fix"><b>Co robimy.</b> Pokrowiec i skorupa według instrukcji producenta. Pasy tylko powierzchniowo.</p></div></article>
+<article class="pc "><div class="ph pic" role="img" aria-label="Miejsce na własne zdjęcie: spacerówka, szwy">zdjęcie własne<br>spacerówka, szwy</div><div class="pc-body"><span class="eyebrow">Problem</span><h3>Spacerówka po lecie</h3><p class="fix"><b>Co robimy.</b> Siedzisko, budka i szwy. Stelaż i koła są w cenie.</p></div></article>
+<a class="pc wide" href="#cennik"><div class="ph pic" role="img" aria-label="Miejsce na własne zdjęcie: wózek i fotelik">zdjęcie własne<br>wózek i fotelik</div><div class="pc-body"><span class="eyebrow">Problem</span><h3>Drugie dziecko w drodze</h3><p class="fix"><b>Co robimy.</b> Cały zestaw po starszym rodzeństwie, gotowy na nowy początek.</p><span class="more">Pakiet Nowy Członek Rodziny od 319&nbsp;zł <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" /></svg></span></div></a>
+</div></div></section><section id="cennik" class=""><div class="wrap"><div class="sec-head"><span class="eyebrow">Cennik</span><h2>Pranie wózka i fotelika – cena</h2><p class="lede">Ceny brutto, z dojazdem w Strefie 1. Dokładną kwotę podajemy ze zdjęć, zanim przyjedziemy.</p></div>
 <div class="price-wrap"><div><ul class="plist"><li><span>Wózek spacerowy<small>siedzisko, budka, pasy, stelaż i koła</small></span><b><i>od</i>90&nbsp;zł</b></li><li><span>Wózek 2w1<small>gondola + spacerówka, stelaż i koła</small></span><b><i>od</i>120&nbsp;zł</b></li><li><span>Wózek 3w1<small>z fotelikiem-nosidełkiem</small></span><b><i>od</i>160&nbsp;zł</b></li><li><span>Wózek bliźniaczy</span><b><i>od</i>150&nbsp;zł</b></li><li><span>Fotelik samochodowy<small>pokrowiec, skorupa, baza</small></span><b><i>od</i>80&nbsp;zł</b></li><li><span>Krzesełko, leżaczek lub mata</span><b><i>od</i>60&nbsp;zł</b></li></ul><p class="pnote">Minimalne zamówienie 150 zł. Przy silnych zabrudzeniach (pleśń, wymioty) wycenimy ze zdjęć przed przyjazdem.</p></div>
 <aside class="safety on-dark"><span class="eyebrow">Foteliki samochodowe</span><h3>Fotelik to sprzęt bezpieczeństwa. Tak go traktujemy.</h3><ul><li>Pokrowiec i skorupę czyścimy według instrukcji producenta.</li><li>Pasy czyścimy tylko powierzchniowo, bo moczenie osłabia ich wytrzymałość.</li><li>Środki hipoalergiczne, bezpieczne dla niemowląt po wyschnięciu.</li></ul></aside></div>
 <div class="packs"><div class="pack"><span class="tag">przed porodem</span><h3>Nowy Członek Rodziny</h3><ul><li>Materac dwuosobowy</li><li>Wózek 2w1</li><li>Fotelik samochodowy</li></ul><div class="pr"><b class="num">319&nbsp;zł</b><s class="num">350&nbsp;zł</s></div></div>
