@@ -36,5 +36,5 @@ This repo is the **design studio** for a one-person mobile cleaning business in 
 1. ~~Snapshot the owner's Pinterest board~~ (done 2026-11-12).
 2. Connect **Figma** in Claude Code and read the owner's file, if any (read tools only so far; no write tools).
 3. ~~Logo~~ — direction B approved 2026-11-13; per-service accents and icon set in DESIGN.md. Custom icons (chamomile, stroller, sofa, paw, mattress, car) still to draw.
-4. First page: the **stroller counter** (`/poznan/pranie-wozkow-i-fotelikow`, per the SEO brief, issue #2) — three directions in `prototypes/stroller/` awaiting the owner's pick → approved design with all states → `handoff/pages/stroller-counter/` + `handoff/tokens/` → tag `stroller-v1`.
-5. Then: counter template states, quote form, homepage, sofa counter, admin screens (order in `docs/prd.md` §9).
+4. First page: the **stroller counter** (`/poznan/pranie-wozkow-i-fotelikow`, per the SEO brief, issue #2) — **handed over as `stroller-v1` (2026-11-13)**; waiting for the developer's questions and the owner's photos, phone number and brand-list checks.
+5. Next: quote form, then counter template states, homepage, sofa counter, admin screens (order in `docs/prd.md` §9). Custom service icons (chamomile, stroller, sofa, paw, mattress, car) still to draw.

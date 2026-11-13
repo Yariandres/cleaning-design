@@ -1,7 +1,7 @@
 # Stroller counter — `/poznan/pranie-wozkow-i-fotelikow`
 
 ## 1. Tag and status
-- **Tag:** `stroller-v1` (proposed; created only after the owner's "go"). Direction 2 ("Cennik pierwszy") chosen by the owner on 2026-11-13; the full design is awaiting the owner's review.
+- **Tag:** `stroller-v1`, approved by the owner on 2026-11-13 (Direction 2, "Cennik pierwszy").
 - Designed against `docs/design-constraints.md` in cleaning-sell-system at commit `85dee45`, and `DESIGN.md` in this repo at the tag.
 - **No Figma for this handover** (owner decision, 2026-11-13). The visuals are the PNGs in `screens/` and the working HTML reference below.
 
