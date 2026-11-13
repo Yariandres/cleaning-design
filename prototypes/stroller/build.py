@@ -56,12 +56,12 @@ HEADACHE2 = f"""<section class="{{band}}"><div class="wrap"><div class="sec-head
 <a class="pc wide" href="#cennik"><div class="ph pic" role="img" aria-label="Miejsce na własne zdjęcie: wózek i fotelik">zdjęcie własne<br>wózek i fotelik</div><div class="pc-body"><span class="eyebrow">Problem</span><h3>Drugie dziecko w drodze</h3><p class="fix"><b>Co robimy.</b> Cały zestaw po starszym rodzeństwie, gotowy na nowy początek.</p><span class="more">Pakiet Nowy Członek Rodziny od 319&nbsp;zł {ico("arrow-right")}</span></div></a>
 </div></div></section>"""
 
-STEPS = '''<section><div class="wrap"><div class="sec-head"><span class="eyebrow">Jak to działa</span><h2>Trzy kroki, zero wychodzenia z domu</h2></div><ol class="steps">
+STEPS = '''<section><div class="wrap"><div class="sec-head"><span class="eyebrow">Trzy kroki, zero wychodzenia z domu</span><h2>Jak to działa</h2></div><ol class="steps">
 <li><h3>Wyślij zdjęcia</h3><p>2–3 zdjęcia przez WhatsApp, SMS lub formularz. Napisz, gdzie mieszkasz.</p></li>
 <li><h3>Dostań cenę i termin</h3><p>Zwykle w kilka minut. Wolne terminy często już na następny dzień.</p></li>
 <li><h3>Pierzemy u Ciebie</h3><p>Przywozimy sprzęt i środki. Potrzebujemy tylko wody i gniazdka.</p></li></ol></div></section>'''
 
-SEATS = f'''<section class="{{band}}"><div class="wrap seat"><div><div class="sec-head" style="margin-bottom:20px"><span class="eyebrow">Foteliki według marek</span><h2>Cybex, Maxi-Cosi, Britax Römer, Avionaut – według instrukcji producenta</h2></div>
+SEATS = f'''<section class="{{band}}"><div class="wrap seat"><div><div class="sec-head" style="margin-bottom:20px"><span class="eyebrow">Foteliki według marek</span><h2>Foteliki Cybex, Maxi-Cosi, Britax i Avionaut – według instrukcji producenta</h2></div>
 <ul><li>Pokrowiec prany lub czyszczony tak, jak każe metka.</li><li>Skorupa i klamra przecierane łagodnym środkiem.</li><li>Pasy tylko powierzchniowo. Nigdy nie moczymy.</li></ul></div>
 <div class="ph" style="aspect-ratio:4/3" role="img" aria-label="Miejsce na własne zdjęcie fotelika">miejsce na własne zdjęcie fotelika<br>(4:3, bez ludzi)</div></div></section>'''
 

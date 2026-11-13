@@ -13,6 +13,8 @@ handoff/
     tokens.json                colours (light only; Nuxt UI names, 50–950 scales), type, radius, spacing, motion — names match DESIGN.md and Figma variables
     tokens.css                 the same as CSS: `@theme static` colour scales plus the `:root` overrides
     fonts.md                   families, weights, source and licence
+  brand/
+    logo/                      approved logo SVGs (full logo, symbol, small-size symbol, app icon, maskable)
   components/
     <component>.md             anatomy, states, behaviour, spacing, motion, accessibility; Figma link to the component
   pages/
@@ -28,7 +30,7 @@ handoff/
 
 1. **Tag and status** — e.g. `stroller-v1`, approved by the owner on YYYY-MM-DD, designed against `design-constraints.md` at commit `<sha>`
 2. **Issues** — developer issue numbers and PRD IDs it covers (e.g. #41, #42 · S2–S6, S9)
-3. **Figma** — direct links to the exact frames (one per section and state), not just the file
+3. **Visuals** — direct links to the exact Figma frames (one per section and state) when Figma is used; otherwise the PNGs in `screens/` plus the working HTML reference in `prototypes/` at the tag (the owner chose this for `stroller-v1`)
 4. **Sections in order** — with notes the frames can't show (behaviour, sticky bar, scroll, motion with durations and easing)
 5. **Data bindings** — everything from the database marked, e.g. `{price:stroller-single}` → "od 90 zł", `{nextFreeSlot}`, `{faq:stroller}`, `{reviews:stroller}`. Never hard-coded.
 6. **States** — empty (no reviews/photos yet), loading, error, success, long text, phone/desktop — each with its frame or screenshot (no dark frames: light mode only)
@@ -51,6 +53,6 @@ handoff/
 1. Owner approves the design.
 2. Designer completes the page folder, updates `tokens/` if anything changed, adds a CHANGELOG line, commits and pushes.
 3. Designer tags the commit: `git tag <page>-v<n>` (e.g. `stroller-v1`) and pushes the tag. Later edits get a new tag (`stroller-v2`); a published tag is never moved.
-4. Figma: the approved frames are marked "Ready for dev" (or moved to a "Handoff" page) and must match the tag. Changes after the tag go to a new version, not over the approved frames.
+4. If Figma is used: the approved frames are marked "Ready for dev" (or moved to a "Handoff" page) and must match the tag. Changes after the tag go to a new version, not over the approved frames.
 5. Notify the developer — either the owner says *"Build stroller-v1 from cleaning-design"*, or, if this session has GitHub access to both repos, the designer opens an issue in cleaning-sell-system titled **"Handoff ready: stroller-v1"** with the tag, the README link, the issue numbers and the Figma links.
 6. The developer fetches the tag, reads the README, pulls visuals from Figma, builds, and asks back (in that issue, or via the owner) if anything is missing.

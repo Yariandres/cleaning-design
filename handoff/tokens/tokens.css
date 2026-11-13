@@ -1,0 +1,101 @@
+/* Nowiutko tokens for Nuxt UI v4 + Tailwind v4. Light only. Source: handoff/tokens/tokens.json */
+@theme static {
+  --color-neutral-50: #F5FAF8;
+  --color-neutral-100: #E3F2EC;
+  --color-neutral-200: #CFE3DB;
+  --color-neutral-300: #A2B9B2;
+  --color-neutral-400: #77918A;
+  --color-neutral-500: #4E6B65;
+  --color-neutral-600: #3F5C56;
+  --color-neutral-700: #304D47;
+  --color-neutral-800: #213E39;
+  --color-neutral-900: #12302B;
+  --color-neutral-950: #0A1F1C;
+  --color-primary-50: #EEF8F4;
+  --color-primary-100: #D7F3E6;
+  --color-primary-200: #A0E2CD;
+  --color-primary-300: #5FD1B5;
+  --color-primary-400: #399E87;
+  --color-primary-500: #0E6E5C;
+  --color-primary-600: #0D5A4B;
+  --color-primary-700: #0B473B;
+  --color-primary-800: #09342C;
+  --color-primary-900: #06231D;
+  --color-primary-950: #031511;
+  --color-secondary-50: #FFF8E1;
+  --color-secondary-100: #FFF1C9;
+  --color-secondary-200: #FFE398;
+  --color-secondary-300: #FFD45C;
+  --color-secondary-400: #F2BC3C;
+  --color-secondary-500: #E4A400;
+  --color-secondary-600: #BB8700;
+  --color-secondary-700: #946A00;
+  --color-secondary-800: #6E5000;
+  --color-secondary-900: #4B3600;
+  --color-secondary-950: #3A2A00;
+  --color-success-50: #EFF8EC;
+  --color-success-100: #DAEAD7;
+  --color-success-200: #AFCEAD;
+  --color-success-300: #86B384;
+  --color-success-400: #5C985B;
+  --color-success-500: #2E7D32;
+  --color-success-600: #26692A;
+  --color-success-700: #1F5622;
+  --color-success-800: #17441B;
+  --color-success-900: #103214;
+  --color-success-950: #0D2A10;
+  --color-info-50: #EEF5F9;
+  --color-info-100: #D8E5ED;
+  --color-info-200: #ADC7D6;
+  --color-info-300: #83A8BF;
+  --color-info-400: #598BA8;
+  --color-info-500: #2C6E91;
+  --color-info-600: #255C7A;
+  --color-info-700: #1D4C64;
+  --color-info-800: #163B4F;
+  --color-info-900: #0F2C3B;
+  --color-info-950: #0C2431;
+  --color-warning-50: #FFF4E0;
+  --color-warning-100: #F5E3CA;
+  --color-warning-200: #E1C09D;
+  --color-warning-300: #CC9E71;
+  --color-warning-400: #B77D44;
+  --color-warning-500: #A15C00;
+  --color-warning-600: #874D00;
+  --color-warning-700: #6E3F00;
+  --color-warning-800: #553100;
+  --color-warning-900: #3E2300;
+  --color-warning-950: #331D00;
+  --color-error-50: #FDEEEC;
+  --color-error-100: #F7DAD6;
+  --color-error-200: #E9B3AA;
+  --color-error-300: #D98B80;
+  --color-error-400: #C76356;
+  --color-error-500: #B3372B;
+  --color-error-600: #962D23;
+  --color-error-700: #7A241C;
+  --color-error-800: #601B14;
+  --color-error-900: #46120D;
+  --color-error-950: #3A0E0A;
+}
+
+:root {
+  --ui-radius: 0.375rem;
+  --ui-container: 70rem;
+  --ui-bg: var(--ui-color-neutral-50);
+  --ui-bg-muted: var(--ui-color-neutral-100);
+  --ui-bg-elevated: #fff;
+  --ui-bg-inverted: var(--ui-color-neutral-900);
+  --ui-text: var(--ui-color-neutral-700);
+  --ui-text-highlighted: var(--ui-color-neutral-900);
+  --ui-text-muted: var(--ui-color-neutral-500);
+  --ui-text-dimmed: var(--ui-color-neutral-400);
+  --ui-text-inverted: #fff;
+  --ui-border: var(--ui-color-neutral-200);
+  --ui-border-muted: var(--ui-color-neutral-200);
+  --ui-border-accented: var(--ui-color-neutral-300);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}

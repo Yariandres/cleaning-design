@@ -3,3 +3,4 @@ node_modules
 .impeccable/
 .claude/skills/impeccable/scripts/bin/
 .claude/settings.local.json
+__pycache__/
