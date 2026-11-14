@@ -1,7 +1,7 @@
 # Admin: shell navigation + "Cennik i ustawienia"
 
 ## 1. Tag and status
-- **DRAFT. Not approved by the owner, not tagged.** Planned tag: `admin-cennik-v1`. Do not build from this until the tag exists.
+- **Tag:** `admin-cennik-v1`, approved by the owner on 2026-11-14.
 - Designed 2026-11-14 against `docs/design-constraints.md` in cleaning-sell-system (as read on 2026-11-14: Nuxt UI v4, Lucide, light only, 390 first, online only, installable) and `DESIGN.md` in this repo.
 - **No Figma for this handover** (no Figma write access in the design session). Visuals are the PNGs in `screens/` and the HTML reference below, as for `stroller-v1`.
 
@@ -196,8 +196,8 @@ Not applicable. The admin and login must be `noindex`.
 ## 11. Answers to the brief's open questions
 1. **Save per entry or auto-save?** Explicit save per entry; only reorder moves save at once. A half-typed price ("9" on the way to "95") must never reach the public site, and one deliberate tap gives a clear moment to say "saved and live".
 2. **Tab bar or menu?** Both: five-item tab bar with "Więcej" on phones, sidebar with all six from 1024px.
-3. **"Teraz w sezonie": where, and an image?** For the owner to decide (offer). Recommendation: one text label with the sun dot, on the homepage hero and at the top of the price list; on a counter page only when the promoted item belongs to that counter. No image: the promoted item's own photo slot on the page is enough, and a separate image would need a new photo for every change.
-4. **Package "was" price: computed or typed?** For the owner to decide (pricing). Recommendation: keep it typed and optional, and show the computed sum of the items next to it, so the two cannot drift apart unnoticed. If the typed value is lower than the package price, block the save.
+3. **"Teraz w sezonie": where, and an image?** The owner approved the handover with this recommendation unchanged (2026-11-14): one text label with the sun dot, on the homepage hero and at the top of the price list; on a counter page only when the promoted item belongs to that counter. No image: the promoted item's own photo slot on the page is enough, and a separate image would need a new photo for every change.
+4. **Package "was" price: computed or typed?** The owner approved the handover with this recommendation unchanged (2026-11-14): keep it typed and optional, and show the computed sum of the items next to it, so the two cannot drift apart unnoticed. If the typed value is lower than the package price, block the save.
 
 ## 12. Open questions for the developer
 - Is "group" an editable field of a service (designed as a select), and are groups themselves fixed?
