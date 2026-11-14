@@ -134,6 +134,21 @@ Nuxt UI components, restyled through tokens (the mockup's hand-made versions are
 - **Sticky bottom bar on phones:** "Wyślij zdjęcia" plus a phone icon.
 - **Service area and zones:** text only (postcode field, grouped town picker, list of towns). No map.
 
+## Admin patterns
+
+The owner's admin uses the same tokens, fonts and components as the site; it is quieter (no bands, no photos, no highlight underline). Added with the "Cennik i ustawienia" design (reference: `prototypes/admin-cennik/`).
+
+- **Shell:** below 1024px a bottom tab bar with five items (Dziś, Lejek, Kalendarz, Klienci, Więcej); "Więcej" is a sheet with Cennik i ustawienia, Raport and Wyloguj. From 1024px a 248px left sidebar with all six. Edit screens replace the tab bar with the save bar.
+- **Screens:** `neutral-50` page, white `rounded-xl` cards and panels with a 1px `neutral-200` border. Screen title in Bricolage 800 at 28px; everything else Figtree. Fields always sit on white panels.
+- **List → edit:** rows at least 64px tall, the whole row is the link; edit forms are stacked white panels.
+- **Saving:** explicit "Zapisz" in a fixed bottom save bar with a status line (clean, unsaved, invalid, saving, failed). After saving: back to the list, the row tinted `success-50`, and a `neutral-900` toast saying the change is live. Only reorder moves save at once. Leaving with unsaved changes asks first.
+- **Off, not deleted:** hidden entries stay in place with muted text and an "Ukryta" badge. Delete only for never-used entries, with a confirmation; solid `error` is used only on that confirm button.
+- **Order:** a reorder mode with 44px up and down buttons. No drag and drop.
+- **Live prices in text:** a price token is shown as a chip (`primary-100` / `primary-800`, Lucide `tag`), never as code.
+- **Sun** in admin: only the "Teraz w sezonie" marker, once per screen. The package-tag colour sample is a swatch, not a highlight.
+- **Status colours:** soft notes use the status 50 background, 200 border and 700 text; the unsaved dot is `warning-500` and always has text next to it.
+- **Controls:** inputs and buttons 48px, 16px text in inputs (no zoom on iOS); every other control at least 44px, including the switch's hit area.
+
 ## Icons
 
 - **Interface icons: Lucide only** (`i-lucide-*` in Nuxt UI). No other set, and no emoji or text characters standing in for icons (the mockup's ✓ and ★ become `check` and, later, `star`).
@@ -177,3 +192,4 @@ Accent use is limited to small surfaces (icon, eyebrow, highlight underline, ill
 - 2026-11-09 — Brand Nowiutko: chamomile symbol, one look with per-service accents (accent values for pets, mattresses and car still to define).
 - 2026-11-12 — Dev note #1 (Nuxt UI, Lucide, light only): **removed dark mode**; colours rebuilt as Nuxt UI semantic names with 50–950 scales (old `--paper/--band/--card/--ink/--muted/--line/--accent/--sun` map onto them, same values at the anchors); **fonts cut from three to two** (DM Mono dropped for Figtree) and self-hosted; radius is one base value (6px) that reproduces the 12/18/24px sizes; spacing on a 4px grid; 44px minimum control height; icons Lucide plus custom 24px 2px-stroke SVGs; share-image, image-ratio and motion rules added. **Contrast fixes:** focus ring changed from sun yellow (1.3:1) to ink or white, field borders from `--line` (1.3:1) to `neutral-400` (3.4:1). FAQ accordion must not unmount closed answers (SEO). Pets and mattress accents still open (Job C).
 - 2026-11-13 — Logo B (Odznaka) chosen; paper stays cool mint. Accents defined: pets `neutral-700`, mattress `primary-600`; car `primary-800` confirmed. All reuse existing scales, no new colours.
+- 2026-11-14 — **Admin patterns added** (shell navigation, list → edit, explicit save with a save bar and "live on the site" toast, off-not-deleted, reorder mode, live price chips), from the "Cennik i ustawienia" design. No new tokens or colours. Draft until the owner approves `admin-cennik-v1`.
