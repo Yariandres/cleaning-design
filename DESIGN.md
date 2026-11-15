@@ -149,6 +149,18 @@ The owner's admin uses the same tokens, fonts and components as the site; it is 
 - **Status colours:** soft notes use the status 50 background, 200 border and 700 text; the unsaved dot is `warning-500` and always has text next to it.
 - **Controls:** inputs and buttons 48px, 16px text in inputs (no zoom on iOS); every other control at least 44px, including the switch's hit area.
 
+## Quote form patterns
+
+The public quote form (`/poznan/wycena`) looks like the counters: same header (logo + phone), footer, type, buttons and tokens. Added with the quote-form design (reference: `prototypes/quote-form/`).
+
+- **Estimate bar replaces the "Wyślij zdjęcia" bar** on this page. Below 900px a fixed white bottom bar holds "Szacunkowa cena" with the amount (left, a button that opens the breakdown in a `UDrawer`) and the step's one solid button (right). From 900px the estimate is a sticky white `rounded-2xl` card in a 360px right column, and the buttons sit under the step.
+- **Sun on the form:** only the highlight underline under the estimate amount, once per screen. Package tags inside the form are `primary-100` / `primary-800`, not sun.
+- **Chosen things** (service rows, packages, radio cards): `primary-50` background with a 4px `primary-500` left edge or a 2px `primary-500` border, always together with a non-colour sign (stepper, tick).
+- **Steps:** four 6px bars (`primary-500` done and current, `neutral-200` ahead) with "Krok N z 4"; one `h1` (styled as the eyebrow) and the step title as the only `h2`.
+- **Status colours on the public site** follow the admin rule: soft notes use the status 50 background, 200 border and 700 text; field errors are `error-500` text with a Lucide `circle-alert`, under the field.
+- **Fields sit on white panels or directly on the `neutral-50` page**, never on a `neutral-100` band. Inputs and buttons 48px, 16px input text, every other control at least 44px (slot pills 48px).
+- **Never pressure:** the minimum order and the "free travel from 400 zł" rule are stated as one neutral sentence with the customer's current amount. No progress bars toward a threshold, no "only … left".
+
 ## Icons
 
 - **Interface icons: Lucide only** (`i-lucide-*` in Nuxt UI). No other set, and no emoji or text characters standing in for icons (the mockup's ✓ and ★ become `check` and, later, `star`).
@@ -193,3 +205,4 @@ Accent use is limited to small surfaces (icon, eyebrow, highlight underline, ill
 - 2026-11-12 — Dev note #1 (Nuxt UI, Lucide, light only): **removed dark mode**; colours rebuilt as Nuxt UI semantic names with 50–950 scales (old `--paper/--band/--card/--ink/--muted/--line/--accent/--sun` map onto them, same values at the anchors); **fonts cut from three to two** (DM Mono dropped for Figtree) and self-hosted; radius is one base value (6px) that reproduces the 12/18/24px sizes; spacing on a 4px grid; 44px minimum control height; icons Lucide plus custom 24px 2px-stroke SVGs; share-image, image-ratio and motion rules added. **Contrast fixes:** focus ring changed from sun yellow (1.3:1) to ink or white, field borders from `--line` (1.3:1) to `neutral-400` (3.4:1). FAQ accordion must not unmount closed answers (SEO). Pets and mattress accents still open (Job C).
 - 2026-11-13 — Logo B (Odznaka) chosen; paper stays cool mint. Accents defined: pets `neutral-700`, mattress `primary-600`; car `primary-800` confirmed. All reuse existing scales, no new colours.
 - 2026-11-14 — **Admin patterns added** (shell navigation, list → edit, explicit save with a save bar and "live on the site" toast, off-not-deleted, reorder mode, live price chips), from the "Cennik i ustawienia" design. No new tokens or colours. Draft until the owner approves `admin-cennik-v1`.
+- 2026-11-15 — **Quote form patterns added** (estimate bar in place of the "Wyślij zdjęcia" bar on the form, sun only on the estimate amount, chosen-row style, step bars, status colours on the public site, no-pressure rule), from the quote-form design. No new tokens or colours. Draft until the owner approves `quote-form-v1`.

@@ -1,0 +1,608 @@
+{
+ "01-krok1-pusty.html": {
+  "320": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Co mamy wyczyścić?"
+   ]
+  },
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Co mamy wyczyścić?"
+   ]
+  },
+  "1440": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Co mamy wyczyścić?"
+   ]
+  }
+ },
+ "02-krok1-ilosci-dodatki.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Co mamy wyczyścić?"
+   ]
+  }
+ },
+ "03-krok1-z-wozkow.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Co mamy wyczyścić?"
+   ]
+  }
+ },
+ "04-krok1-z-wozkow-pakiet.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Co mamy wyczyścić?"
+   ]
+  }
+ },
+ "05-krok1-dywan-m2.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Co mamy wyczyścić?"
+   ]
+  },
+  "768": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Co mamy wyczyścić?"
+   ]
+  },
+  "1024": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Co mamy wyczyścić?"
+   ]
+  },
+  "1440": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Co mamy wyczyścić?"
+   ]
+  }
+ },
+ "06-krok1-minimum.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Co mamy wyczyścić?"
+   ]
+  }
+ },
+ "07-krok1-szacunek-arkusz.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Co mamy wyczyścić?",
+    "Szacunkowa cena"
+   ]
+  }
+ },
+ "08-krok1-blad-nic.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Co mamy wyczyścić?"
+   ]
+  }
+ },
+ "09-krok1-blad-m2.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Co mamy wyczyścić?"
+   ]
+  }
+ },
+ "10-krok1-podpowiedz-pakietu.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Co mamy wyczyścić?"
+   ]
+  }
+ },
+ "11-krok2-pusty.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Gdzie mamy przyjechać?"
+   ]
+  }
+ },
+ "12-krok2-lista-grupy.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Gdzie mamy przyjechać?"
+   ]
+  }
+ },
+ "13-krok2-lista-szukanie.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Gdzie mamy przyjechać?"
+   ]
+  }
+ },
+ "14-krok2-kod-pasuje.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Gdzie mamy przyjechać?"
+   ]
+  },
+  "1440": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Gdzie mamy przyjechać?"
+   ]
+  }
+ },
+ "15-krok2-strefa2.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Gdzie mamy przyjechać?"
+   ]
+  }
+ },
+ "16-krok2-strefa2-arkusz.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Gdzie mamy przyjechać?",
+    "Szacunkowa cena"
+   ]
+  }
+ },
+ "17-krok2-strefa2-gratis.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Gdzie mamy przyjechać?"
+   ]
+  }
+ },
+ "18-krok2-kod-nie-pasuje.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Gdzie mamy przyjechać?"
+   ]
+  }
+ },
+ "19-krok2-inna-miejscowosc.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Gdzie mamy przyjechać?"
+   ]
+  }
+ },
+ "20-krok2-blad-brak.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Gdzie mamy przyjechać?"
+   ]
+  }
+ },
+ "21-krok2-blad-kod.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Gdzie mamy przyjechać?"
+   ]
+  }
+ },
+ "22-krok2-blad-inna.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Gdzie mamy przyjechać?"
+   ]
+  }
+ },
+ "23-krok3-pusty.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Zdjęcia i termin"
+   ]
+  }
+ },
+ "24-krok3-zdjecia-stany.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Zdjęcia i termin"
+   ]
+  }
+ },
+ "25-krok3-zdjecia-komplet.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Zdjęcia i termin"
+   ]
+  }
+ },
+ "26-krok3-terminy-wybrane.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Zdjęcia i termin"
+   ]
+  },
+  "1440": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Zdjęcia i termin"
+   ]
+  }
+ },
+ "27-krok3-terminy-komplet-wieczor.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Zdjęcia i termin"
+   ]
+  }
+ },
+ "28-krok3-terminy-wczytywanie.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Zdjęcia i termin"
+   ]
+  }
+ },
+ "29-krok3-terminy-blad.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Zdjęcia i termin"
+   ]
+  }
+ },
+ "30-krok3-brak-terminow.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Zdjęcia i termin"
+   ]
+  }
+ },
+ "31-krok3-jeden-termin.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Zdjęcia i termin"
+   ]
+  }
+ },
+ "32-krok3-zaden-nie-pasuje.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Zdjęcia i termin"
+   ]
+  }
+ },
+ "33-krok3-blad-terminy.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Zdjęcia i termin"
+   ]
+  }
+ },
+ "34-krok3-termin-zajety.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Zdjęcia i termin"
+   ]
+  }
+ },
+ "35-krok4-pusty.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Kontakt"
+   ]
+  }
+ },
+ "36-krok4-email-wypelniony.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Kontakt"
+   ]
+  },
+  "768": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Kontakt"
+   ]
+  },
+  "1440": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Kontakt"
+   ]
+  }
+ },
+ "37-krok4-whatsapp.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Kontakt"
+   ]
+  }
+ },
+ "38-krok4-bledy.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Kontakt"
+   ]
+  }
+ },
+ "39-krok4-wysylanie.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Kontakt"
+   ]
+  }
+ },
+ "40-krok4-blad-wysylki.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Kontakt"
+   ]
+  }
+ },
+ "41-dziekujemy.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Dziękujemy. Mamy Twoje zapytanie."
+   ]
+  },
+  "1440": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Dziękujemy. Mamy Twoje zapytanie."
+   ]
+  }
+ },
+ "42-dziekujemy-whatsapp-bez-terminu.html": {
+  "390": {
+   "tap": [],
+   "input": [],
+   "contrast": [],
+   "overflow": 0,
+   "h1": 1,
+   "h2": [
+    "Dziękujemy. Mamy Twoje zapytanie."
+   ]
+  }
+ }
+}
