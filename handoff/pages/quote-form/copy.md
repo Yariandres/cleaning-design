@@ -1,6 +1,6 @@
 # Copy: quote form (`/poznan/wycena`)
 
-**DRAFT, not approved.** Polish copy, keyed. `{...}` = comes from the database, never hard-coded. Voice: "Ty", short, concrete; no gendered forms for the customer. Service, package, add-on, town and zone names and all prices are data and are not listed here. Error texts are in the README, section 6.
+**Approved with `quote-form-v1` (2026-11-15).** Polish copy, keyed. `{...}` = comes from the database, never hard-coded. Voice: "Ty", short, concrete; no gendered forms for the customer. Service, package, add-on, town and zone names and all prices are data and are not listed here. Error texts are in the README, section 6.
 
 ## Head
 - `meta.title` — Wycena prania ze zdjęć – Poznań i okolice | Nowiutko *(placeholder until the SEO brief)*

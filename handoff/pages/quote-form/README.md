@@ -1,9 +1,9 @@
 # Quote form — `/poznan/wycena`
 
 ## 1. Tag and status
-- **DRAFT. Not approved by the owner, not tagged.** Planned tag: `quote-form-v1`. Do not build from this until the tag exists.
+- **Tag:** `quote-form-v1`, approved by the owner on 2026-11-15.
 - Designed 2026-11-15 against `docs/design-constraints.md` in cleaning-sell-system (as read on 2026-11-15: Nuxt UI v4, Lucide, light only, 390 first, Zod forms, CSS-only motion, no map) and `DESIGN.md` in this repo.
-- **No Figma for this handover so far** (the Figma connector was not authorised in the design session). Visuals are the PNGs in `screens/` and the HTML reference, as for `stroller-v1` and `admin-cennik-v1`.
+- **No Figma for this handover** (the Figma connector was not authorised in the design session). Visuals are the PNGs in `screens/` and the HTML reference, as for `stroller-v1` and `admin-cennik-v1`.
 - **No SEO brief yet** for this page; the owner said to start without it. See section 10.
 
 ## 2. Issues
@@ -195,8 +195,8 @@ No photos or illustrations. The photo thumbnails in the frames are striped place
 - Is the package suggestion (frame `10`) in scope for v1?
 
 **For the owner**
-- Estimate wording: a plain amount ("447 zł") under the label "Szacunkowa cena", turning into "od …" only when something is unmeasured. The alternative is "od" always, since list prices are "od".
-- E-mail is preselected as the channel (it gets the automatic confirmation; WhatsApp is sent by hand at launch). Payment has no default and is required.
-- The privacy sentence and the consent wording need a legal read before launch.
+- Approved with the handover, unchanged (2026-11-15). Estimate wording: a plain amount ("447 zł") under the label "Szacunkowa cena", turning into "od …" only when something is unmeasured. The alternative is "od" always, since list prices are "od".
+- Approved with the handover, unchanged (2026-11-15). E-mail is preselected as the channel (it gets the automatic confirmation; WhatsApp is sent by hand at launch). Payment has no default and is required.
+- Still open: the privacy sentence and the consent wording need a legal read before launch.
 - "Wycenę wyślemy jeszcze dziś" is a promise; it must hold on the days the owner works.
-- The owner's phone number is still the placeholder.
+- Still open: the owner's phone number is the placeholder.
