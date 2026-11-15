@@ -33,6 +33,8 @@ This repo is the **design studio** for a one-person mobile cleaning business in 
 
 ## What's next
 
+**0. PRIORITY — early launch (owner, 15 Nov 2026):** the stroller page goes live on nowiutko.pl by Fri 20 Nov, booking by phone + WhatsApp only. Do [#5](https://github.com/Yariandres/cleaning-design/issues/5) first: stroller page without the quote form, homepage v0 (after the SEO mini brief), OG images, footer. Sofa counter, full homepage and remaining admin screens are paused until it's live.
+
 1. ~~Snapshot the owner's Pinterest board~~ (done 2026-11-12).
 2. Connect **Figma** in Claude Code and read the owner's file, if any (read tools only so far; no write tools).
 3. ~~Logo~~ — direction B approved 2026-11-13; per-service accents and icon set in DESIGN.md. Custom icons (chamomile, stroller, sofa, paw, mattress, car) still to draw.
