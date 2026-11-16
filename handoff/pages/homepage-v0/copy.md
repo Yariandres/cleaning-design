@@ -13,6 +13,8 @@ DRAFT, not approved. Brand decisions applied 2026-11-17 (#6, #7): H1/title appro
 - `hero.lede` — Przyjeżdżamy z własnym sprzętem i pierzemy u Ciebie, na miejscu: wózki, foteliki, kanapy, materace, dywany i wnętrza aut.
 - **Story board (right side, decorative; whole block `role="img"`):** `story.alt` — Trzy kroki: zaplamiony wózek, zdjęcia wysłane w rozmowie na WhatsApp, wózek jak nowy.
   - `story.1` — Plama na wózku · `story.2.label` — Przykład: tak wygląda rozmowa · `story.3` — Wózek jak nowe
+  - Strip below 900px (aria-hidden): `strip.1` — Plama · `strip.2` — Zdjęcia · `strip.3` — Jak nowe
+  - Non-breaking spaces after single-letter words everywhere (H1: "u Ciebie", "w Poznaniu", "i okolicach")
   - Chat example (hard-coded illustration, not data; no name, no time, no rating): header *Nowiutko / WhatsApp*; customer bubble = two photo thumbnails (neutral image icons) + *Dzień dobry, proszę o wycenę wózka.*; reply bubble = *Dziękujemy! Cenę podamy dziś.* + `hours`.
   - Nothing essential lives only in the board: the same facts are in the lede, the promise line, the hours line and "Jak to działa".
 - Buttons: `cta.whatsapp` (solid) · `cta.call` "Zadzwoń: {business:phone}" (outline) — both as in `stroller-v1.2` copy.md

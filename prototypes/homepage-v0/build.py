@@ -55,19 +55,27 @@ FLOWER = '<g class="mini">' + "".join(f'<circle cx="{11+2.0*math.sin(math.radian
 def badge(inner_svg, cls=""):
     return f'<span class="sb {cls}">{inner_svg}</span>'
 
+MSG = '<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 11.5h8M8 15h5"/>'
+CAMERA = '<path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/>'
+# Desktop (>= 900px): a vertical timeline on the right, 1 -> 2 -> 3 top to bottom, chips on a dashed line.
+# Below 900px: a slim 3-tile strip (.strip) sits under the voice line; the board then shows only the chat window.
 STORY = f'''<div class="story" role="img" aria-label="Trzy kroki: zaplamiony wózek, zdjęcia wysłane w rozmowie na WhatsApp, wózek jak nowy.">
 <div class="sc sc1">{badge(svg(FROWN, size=22), "sb1")}
-<div class="sc-art">{svg(STROLLER_PATHS + STAINS, "art-stroller", sw=1.5)}</div><p class="sc-cap"><b>1</b>Plama na wózku</p></div>
-<div class="chat-card">{badge(svg('<path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/>', size=22), "sb2")}
-<p class="ch-label">Przykład: tak wygląda rozmowa<b>2</b></p>
+<div class="sc-art">{svg(STROLLER_PATHS + STAINS, "art-stroller", sw=1.5)}</div><p class="sc-cap">Plama na&nbsp;wózku</p></div>
+<div class="chat-card">{badge(svg(CAMERA, size=22), "sb2")}
+<p class="ch-label">Przykład: tak wygląda rozmowa</p>
 <div class="chat"><div class="ch-head"><img src="../stroller/assets/mark.svg" alt="" width="28" height="28"><span><b>Nowiutko</b><i>WhatsApp</i></span></div>
 <div class="ch-body">
 <div class="bub out"><div class="thumbs"><span class="th">{svg(IMAGE, size=24)}</span><span class="th">{svg(IMAGE, size=24)}</span></div><p>Dzień dobry, proszę o wycenę wózka.</p></div>
 <div class="bub in"><p>Dziękujemy! Cenę podamy dziś.</p><small>{F.HOURS}</small></div>
 </div></div></div>
 <div class="sc sc3">{badge(svg(chamomile_paths(), size=24, sw=2), "sb3")}
-<div class="sc-art">{svg(STROLLER_PATHS + FLOWER + SPARK, "art-stroller fresh", sw=1.5)}</div><p class="sc-cap"><b>3</b>Wózek jak nowe</p></div>
+<div class="sc-art">{svg(STROLLER_PATHS + FLOWER + SPARK, "art-stroller fresh", sw=1.5)}</div><p class="sc-cap">Wózek jak&nbsp;nowe</p></div>
 </div>'''
+STRIP = f'''<div class="strip" aria-hidden="true">
+<div class="st st1">{svg(STROLLER_PATHS + STAINS, "art-stroller", sw=1.6)}<p>Plama</p></div><span class="arr">{ico("arrow-right")}</span>
+<div class="st st2">{svg(MSG, "art-msg", sw=1.6)}<p>Zdjęcia</p></div><span class="arr">{ico("arrow-right")}</span>
+<div class="st st3">{svg(STROLLER_PATHS + FLOWER + SPARK, "art-stroller fresh", sw=1.6)}<p>Jak&nbsp;nowe</p></div></div>'''
 
 # ---------------- hero ----------------
 # H1 is the headline itself (real text, the name first). The voice line sits under it as a normal paragraph.
@@ -75,7 +83,8 @@ HERO = f'''<section class="hh"><div class="wrap">
 <div class="hh-copy">
 <h1 class="hh-h1"><span class="name">Nowiutko</span> — pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach</h1>
 <p class="voice">Świeżo i jak nowe — bez wychodzenia z domu.</p>
-<p class="lede">Przyjeżdżamy z własnym sprzętem i pierzemy u Ciebie, na miejscu: wózki, foteliki, kanapy, materace, dywany i wnętrza aut.</p>
+{STRIP}
+<p class="lede">Przyjeżdżamy z własnym sprzętem i pierzemy u Ciebie, na miejscu: wózki, foteliki, kanapy, materace, dywany i wnętrza&nbsp;aut.</p>
 <div class="hh-btns">{F.wa_btn("hero")}<a class="btn btn-ghost num" href="{F.TEL}" data-bind="business:phone" data-cta="phone" data-cta-pos="hero">{ico("phone")}Zadzwoń: {F.PHONE}</a></div>
 <p class="pc-promise hh-promise">2–3 zdjęcia wystarczą. Cenę podamy dziś.</p>
 <p class="pc-promise hh-promise hh-hours" data-bind="business:hours">{F.HOURS}</p>
@@ -133,33 +142,48 @@ CSS = '''
 .hh .lede{margin-top:10px;color:var(--n700);font-size:1.1rem}
 .hh-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.hh-btns .btn{flex:1 1 250px}
 .hh-promise{text-align:left;margin-top:12px}.hh-hours{margin-top:2px}
-.story{display:none}
-/* story board: three beats in icons (problem, message, result). Zigzag like the reference: cards 1 and 3 in the left column, the chat window offset down in the right column. Badges sit on the seam. Static; no motion. */
-.story{display:grid;grid-template-columns:.8fr 1.2fr;grid-template-rows:1fr 1fr;gap:16px;aspect-ratio:358/392;position:relative;--w400:#B77D44;--w500:#A15C00}
-.sc{position:relative;border-radius:var(--r-2xl);display:grid;grid-template-rows:1fr auto;padding:12px 12px 12px;overflow:visible;min-height:0}
-.sc1{background:var(--n100);color:var(--n500);border:1px solid var(--border)}
-.sc3{background:var(--p100);color:var(--p700);border:1px solid var(--p200)}
-.sc-art{display:grid;place-items:center;min-height:0}.sc-art .ico{width:min(100%,104px);height:auto;display:block;overflow:visible}
+/* story board: three beats in icons. Desktop: vertical timeline (1 > 2 > 3), chips on a dashed line. <900px: slim strip under the voice line + the chat window below the buttons. Static, no motion. */
+.story{--w400:#B77D44;--w500:#A15C00}
+.strip{display:flex;align-items:stretch;gap:4px;margin-top:16px;max-width:520px}
+.st{flex:1 1 0;min-width:0;border-radius:var(--r-xl);padding:10px 6px 8px;display:grid;justify-items:center;align-content:center;gap:4px;border:1px solid var(--border)}
+.st p{font:700 .8rem/1.2 var(--body);color:var(--n900);white-space:nowrap}
+.st .ico{width:52px;height:52px;display:block;overflow:visible}
+.st1{background:var(--n100);color:var(--n500)}.st2{background:#fff;color:var(--p600)}.st3{background:var(--p100);color:var(--p700);border-color:var(--p200)}
+.arr{flex:none;display:grid;place-items:center;width:18px;color:var(--n500)}.arr .ico{width:16px;height:16px}
 .stain{fill:var(--w400)}.fresh .mini circle{fill:#fff;stroke:var(--p700);stroke-width:.35}.fresh .mini .mid{fill:var(--s300);stroke:var(--p700);stroke-width:.35}.fresh .spark{stroke:var(--s500)}
-.sc-cap{font:700 .86rem/1.2 var(--body);color:var(--n900);display:flex;gap:8px;align-items:center}
-.sc-cap b,.ch-label b{flex:none;display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--n900);color:#fff;font-size:.75rem}
-.sb{position:absolute;z-index:2;width:36px;height:36px;border-radius:50%;background:var(--n900);color:#fff;display:grid;place-items:center;box-shadow:0 0 0 3px var(--p50)}
-.sb .ico{width:18px;height:18px}.sb3{background:var(--p500)}
-.sb1{right:-26px;top:14px}.sb3{right:-26px;bottom:14px}.sb2{left:-26px;top:52%}
-.chat-card{grid-column:2;grid-row:1/3;margin-top:28px;align-self:start;position:relative;display:grid;grid-template-rows:auto 1fr;gap:8px;min-height:0}
-.ch-label{font:700 .8rem/1.25 var(--body);color:var(--n900);display:flex;gap:8px;align-items:center;margin:0;padding-left:24px}
-.chat{background:#fff;border:1px solid var(--border);border-radius:var(--r-2xl);overflow:hidden;display:grid;grid-template-rows:auto 1fr;box-shadow:0 24px 50px -34px rgba(14,60,50,.5);min-height:0}
-.ch-head{display:flex;gap:8px;align-items:center;padding:8px 10px;border-bottom:1px solid var(--border);background:var(--n50)}
-.ch-head img{width:26px;height:26px;border-radius:8px}.ch-head span{display:grid;line-height:1.15}.ch-head b{font:700 .85rem var(--body);color:var(--n900)}.ch-head i{font-style:normal;font-size:.72rem;color:var(--text-muted)}
-.ch-body{background:var(--p50);padding:10px;display:grid;gap:8px;align-content:start;overflow:hidden}
-.bub{border-radius:14px;padding:8px 10px;max-width:92%;display:grid;gap:6px;font-size:.82rem;line-height:1.3;color:var(--n900)}
-.bub.out{background:var(--p100);justify-self:end;border-bottom-right-radius:4px}.bub.in{background:#fff;justify-self:start;border-bottom-left-radius:4px;border:1px solid var(--border)}
-.bub small{font-size:.74rem;line-height:1.3;color:var(--n700)}
-.thumbs{display:grid;grid-template-columns:1fr 1fr;gap:4px}.th{aspect-ratio:1;border-radius:8px;background:var(--n200);color:var(--n500);display:grid;place-items:center}.th .ico{width:55%;height:55%}
-@media(max-width:359px){.story{aspect-ratio:288/430}.sc-art .ico{width:72px}.sc-cap{font-size:.78rem}.sc{padding:10px}.sb3{bottom:56px}}
-@media(max-width:899px){.hh .wrap{gap:36px}.story{display:grid;margin-inline:auto;width:min(100%,520px)}}
-@media(min-width:900px){.hh .wrap{grid-template-columns:1fr 500px;gap:64px;align-items:center;padding-block:56px 64px}.story{display:grid;grid-template-columns:.8fr 1.2fr;aspect-ratio:500/470;gap:20px}.sc{padding:16px}.sc-art .ico{width:min(100%,128px)}.sc-cap{font-size:.95rem}.sb{width:44px;height:44px}.sb .ico{width:22px;height:22px}.sb1,.sb3{right:-32px}.sb2{left:-32px}.chat-card{margin-top:44px}.bub{font-size:.95rem}.bub small{font-size:.82rem}.ch-head b{font-size:.95rem}.ch-label{font-size:.88rem;padding-left:30px}.ch-body{padding:14px;gap:12px}.th .ico{width:50%}}
-@media(min-width:1100px){.hh .wrap{grid-template-columns:1fr 540px}.story{aspect-ratio:540/500}}
+.sc{display:none}.sb{display:none}
+.chat-card{display:grid;gap:8px;max-width:440px;margin-inline:auto;width:100%}
+.ch-label{font:700 .8rem/1.25 var(--body);color:var(--n900);margin:0}
+.chat{background:#fff;border:1px solid var(--border);border-radius:var(--r-2xl);overflow:hidden;box-shadow:0 24px 50px -34px rgba(14,60,50,.5)}
+.ch-head{display:flex;gap:8px;align-items:center;padding:8px 12px;border-bottom:1px solid var(--border);background:var(--n50)}
+.ch-head img{width:28px;height:28px;border-radius:8px}.ch-head span{display:grid;line-height:1.15}.ch-head b{font:700 .9rem var(--body);color:var(--n900)}.ch-head i{font-style:normal;font-size:.75rem;color:var(--text-muted)}
+.ch-body{background:var(--p50);padding:12px;display:grid;gap:10px;align-content:start}
+.bub{border-radius:14px;padding:8px 10px;max-width:86%;display:grid;gap:6px;font-size:.9rem;line-height:1.35;color:var(--n900)}
+.bub.out{background:var(--p100);justify-self:end;border-bottom-right-radius:4px;width:62%}.bub.in{background:#fff;justify-self:start;border-bottom-left-radius:4px;border:1px solid var(--border)}
+.bub small{font-size:.8rem;line-height:1.3;color:var(--n700)}
+.thumbs{display:grid;grid-template-columns:1fr 1fr;gap:4px}.th{aspect-ratio:1;border-radius:8px;background:var(--n200);color:var(--n500);display:grid;place-items:center}.th .ico{width:50%;height:50%}
+.hh-h1,.hh .lede,.voice{text-wrap:balance}.hh .lede{text-wrap:pretty}
+@media(max-width:899px){.hh .wrap{gap:28px}}
+@media(max-width:359px){.st p{font-size:.72rem}.st .ico{width:44px;height:44px}.arr{width:14px}}
+@media(min-width:900px){
+ .hh .wrap{grid-template-columns:1fr 500px;gap:64px;align-items:center;padding-block:48px 56px}
+ .strip{display:none}
+ .hh-h1{font-size:clamp(2.3rem,3.5vw,3.1rem)}
+ .story{position:relative;display:grid;grid-template-rows:112px 1fr 112px;gap:28px;aspect-ratio:500/640}
+ .story::before{content:"";position:absolute;left:0;top:56px;bottom:56px;border-left:2px dashed var(--n300)}
+ .sc{display:grid;grid-template-columns:104px 1fr;align-items:center;gap:8px;position:relative;margin-left:32px;border-radius:var(--r-2xl);padding:8px 20px 8px 12px}
+ .sc1{background:var(--n100);color:var(--n500);border:1px solid var(--border)}
+ .sc3{background:var(--p100);color:var(--p700);border:1px solid var(--p200)}
+ .sc-art{display:grid;place-items:center}.sc-art .ico{width:88px;height:auto;display:block;overflow:visible}
+ .sc-cap{font:700 1.1rem/1.2 var(--body);color:var(--n900)}
+ .chat-card{margin:0 0 0 32px;width:auto;max-width:none;position:relative;grid-template-rows:auto 1fr;align-content:stretch;min-height:0}
+ .chat{display:grid;grid-template-rows:auto 1fr;min-height:0}
+ .ch-label{font-size:.88rem}.bub{font-size:.95rem}.bub small{font-size:.85rem}.ch-body{padding:14px;gap:12px}.bub.out{width:56%}
+ .sb{display:grid;position:absolute;z-index:2;left:-54px;width:44px;height:44px;border-radius:50%;background:var(--n900);color:#fff;place-items:center;box-shadow:0 0 0 4px var(--p50)}
+ .sb .ico{width:22px;height:22px}.sb3{background:var(--p500)}
+ .sb1,.sb3{top:50%;margin-top:-22px}.sb2{top:34px}
+}
+@media(min-width:1100px){.hh .wrap{grid-template-columns:1fr 540px}.story{aspect-ratio:540/640}}
 /* services */
 .svc{display:grid;gap:20px}
 @media(min-width:900px){.svc{grid-template-columns:1.2fr 1fr;gap:28px;align-items:stretch}}
@@ -191,6 +215,15 @@ CSS = '''
 .ah-body .lede{color:var(--n700)}
 '''
 
+def nb(html):
+    # non-breaking space after single-letter Polish words (u, w, i, z, a, o) in text nodes of <body>, outside <script>; wording unchanged
+    head, body = html.split("<body>", 1)
+    parts = re.split(r"(<script>.*?</script>)", body, flags=re.S)
+    def fix_text(m):
+        return ">" + re.sub(r"(?<![\w])([uwizaoUWIZAO]) (?=\S)", "\\1\u00a0", m.group(1)) + "<"
+    out = [x if x.startswith("<script>") else re.sub(r">([^<]+)<", fix_text, x) for x in parts]
+    return head + "<body>" + "".join(out)
+
 def page(body_extra="", extra_head="", live=None, company=F.COMPANY_DEFAULT, extra_css=""):
     main = HERO + services(live) + STEPS + AREA + F.FINAL
     html = f'''<!doctype html><html lang="pl-PL"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -198,7 +231,7 @@ def page(body_extra="", extra_head="", live=None, company=F.COMPANY_DEFAULT, ext
 <link rel="stylesheet" href="../stroller/base.css"><style>{F.FINAL_CSS}{CSS}{extra_css}</style>{extra_head}</head><body>
 <a class="skip" href="#uslugi">Przejdź do usług</a>
 {F.HEADER}<main>{main}</main>{F.footer(company)}{F.STICKY}{body_extra}</body></html>'''
-    return fix(html)
+    return nb(fix(html))
 
 def write(name, html):
     open(os.path.join(HERE, name), "w").write(html)
