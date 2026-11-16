@@ -1,9 +1,16 @@
 """Builds the three stroller-counter directions (prototypes, not production). Run: python3 build.py"""
 import re, os
-L = "/home/claude/scratch-lucide/package/icons/"
+import json
+# Lucide icons: set LUCIDE_ICONS to a folder of Lucide SVGs to add new ones; otherwise the bodies
+# already used by these prototypes come from lucide-cache.json (Lucide, ISC licence), so the build runs anywhere.
+L = os.environ.get("LUCIDE_ICONS", "/home/claude/scratch-lucide/package/icons/")
+_CACHE = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "lucide-cache.json")))
 def ico(name):
-    s = open(L + name + ".svg").read()
-    inner = re.search(r"<svg[^>]*>(.*)</svg>", s, re.S).group(1).strip()
+    if os.path.exists(L + name + ".svg"):
+        s = open(L + name + ".svg").read()
+        inner = re.search(r"<svg[^>]*>(.*)</svg>", s, re.S).group(1).strip()
+    else:
+        inner = _CACHE[name]
     return f'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true">{inner}</svg>'
 
 PRICES = [("Wózek spacerowy", "siedzisko, budka, pasy, stelaż i koła", 90),

@@ -1,0 +1,939 @@
+{
+ "note": "Automatic checks for stroller-v1.1 (draft), run 2026-11-16 in headless Chrome on prototypes/stroller/final/*.html. contrastMin is the lowest text contrast found; smallTargets lists controls under 44px (inline links in running text are exempt, WCAG 2.5.8).",
+ "frames": {
+  "default-390": {
+   "width": 390,
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [],
+   "hiddenSlots": [
+    "nextFreeSlot: hidden",
+    "nextFreeSlot.label: hidden",
+    "before-after: hidden",
+    "reviews: hidden"
+   ],
+   "leftoverV1Strings": [],
+   "motion": {
+    "scroll": "smooth",
+    "transitions": [
+     "0s",
+     "0.15s, 0.15s",
+     "0.2s",
+     "0.2s, 0.2s",
+     "0.35s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "default-1440": {
+   "width": 1440,
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "hiddenSlots": [
+    "nextFreeSlot: hidden",
+    "nextFreeSlot.label: hidden",
+    "before-after: hidden",
+    "reviews: hidden"
+   ],
+   "leftoverV1Strings": [],
+   "motion": {
+    "scroll": "smooth",
+    "transitions": [
+     "0s",
+     "0.15s, 0.15s",
+     "0.2s",
+     "0.2s, 0.2s",
+     "0.35s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "hold-768": {
+   "width": 768,
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "hiddenSlots": [
+    "nextFreeSlot: hidden",
+    "nextFreeSlot.label: hidden",
+    "before-after: hidden",
+    "reviews: hidden"
+   ],
+   "leftoverV1Strings": [],
+   "motion": {
+    "scroll": "smooth",
+    "transitions": [
+     "0s",
+     "0.15s, 0.15s",
+     "0.2s",
+     "0.2s, 0.2s",
+     "0.35s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "hold-1024": {
+   "width": 1024,
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "hiddenSlots": [
+    "nextFreeSlot: hidden",
+    "nextFreeSlot.label: hidden",
+    "before-after: hidden",
+    "reviews: hidden"
+   ],
+   "leftoverV1Strings": [],
+   "motion": {
+    "scroll": "smooth",
+    "transitions": [
+     "0s",
+     "0.15s, 0.15s",
+     "0.2s",
+     "0.2s, 0.2s",
+     "0.35s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "cookie-390": {
+   "width": 390,
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "Szczegóły"
+   ],
+   "hiddenSlots": [
+    "nextFreeSlot: hidden",
+    "nextFreeSlot.label: hidden",
+    "before-after: hidden",
+    "reviews: hidden"
+   ],
+   "leftoverV1Strings": [],
+   "motion": {
+    "scroll": "smooth",
+    "transitions": [
+     "0s",
+     "0.15s, 0.15s",
+     "0.2s",
+     "0.2s, 0.2s",
+     "0.35s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "cookie-1440": {
+   "width": 1440,
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer",
+    "Szczegóły"
+   ],
+   "hiddenSlots": [
+    "nextFreeSlot: hidden",
+    "nextFreeSlot.label: hidden",
+    "before-after: hidden",
+    "reviews: hidden"
+   ],
+   "leftoverV1Strings": [],
+   "motion": {
+    "scroll": "smooth",
+    "transitions": [
+     "0s",
+     "0.15s, 0.15s",
+     "0.2s",
+     "0.2s, 0.2s",
+     "0.35s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "live-390": {
+   "width": 390,
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [],
+   "hiddenSlots": [
+    "nextFreeSlot: VISIBLE",
+    "nextFreeSlot.label: VISIBLE",
+    "before-after: VISIBLE",
+    "reviews: VISIBLE"
+   ],
+   "leftoverV1Strings": [],
+   "motion": {
+    "scroll": "smooth",
+    "transitions": [
+     "0s",
+     "0.15s, 0.15s",
+     "0.2s",
+     "0.2s, 0.2s",
+     "0.35s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "live-1440": {
+   "width": 1440,
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "hiddenSlots": [
+    "nextFreeSlot: VISIBLE",
+    "nextFreeSlot.label: VISIBLE",
+    "before-after: VISIBLE",
+    "reviews: VISIBLE"
+   ],
+   "leftoverV1Strings": [],
+   "motion": {
+    "scroll": "smooth",
+    "transitions": [
+     "0s",
+     "0.15s, 0.15s",
+     "0.2s",
+     "0.2s, 0.2s",
+     "0.35s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "faq-390": {
+   "width": 390,
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [],
+   "hiddenSlots": [
+    "nextFreeSlot: hidden",
+    "nextFreeSlot.label: hidden",
+    "before-after: hidden",
+    "reviews: hidden"
+   ],
+   "leftoverV1Strings": [],
+   "motion": {
+    "scroll": "smooth",
+    "transitions": [
+     "0s",
+     "0.15s, 0.15s",
+     "0.2s",
+     "0.2s, 0.2s",
+     "0.35s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "faq-1440": {
+   "width": 1440,
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "hiddenSlots": [
+    "nextFreeSlot: hidden",
+    "nextFreeSlot.label: hidden",
+    "before-after: hidden",
+    "reviews: hidden"
+   ],
+   "leftoverV1Strings": [],
+   "motion": {
+    "scroll": "smooth",
+    "transitions": [
+     "0s",
+     "0.15s, 0.15s",
+     "0.2s",
+     "0.2s, 0.2s",
+     "0.35s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "hold-320": {
+   "width": 320,
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "hiddenSlots": [
+    "nextFreeSlot: hidden",
+    "nextFreeSlot.label: hidden",
+    "before-after: hidden",
+    "reviews: hidden"
+   ],
+   "leftoverV1Strings": [],
+   "motion": {
+    "scroll": "smooth",
+    "transitions": [
+     "0s",
+     "0.15s, 0.15s",
+     "0.2s",
+     "0.2s, 0.2s",
+     "0.35s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "hold-360": {
+   "width": 360,
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [],
+   "hiddenSlots": [
+    "nextFreeSlot: hidden",
+    "nextFreeSlot.label: hidden",
+    "before-after: hidden",
+    "reviews: hidden"
+   ],
+   "leftoverV1Strings": [],
+   "motion": {
+    "scroll": "smooth",
+    "transitions": [
+     "0s",
+     "0.15s, 0.15s",
+     "0.2s",
+     "0.2s, 0.2s",
+     "0.35s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "hold-900": {
+   "width": 900,
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "hiddenSlots": [
+    "nextFreeSlot: hidden",
+    "nextFreeSlot.label: hidden",
+    "before-after: hidden",
+    "reviews: hidden"
+   ],
+   "leftoverV1Strings": [],
+   "motion": {
+    "scroll": "smooth",
+    "transitions": [
+     "0s",
+     "0.15s, 0.15s",
+     "0.2s",
+     "0.2s, 0.2s",
+     "0.35s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "reduced-390": {
+   "width": 390,
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [],
+   "hiddenSlots": [
+    "nextFreeSlot: hidden",
+    "nextFreeSlot.label: hidden",
+    "before-after: hidden",
+    "reviews: hidden"
+   ],
+   "leftoverV1Strings": [],
+   "motion": {
+    "scroll": "auto",
+    "transitions": [
+     "0s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "reduced-1440": {
+   "width": 1440,
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "hiddenSlots": [
+    "nextFreeSlot: hidden",
+    "nextFreeSlot.label: hidden",
+    "before-after: hidden",
+    "reviews: hidden"
+   ],
+   "leftoverV1Strings": [],
+   "motion": {
+    "scroll": "auto",
+    "transitions": [
+     "0s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "nophotos-390": {
+   "width": 390,
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [],
+   "hiddenSlots": [
+    "nextFreeSlot: hidden",
+    "nextFreeSlot.label: hidden",
+    "before-after: hidden",
+    "reviews: hidden"
+   ],
+   "leftoverV1Strings": [],
+   "motion": {
+    "scroll": "smooth",
+    "transitions": [
+     "0s",
+     "0.15s, 0.15s",
+     "0.2s",
+     "0.2s, 0.2s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "nophotos-1440": {
+   "width": 1440,
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "hiddenSlots": [
+    "nextFreeSlot: hidden",
+    "nextFreeSlot.label: hidden",
+    "before-after: hidden",
+    "reviews: hidden"
+   ],
+   "leftoverV1Strings": [],
+   "motion": {
+    "scroll": "smooth",
+    "transitions": [
+     "0s",
+     "0.15s, 0.15s",
+     "0.2s",
+     "0.2s, 0.2s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "nophotos-768": {
+   "width": 768,
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "hiddenSlots": [
+    "nextFreeSlot: hidden",
+    "nextFreeSlot.label: hidden",
+    "before-after: hidden",
+    "reviews: hidden"
+   ],
+   "leftoverV1Strings": [],
+   "motion": {
+    "scroll": "smooth",
+    "transitions": [
+     "0s",
+     "0.15s, 0.15s",
+     "0.2s",
+     "0.2s, 0.2s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "nophotos-1024": {
+   "width": 1024,
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "hiddenSlots": [
+    "nextFreeSlot: hidden",
+    "nextFreeSlot.label: hidden",
+    "before-after: hidden",
+    "reviews: hidden"
+   ],
+   "leftoverV1Strings": [],
+   "motion": {
+    "scroll": "smooth",
+    "transitions": [
+     "0s",
+     "0.15s, 0.15s",
+     "0.2s",
+     "0.2s, 0.2s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  }
+ },
+ "links": [
+  {
+   "text": "Przejdź do cennika",
+   "href": "#cennik"
+  },
+  {
+   "text": "Nowiutko, strona główna",
+   "href": "/"
+  },
+  {
+   "text": "736 369 704",
+   "href": "tel:+48736369704"
+  },
+  {
+   "text": "Wyślij zdjęcia na WhatsApp",
+   "href": "https://wa.me/48736369704?text=Dzie%C5%84%20dobry%2C%20prosz…"
+  },
+  {
+   "text": "Wyślij zdjęcia na WhatsApp",
+   "href": "https://wa.me/48736369704?text=Dzie%C5%84%20dobry%2C%20prosz…"
+  },
+  {
+   "text": "Pełny cennik i pakiety",
+   "href": "#cennik"
+  },
+  {
+   "text": "Zadzwoń: 736 369 704",
+   "href": "tel:+48736369704"
+  },
+  {
+   "text": "zdjęcie własnewózek i fotelikProblemDrugie dz",
+   "href": "#cennik"
+  },
+  {
+   "text": "Wyślij zdjęcia na WhatsApp",
+   "href": "https://wa.me/48736369704?text=Dzie%C5%84%20dobry%2C%20prosz…"
+  },
+  {
+   "text": "Wyślij zdjęcia na WhatsApp",
+   "href": "https://wa.me/48736369704?text=Dzie%C5%84%20dobry%2C%20prosz…"
+  },
+  {
+   "text": "Zadzwoń: 736 369 704",
+   "href": "tel:+48736369704"
+  },
+  {
+   "text": "SMS-em na ten sam numer",
+   "href": "sms:+48736369704"
+  },
+  {
+   "text": "Prywatność",
+   "href": "/polityka-prywatnosci"
+  },
+  {
+   "text": "Ustawienia cookies",
+   "href": "(button open-cookie-settings)"
+  },
+  {
+   "text": "Wyślij zdjęcia na WhatsApp",
+   "href": "https://wa.me/48736369704?text=Dzie%C5%84%20dobry%2C%20prosz…"
+  },
+  {
+   "text": "Zadzwoń: 736 369 704",
+   "href": "tel:+48736369704"
+  },
+  {
+   "text": "Wyślij zdjęcia na WhatsApp (sticky, phones)",
+   "href": "https://wa.me/48736369704?text=…"
+  },
+  {
+   "text": "Zadzwoń: 736 369 704 (sticky, phones)",
+   "href": "tel:+48736369704"
+  }
+ ],
+ "headings": [
+  "H1 Pranie wózków i fotelików dziecięcych w Poznaniu i",
+  "H2 Dlaczego nie wyprać wózka samemu?",
+  "H3 Gondola żółta od oliwki",
+  "H3 Fotelik po podróży",
+  "H3 Spacerówka po lecie",
+  "H3 Drugie dziecko w drodze",
+  "H2 Pranie wózka i fotelika – cena",
+  "H3 Fotelik to sprzęt bezpieczeństwa. Tak go traktujem",
+  "H3 Nowy Członek Rodziny",
+  "H3 Rodzinny",
+  "H3 Auto i Maluch",
+  "H2 Jak to działa",
+  "H3 Wyślij zdjęcia",
+  "H3 Dostań cenę i termin",
+  "H3 Pierzemy u Ciebie",
+  "H2 Foteliki Cybex, Maxi-Cosi, Britax i Avionaut – wed",
+  "H2 Najczęstsze pytania",
+  "H2 Gdzie dojeżdżamy",
+  "H3 Strefa 1",
+  "H3 Strefa 2",
+  "H3 Dalej",
+  "H2 Wyślij 2–3 zdjęcia. Cenę podamy dziś."
+ ],
+ "keyboard": {
+  "k390-tabs": [
+   {
+    "focus": "Przejdź do cennika",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Nowiutko, strona główna",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "736 369 704",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Wyślij zdjęcia na WhatsApp",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Pełny cennik i pakiety",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Zadzwoń: 736 369 704",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "zdjęcie własnewózek i fotelikP",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Wyślij zdjęcia na WhatsApp",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Ile kosztuje pranie wózka dzie",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Ile kosztuje pranie fotelika s",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Jak pierzecie foteliki Cybex c",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Czy środki są bezpieczne dla n",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Kiedy wózek będzie gotowy?",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Czy usuniecie pleśń z gondoli?",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Czy czyścicie też stelaż i koł",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Wyślij zdjęcia na WhatsApp",
+    "ring": "3px solid rgb(255, 255, 255) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Zadzwoń: 736 369 704",
+    "ring": "3px solid rgb(255, 255, 255) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "SMS-em na ten sam numer",
+    "ring": "3px solid rgb(255, 255, 255) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Prywatność",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Ustawienia cookies",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Wyślij zdjęcia na WhatsApp",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Zadzwoń: 736 369 704",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   }
+  ],
+  "k1440-tabs": [
+   {
+    "focus": "Przejdź do cennika",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Nowiutko, strona główna",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "736 369 704",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Wyślij zdjęcia na WhatsApp",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Wyślij zdjęcia na WhatsApp",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Pełny cennik i pakiety",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Zadzwoń: 736 369 704",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "zdjęcie własnewózek i fotelikP",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Wyślij zdjęcia na WhatsApp",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Ile kosztuje pranie wózka dzie",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Ile kosztuje pranie fotelika s",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Jak pierzecie foteliki Cybex c",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Czy środki są bezpieczne dla n",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Kiedy wózek będzie gotowy?",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Czy usuniecie pleśń z gondoli?",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Czy czyścicie też stelaż i koł",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Wyślij zdjęcia na WhatsApp",
+    "ring": "3px solid rgb(255, 255, 255) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Zadzwoń: 736 369 704",
+    "ring": "3px solid rgb(255, 255, 255) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "SMS-em na ten sam numer",
+    "ring": "3px solid rgb(255, 255, 255) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Prywatność",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Ustawienia cookies",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   },
+   {
+    "focus": "Przejdź do cennika",
+    "ring": "3px solid rgb(18, 48, 43) +3px",
+    "inView": true,
+    "coveredByStickyBar": false
+   }
+  ]
+ }
+}

@@ -1,5 +1,7 @@
 # Copy: stroller counter
 
+**`stroller-v1.1` (draft, awaiting the owner's approval): early launch without the quote form.** Changed keys are marked *(v1.1)*; everything else is as in `stroller-v1`. The one action is "Wyślij zdjęcia na WhatsApp"; the label is the same in every place.
+
 Final Polish copy, keyed. `{...}` = comes from the database, never hard-coded. Voice: "Ty", short, concrete. **Wording of the H1 and hero is the brand strategist's call** (see README, open questions); the keys below hold the version in the approved design.
 
 ## Head
@@ -8,8 +10,14 @@ Final Polish copy, keyed. `{...}` = comes from the database, never hard-coded. V
 - `meta.canonical` — https://nowiutko.pl/poznan/pranie-wozkow-i-fotelikow
 
 ## Header
-- `header.phone` — `{business:phone}` (placeholder 500 000 000 until the owner supplies it)
-- `header.cta` — Wyślij zdjęcia
+- `header.phone` — `{business:phone}`, shown as **736 369 704**, link `tel:+48736369704` *(v1.1: real number)*
+- `header.cta` — Wyślij zdjęcia na WhatsApp *(v1.1; the shared key `cta.whatsapp`)*
+
+## Contact (v1.1, used by every button)
+- `cta.whatsapp` — Wyślij zdjęcia na WhatsApp → `https://wa.me/{business:whatsapp}?text={whatsapp.prefill}` (`{business:whatsapp}` = `48736369704`)
+- `whatsapp.prefill` — Dzień dobry, proszę o wycenę prania wózka lub fotelika. Wysyłam zdjęcia. Miejscowość:␣ *(ends with a space; URL-encoded in the link; page copy, not owner data)*
+- `cta.call` — Zadzwoń: `{business:phone}` → `tel:`
+- `cta.sms` — Nie masz WhatsAppa? Wyślij zdjęcia [SMS-em na ten sam numer](sms:+48736369704).
 
 ## Hero
 - `hero.h1` (real `<h1>`, styled as eyebrow) — Pranie wózków i fotelików dziecięcych w Poznaniu i okolicach
@@ -19,9 +27,10 @@ Final Polish copy, keyed. `{...}` = comes from the database, never hard-coded. V
 - `hero.card.eyebrow` — Cennik brutto
 - `hero.card.sub` — cena ze zdjęć, przed przyjazdem
 - `hero.card.rows` — Wózek spacerowy `{price:stroller-single}` · Wózek 2w1 `{price:stroller-2in1}` · Fotelik samochodowy `{price:carseat}` · Wózek 3w1 `{price:stroller-3in1}` (each "od N zł")
-- `hero.card.nextslot` — Najbliższy wolny termin: `{nextFreeSlot.label}` *(hidden when there is no real free slot; never a timer)*
-- `hero.card.cta` — Wyślij 2–3 zdjęcia – cena dziś
-- `hero.card.links` — Pełny cennik i pakiety (#cennik) · Napisz na WhatsApp (`{business:whatsapp}`, text only)
+- `hero.card.nextslot` — Najbliższy wolny termin: `{nextFreeSlot.label}` *(v1.1: hidden for the whole early launch; never a timer)*
+- `hero.card.cta` — `cta.whatsapp` *(v1.1; was "Wyślij 2–3 zdjęcia – cena dziś")*
+- `hero.card.promise` — 2–3 zdjęcia wystarczą. Cenę podamy dziś. *(v1.1, new: one muted line under the button; it carries the promise the old button label had)*
+- `hero.card.links` — Pełny cennik i pakiety (#cennik) · `cta.call` *(v1.1; was "Napisz na WhatsApp")*
 
 ## Proof bar (no heading)
 1. **Tego samego dnia** — Rano pierzemy, po południu idziecie na spacer.
@@ -44,17 +53,17 @@ Final Polish copy, keyed. `{...}` = comes from the database, never hard-coded. V
 - `price.h2` — Pranie wózka i fotelika – cena
 - `price.lede` — Ceny brutto, z dojazdem w Strefie 1. Dokładną kwotę podajemy ze zdjęć, zanim przyjedziemy.
 - Rows (name · description · price key): Wózek spacerowy · siedzisko, budka, pasy, stelaż i koła · `stroller-single` / Wózek 2w1 · gondola + spacerówka, stelaż i koła · `stroller-2in1` / Wózek 3w1 · z fotelikiem-nosidełkiem · `stroller-3in1` / Wózek bliźniaczy · `stroller-twin` / Fotelik samochodowy · pokrowiec, skorupa, baza · `carseat` / Krzesełko, leżaczek lub mata · `highchair`
-- `price.note` — Minimalne zamówienie `{business:min-order}`. Przy silnych zabrudzeniach (pleśń, wymioty) wycenimy ze zdjęć przed przyjazdem. [Pełny cennik](/cennik)
+- `price.note` — Minimalne zamówienie `{business:min-order}`. Przy silnych zabrudzeniach (pleśń, wymioty) wycenimy ze zdjęć przed przyjazdem. *(v1.1: the link "Pełny cennik" → `/cennik` is removed until that page exists)*
 - Safety panel — eyebrow *Foteliki samochodowe*; h3 *Fotelik to sprzęt bezpieczeństwa. Tak go traktujemy.*; bullets: Pokrowiec i skorupę czyścimy według instrukcji producenta. / Pasy czyścimy tylko powierzchniowo, bo moczenie osłabia ich wytrzymałość. / Środki hipoalergiczne, bezpieczne dla niemowląt po wyschnięciu.
 - Packages (price + struck-through earlier price from `{price:pack-*}` and `{price:pack-*-was}`): **Nowy Członek Rodziny** (tag *przed porodem*): Materac dwuosobowy, Wózek 2w1, Fotelik samochodowy · **Rodzinny** (tag *najczęściej wybierany*): Kanapa 3-osobowa, Wózek 2w1, Fotelik samochodowy · **Auto i Maluch** (tag *auto i maluch*): Pranie tapicerki auta, Wózek 2w1, Fotelik samochodowy. *The tag "najczęściej wybierany" is a claim: show it only if the owner's data says so (`{pack:*:badge}`).*
 
 ## Steps (H2)
 - `steps.eyebrow` — Trzy kroki, zero wychodzenia z domu
 - `steps.h2` — Jak to działa
-- 1 **Wyślij zdjęcia** — 2–3 zdjęcia przez WhatsApp, SMS lub formularz. Napisz, gdzie mieszkasz.
+- 1 **Wyślij zdjęcia** — 2–3 zdjęcia przez WhatsApp lub SMS. Napisz, gdzie mieszkasz. *(v1.1: "lub formularz" removed)*
 - 2 **Dostań cenę i termin** — Zwykle w kilka minut. Wolne terminy często już na następny dzień.
 - 3 **Pierzemy u Ciebie** — Przywozimy sprzęt i środki. Potrzebujemy tylko wody i gniazdka.
-- `steps.cta` — Wyślij 2–3 zdjęcia
+- `steps.cta` — `cta.whatsapp` *(v1.1; was "Wyślij 2–3 zdjęcia")*
 
 ## Before/after (hidden until real photos exist)
 - `beforeafter.h2` — Wózki przed i po praniu · eyebrow *Efekty* · each pair with a one-line caption written by the owner. Data: `{beforeAfter:stroller}`.
@@ -80,19 +89,19 @@ Final Polish copy, keyed. `{...}` = comes from the database, never hard-coded. V
 
 ## Service area (H2)
 - `area.eyebrow` — Obszar działania · `area.h2` — Gdzie dojeżdżamy
-- `area.lede` — Poznań i okolice, tam gdzie mieszkają rodziny. W Strefie 1 dojazd jest gratis. [Pełna lista miejscowości i stref](/poznan/obszar-dzialania)
+- `area.lede` — Poznań i okolice, tam gdzie mieszkają rodziny. W Strefie 1 dojazd jest gratis. *(v1.1: the link "Pełna lista miejscowości i stref" → `/poznan/obszar-dzialania` is removed until that page exists)*
 - Zones come from `{zones}`: **Strefa 1** — dojazd gratis — Poznań, Suchy Las, Swarzędz, Luboń, Komorniki, Plewiska, Skórzewo, Tarnowo Podgórne, Rokietnica, Czerwonak · **Strefa 2** — 25 zł, gratis od 400 zł — Kórnik, Mosina, Puszczykowo, Dopiewo, Murowana Goślina, Pobiedziska, Buk, Stęszew, Kleszczewo · **Dalej** — 1,50 zł/km — Poza powiatem poznańskim wycenimy dojazd indywidualnie.
 
 ## Final CTA (master promise, PRD S9)
 - `final.h2` — Wyślij 2–3 zdjęcia. Cenę podamy dziś.
 - `final.text` — Przyjeżdżamy na czas. Płacisz tyle, ile podaliśmy ze zdjęć. Jeśli coś wyjdzie po wyschnięciu, wracamy za darmo.
-- Buttons: Wyślij zdjęcia · Napisz na WhatsApp · "Zadzwoń: `{business:phone}`"
+- Buttons *(v1.1)*: `cta.whatsapp` (white solid) · `cta.call` (white outline, Lucide `phone`) · then the line `cta.sms`
 
 ## Footer
-Nowiutko · pranie tapicerki, wózków i aut u Ciebie · Poznań — links: Prywatność, Cookies, Regulamin (pages from issue #47).
+Nowiutko · pranie tapicerki, wózków i aut u Ciebie · Poznań — *(v1.1)* link **Prywatność** (privacy page, issue #47) and button **Ustawienia cookies** (reopens the cookie banner). "Cookies" and "Regulamin" are removed: those pages do not exist at the early launch. Company details arrive with the footer job (cleaning-design #5, item 4).
 
 ## Cookie banner
-- Title *Ciasteczka* · text *Używamy niezbędnych ciasteczek, żeby strona działała. Za Twoją zgodą także analitycznych, żeby wiedzieć, co poprawić.* · link *Szczegóły* · buttons *Akceptuję* / *Odrzucam* (identical style and size).
+- Title *Ciasteczka* · text *Używamy niezbędnych ciasteczek, żeby strona działała. Za Twoją zgodą także analitycznych, żeby wiedzieć, co poprawić.* · link *Szczegóły* → the cookies section of the privacy page *(v1.1; was `/cookies`)* · buttons *Akceptuję* / *Odrzucam* (identical style and size).
 
 ## Alt texts (photos supplied by the owner; plain Polish, describe the picture, no keywords lists)
 - Slots: `gondola-podszewka` · `fotelik-baza` · `spacerowka-szwy` · `wozek-i-fotelik` · `fotelik-samochodowy` · before/after pairs. Example: "Gondola wózka przed praniem – żółta plama po oliwce na podszewce". Decorative stand-ins get `alt=""`. File names Polish, hyphenated (`pranie-gondoli-wozka-przed-po.webp`).

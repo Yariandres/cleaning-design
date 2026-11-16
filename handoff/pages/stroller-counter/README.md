@@ -1,39 +1,87 @@
 # Stroller counter — `/poznan/pranie-wozkow-i-fotelikow`
 
 ## 1. Tag and status
-- **Tag:** `stroller-v1`, approved by the owner on 2026-11-13 (Direction 2, "Cennik pierwszy").
-- Designed against `docs/design-constraints.md` in cleaning-sell-system at commit `85dee45`, and `DESIGN.md` in this repo at the tag.
+- **Tag: `stroller-v1.1` — DRAFT, awaiting the owner's approval (prepared 2026-11-16). Not tagged, not pushed. Until it is tagged, `stroller-v1` is the only approved version.**
+- `stroller-v1.1` is the **early-launch version** (owner priority [cleaning-design #5](https://github.com/Yariandres/cleaning-design/issues/5), developer [#8](https://github.com/Yariandres/cleaning-sell-system/issues/8)): the page goes live on nowiutko.pl before the quote form exists. Booking is by WhatsApp and phone.
+- `stroller-v1` (approved 2026-11-13, Direction 2 "Cennik pierwszy") stays as it is at its tag. It is the version **with** the quote form; see "After the quote form is live" at the end of the next section.
+- Designed against `docs/design-constraints.md` in cleaning-sell-system at commit `85dee45` (unchanged since v1), and `DESIGN.md` in this repo at the tag.
 - **No Figma for this handover** (owner decision, 2026-11-13). The visuals are the PNGs in `screens/` and the working HTML reference below.
 
+## What changed since `stroller-v1` (read this first)
+
+Layout, sections, order, tokens, fonts, prices, FAQ and headings are **unchanged**. Only the action, a few links, two fixes and one new state.
+
+**1. The one action is now "Wyślij zdjęcia na WhatsApp".** Every solid button on the page is the same link, in every place (header, hero card, steps, final CTA, phone sticky bar):
+
+```
+https://wa.me/{business:whatsapp}?text={urlencoded copy key whatsapp.prefill}
+```
+
+- `{business:whatsapp}` is the number in international format, digits only (`48736369704`). In v1 this binding was described as "a wa.me link"; treat it as the **number** and build the link in the template. With the admin switch "WhatsApp na tym samym numerze" on, it equals `{business:phone}`.
+- `whatsapp.prefill` is page copy (in `copy.md`), not owner data: *"Dzień dobry, proszę o wycenę prania wózka lub fotelika. Wysyłam zdjęcia. Miejscowość: "* (keep the trailing space; URL-encode it). It tells the owner which page the message came from and prompts for the town.
+- A plain link: no `target`, `rel="noopener"`, no script. On a phone it opens the WhatsApp app; on a desktop WhatsApp's own page offers the desktop app or WhatsApp Web. Nothing on our page depends on which.
+- In v1 the header, hero, steps and sticky buttons scrolled to the final section (`#wycena`) and only that section linked to `/poznan/wycena`. Now every button goes straight to WhatsApp. The final section's id is `kontakt`; nothing links to it from this page (homepage v0 may).
+
+**2. The phone call is the second action.** `tel:+48{business:phone}`: header number (as before), a text link in the hero card ("Zadzwoń: 736 369 704", replaces "Napisz na WhatsApp"), the outlined button in the final CTA ("Zadzwoń: 736 369 704", replaces the outlined "Napisz na WhatsApp" and the old "Zadzwoń:" line), and the phone icon in the sticky bar (its accessible name is now "Zadzwoń: 736 369 704").
+
+**3. SMS is the fallback for people without WhatsApp.** One sentence under the final CTA buttons: "Nie masz WhatsAppa? Wyślij zdjęcia SMS-em na ten sam numer." linking to `sms:+48{business:phone}` (no body parameter; its syntax differs between iOS and Android).
+
+**4. The real number.** `{business:phone}` = **+48 736 369 704**, shown as "736 369 704". WhatsApp is on the same number. The placeholder 500 000 000 is gone from this page.
+
+**5. Removed until their pages exist** (restore each link when its page ships; the SEO brief still wants them):
+
+| Was in v1 | Now | Restore when |
+|---|---|---|
+| `price.note` link "Pełny cennik" → `/cennik` | removed; the sentence ends after "…przed przyjazdem." | `/cennik` exists |
+| `area.lede` link "Pełna lista miejscowości i stref" → `/poznan/obszar-dzialania` | removed; the lede ends after "…dojazd jest gratis." | that page exists |
+| Final CTA button → `/poznan/wycena` | WhatsApp link (above) | the quote form is live |
+| Footer links "Cookies" → `/cookies`, "Regulamin" → `/regulamin` | "Cookies" becomes a **button** "Ustawienia cookies" that reopens the cookie banner; "Regulamin" removed | a terms page exists (the footer itself is scope item 4 of #5, a later handover) |
+| Cookie banner "Szczegóły" → `/cookies` | → the privacy page's cookies section (prototype: `/polityka-prywatnosci#cookies`; use your real route and anchor) | — |
+| Step 1 "…przez WhatsApp, SMS lub formularz." | "…przez WhatsApp lub SMS." | the quote form is live |
+
+**6. Next free slot stays hidden for the early launch**, even when working hours are set. Bookings are made by hand on WhatsApp and are not in the system yet, so a slot computed from working hours alone could be untrue (PRD S5: true urgency only). Show it again once bookings live in the calendar. In v1's prototype the strip was visible in the default screens because a CSS rule overrode the `hidden` attribute; that is fixed, and the default screens now show the page without it. The live state is still in `screens/09`–`10`.
+
+**7. Two fixes to v1** (please check the built page for both):
+- **Headings on dark surfaces were unreadable.** The final CTA `h2` and the safety panel `h3` were `neutral-900` on `primary-800` (1.04:1) and `neutral-900` on `neutral-900` (1:1, invisible). They are **white** now (13.6:1 and 14.2:1). v1's contrast check missed them.
+- **Reduced motion:** the FAQ plus sign still rotated (the rule did not cover pseudo-elements). Also new: `scroll-padding-bottom: 88px` below 900px, so an element focused by keyboard is never hidden under the sticky bar (WCAG 2.2 SC 2.4.11).
+
+**8. New state: no photos yet** (`screens/13`–`14`, `state-no-photos.html`). This is the likely look on launch day. No placeholder ever ships: the four problem cards become text cards in a 2 × 2 grid (from 700px; stacked below), and the car-seat section becomes one text column (max 760px). Same copy, same order, same link. Each slot switches back to the photo layout on its own when its photo exists; the problem cards switch **together** (all four photos or none), so the bento never mixes.
+
+**9. Click tracking hooks.** With no form, WhatsApp, phone and SMS clicks are the only conversion signals. The prototype marks them `data-cta="whatsapp|phone|sms"` and `data-cta-pos="header|hero|steps|final|sticky"`. Whether and how they are measured (only with analytics consent) is the developer's and SEO desk's call.
+
+**After the quote form is live:** the primary buttons go back to the form (`stroller-v1` behaviour, as a new tag), WhatsApp and phone return to being "alternative doors" (PRD S3). The two fixes, the no-photos state and the real number stay.
+
 ## 2. Issues
-- Developer issues: **#40** (build from a tagged handover), **#41** (counter template), **#42** (stroller counter content), **#44** (reviews and before/after slots, kept hidden), **#46** (cookie banner)
-- PRD: S2, S3, S4, S5, S6, S8, S9
-- SEO: [cleaning-design #2](https://github.com/Yariandres/cleaning-design/issues/2) and `seo/briefs/stroller-counter.md` in cleaning-seo. Title, meta description, H2 order and the seven FAQ questions follow it.
+- Early launch: [cleaning-design #5](https://github.com/Yariandres/cleaning-design/issues/5) scope item 1 · developer [#8](https://github.com/Yariandres/cleaning-sell-system/issues/8) point 4 ("nothing links to the quote form or unbuilt pages")
+- Developer issues (as v1): **#40** (build from a tagged handover), **#41** (counter template), **#42** (stroller counter content), **#44** (reviews and before/after slots, kept hidden), **#46** (cookie banner; adds the "Ustawienia cookies" footer button), **#47** (privacy page, target of two links)
+- PRD: S2, S3 (one action; for the early launch the action is WhatsApp), S4, S5, S6, S8, S9
+- SEO: [cleaning-design #2](https://github.com/Yariandres/cleaning-design/issues/2) and `seo/briefs/stroller-counter.md` in cleaning-seo. Title, meta description, H1, H2 order and the seven FAQ questions are unchanged. Two in-content links the brief asks for are removed until their pages exist (see §9).
 
 ## 3. Visuals (instead of Figma frames)
-- `screens/` (PNG, light only): `01`/`02` full page at 390 and 1440 · `03`/`04` the same layout held at 768 and 1024 · `05`/`06` the first screen · `07`/`08` cookie banner · `09`/`10` reviews, before/after and next-slot **live** states · `11`/`12` FAQ open with a long price-row label.
-- **Working HTML reference** (the source of truth for measurements, spacing, hover states and breakpoints): `prototypes/stroller/final/stroller-counter.html` at this tag, with `prototypes/stroller/base.css`. Open it in a browser and inspect it. It is a prototype, not production code; recreate it with Nuxt UI components and the tokens in `handoff/tokens/`. States: `state-cookie.html`, `state-live-slots.html`, `state-faq-open-long.html`. Share image: `assets/og-template.html`.
-- Regenerate the prototype: `python3 prototypes/stroller/build_final.py` (needs the Lucide icon folder; not needed to read the HTML).
+- `screens/` (PNG, light only): `01`/`02` full page at 390 and 1440 · `03`/`04` the same layout held at 768 and 1024 · `05`/`06` the first screen · `07`/`08` cookie banner · `09`/`10` reviews, before/after and next-slot **live** states · `11`/`12` FAQ open with a long price-row label · **`13`/`14` no photos yet (new)**. `checks.json` is the automatic check output. All screens were regenerated for v1.1; v1's are at the `stroller-v1` tag.
+- **Working HTML reference** (the source of truth for measurements, spacing, hover states and breakpoints): `prototypes/stroller/final/stroller-counter.html` at this tag, with `prototypes/stroller/base.css`. Open it in a browser and inspect it. It is a prototype, not production code; recreate it with Nuxt UI components and the tokens in `handoff/tokens/`. States: `state-cookie.html`, `state-live-slots.html`, `state-faq-open-long.html`, `state-no-photos.html`. Share image: `assets/og-template.html` (unchanged; the final OG image is scope item 3 of #5).
+- Regenerate the prototype: `python3 prototypes/stroller/build_final.py`. It now runs anywhere: icon bodies come from `prototypes/stroller/lucide-cache.json` (Lucide, ISC licence) unless `LUCIDE_ICONS` points at a Lucide icon folder.
+- Diff against v1: `git diff stroller-v1 stroller-v1.1 -- prototypes/stroller handoff`.
 
 ## 4. Sections in order
-Counter pages have **no main menu**: logo + phone only (PRD S3). One action: start a quote.
+Counter pages have **no main menu**: logo + phone only (PRD S3). **One action: send photos on WhatsApp.** Second action: call. Fallback: SMS.
 
 | # | Section | Heading | Notes |
 |---|---|---|---|
-| 0 | Header | — | Logo left; phone (tel link) and "Wyślij zdjęcia" button right (button hidden below 900px) |
-| 1 | Hero | `<h1>` as eyebrow + big headline | 2 columns from 900px (copy / price card 480px), 1 column below. The **price card is the hero's main object**: the price is visible on the first phone screen. The big headline is a `<p class="display">`, not a heading, so the page has one H1 |
-| 2 | Proof bar | none | First fact ("Tego samego dnia") large with the sun-yellow icon; three smaller facts with `primary-100` icon circles. 4 columns from 900px (1.3fr 1fr 1.15fr 1fr), lead fact on top at phone width |
-| 3 | Headache | H2 | Bento from 900px: large card (spans 2 rows), two small, one wide linked card; stacked on phone |
-| 4 | Price | H2 | Price list (left) + dark safety panel (right) from 1000px; three package cards below |
-| 5 | Steps | H2 | 3 columns from 800px; one button below |
+| 0 | Header | — | Logo left (links to `/`, homepage v0); phone (tel link) and "Wyślij zdjęcia na WhatsApp" button right (button hidden below 900px) |
+| 1 | Hero | `<h1>` as eyebrow + big headline | 2 columns from 900px (copy / price card 480px), 1 column below. The **price card is the hero's main object**: the price is visible on the first phone screen. The big headline is a `<p class="display">`, not a heading, so the page has one H1. Card: four price rows, the WhatsApp button, one muted line ("2–3 zdjęcia wystarczą. Cenę podamy dziś."), two text links ("Pełny cennik i pakiety" → `#cennik`, "Zadzwoń: 736 369 704" → `tel:`). No next-slot strip at the early launch |
+| 2 | Proof bar | none | Unchanged |
+| 3 | Headache | H2 | Bento from 900px: large card (spans 2 rows), two small, one wide linked card (→ `#cennik`); stacked on phone. **Without photos: 2 × 2 text cards** (`screens/13`–`14`) |
+| 4 | Price | H2 | Price list (left) + dark safety panel (right) from 1000px; three package cards below. Note under the list has no link now |
+| 5 | Steps | H2 | 3 columns from 800px; one WhatsApp button below |
 | 6 | Before/after | H2 | **Hidden** until real photos exist (`hidden` attribute and `data-slot="before-after"` in the prototype) |
-| 7 | Car seats by brand | H2 | Text + 4:3 photo from 900px; band background |
+| 7 | Car seats by brand | H2 | Text + 4:3 photo from 900px; band background. **Without the photo: one text column** |
 | 8 | Reviews | H2 | **Hidden** until real reviews exist (`data-slot="reviews"`) |
 | 9 | FAQ | H2 | `UAccordion` with **`:unmount-on-hide="false"`** (answers must be in the HTML), first item open |
-| 10 | Service area | H2 | Text only, three zone columns; link to `/poznan/obszar-dzialania` |
-| 11 | Final CTA | H2 | Dark `primary-800` band; master promise (S9); primary white button + outlined "Napisz na WhatsApp" (text only) + phone |
-| 12 | Footer | — | One line of text + three links |
-| — | Sticky bar | — | Phones only (<900px): "Wyślij zdjęcia" + phone icon, 76px reserved at the page bottom |
+| 10 | Service area | H2 | Text only, three zone columns; no link at the early launch |
+| 11 | Final CTA (`id="kontakt"`) | H2 | Dark `primary-800` band; master promise (S9); white solid "Wyślij zdjęcia na WhatsApp" + white outlined "Zadzwoń: 736 369 704" (Lucide `phone`) + one line with the SMS link. Buttons are full width and stacked below 700px |
+| 12 | Footer | — | One line of text + "Prywatność" link + "Ustawienia cookies" button (styled as a link, 44px tall). Company details come with scope item 4 of #5 |
+| — | Sticky bar | — | Phones only (<900px): "Wyślij zdjęcia na WhatsApp" + 48px phone button, 76px reserved at the page bottom. The label stays on one line; below 360px the camera icon is dropped and the text is 15px so it still fits at 320 |
 | — | Cookie banner | — | See states |
 
 Alternating backgrounds: the headache, car-seat and area sections sit on `neutral-100`; the rest on `neutral-50`; proof bar on white.
@@ -48,9 +96,10 @@ Everything from the database is marked `data-bind` in the prototype. Never hard-
 | `{price:stroller-single}` `{price:stroller-2in1}` `{price:stroller-3in1}` `{price:stroller-twin}` `{price:carseat}` `{price:highchair}` | "od 90 zł" … | hero card (4 rows), price list (6 rows), FAQ answers 1–2, meta title/description |
 | `{price:pack-new-member}` `{price:pack-family}` `{price:pack-car-baby}` and `…-was` | "319 zł" with struck-through "350 zł" | package cards, headache card 4 |
 | `{business:min-order}` | "150 zł" | price note |
-| `{business:phone}` | "500 000 000" (**placeholder**, owner to supply) | header, final CTA, sticky bar `tel:` |
-| `{business:whatsapp}` | `wa.me` link | hero card, final CTA (text button, no brand icon) |
-| `{nextFreeSlot}` / `.label` | "jutro, 10:00" | hero card line, **hidden when there is no real slot** (S5: true urgency only; no timers) |
+| `{business:phone}` | **"736 369 704"** (real; stored as +48736369704) | `tel:` in the header, hero card link, final CTA button, sticky bar; `sms:` in the final CTA line. **Changed:** more places than v1, and it now also feeds the SMS link |
+| `{business:whatsapp}` | the **number** `48736369704` (same as the phone) | every solid button (5 places), as `https://wa.me/{number}?text={whatsapp.prefill}`. **Changed meaning:** was "a wa.me link" on two secondary links; is now the page's main action |
+| `whatsapp.prefill` (copy key, not data) | prefilled message | the `text` parameter of every WhatsApp link |
+| `{nextFreeSlot}` / `.label` | "jutro, 10:00" | hero card line. **Hidden for the whole early launch** (see "What changed", 6) |
 | `{faq:stroller}` | 7 Q&A | FAQ and FAQPage JSON-LD (same text) |
 | `{reviews:stroller}` | review cards | hidden until entries exist |
 | `{beforeAfter:stroller}` | photo pairs + caption | hidden until entries exist |
@@ -58,28 +107,32 @@ Everything from the database is marked `data-bind` in the prototype. Never hard-
 | `{pack:*:badge}` | "najczęściej wybierany" | package tag; show only if the owner marks it |
 
 ## 6. States
-- **Default** — `screens/01`–`06`.
-- **Hold at 768 and 1024** — `03`, `04`: layout was checked at 390, 768, 1024, 1440 and 320; no horizontal scroll at any.
-- **Cookie banner** — `07`, `08`. Fixed bottom, white, top shadow. Title + one short paragraph + two buttons of **identical** size and style (both `primary` solid; equal weight, per constraint). Stacks above the sticky bar until a choice is made; on phones the buttons share a row. Built from Nuxt UI parts (issue #46).
-- **Reviews / before-after / next-slot live** — `09`, `10`. The review and photo contents in these screenshots are **wireframe placeholders**, never real-looking quotes. Real data replaces them.
-- **Empty (default)** — photo slots show a striped `neutral-100` placeholder with a dashed `neutral-400` border and a label. In production an empty slot must not ship as a placeholder: either the owner's photo is there, or the slot is hidden or replaced by the plain layout (headache cards without a photo: drop the image frame and keep the text card).
+- **Default** — `screens/01`–`06` (with photo placeholders, no next-slot strip).
+- **No photos yet (launch day)** — `13`, `14`. See "What changed", 8.
+- **Hold at 768 and 1024** — `03`, `04`: layout was checked at 320, 360, 390, 768, 900, 1024 and 1440; no horizontal scroll at any.
+- **Cookie banner** — `07`, `08`. Unchanged, except "Szczegóły" now points at the privacy page. It can be reopened from the footer ("Ustawienia cookies"); reopened, it looks the same.
+- **Reviews / before-after / next-slot live** — `09`, `10`. The review and photo contents in these screenshots are **wireframe placeholders**, never real-looking quotes. Real data replaces them. Not used at the early launch.
+- **Empty photo slots** — the striped placeholder exists only in the prototype. In production: the owner's photo, or the no-photos layout.
 - **FAQ open + long text** — `11`, `12`: all items open; a long price-row label wraps and keeps the price right-aligned and unbroken (`white-space: nowrap` on the price).
-- **Loading / error / success:** none on this page. The quote form is a separate job and handover.
-- **No JavaScript:** all content, headings and FAQ answers are in the HTML; the FAQ also works as native `<details>`.
+- **Loading / error / success:** none. The page has no form; the links leave to WhatsApp, the dialler or the SMS app.
+- **No WhatsApp installed / desktop:** handled by WhatsApp's own page after the click. On our side the phone number is always visible as text (header, hero card, final CTA), so a desktop visitor can pick up the phone.
+- **No JavaScript:** all content, headings, FAQ answers and every contact link work without it. Only "Ustawienia cookies" needs script.
 
 ## 7. Accessibility
-- Focus: 3px solid `neutral-900`, 3px offset; white on dark surfaces (`primary-800` final CTA, `neutral-900` safety panel). Never `outline: none`.
+- Focus: 3px solid `neutral-900`, 3px offset; white on dark surfaces (`primary-800` final CTA, `neutral-900` safety panel). Never `outline: none`. Checked by keyboard on every control (`checks.json` → `keyboard`).
 - Skip link first in the tab order: "Przejdź do cennika".
-- Tab order = visual order: logo → phone → header button → hero card button and links → proof bar (no focus) → linked headache card → price link → steps button → FAQ summaries → area link → final CTA buttons → phone → footer links.
-- All tap targets ≥ 44px (inline links in running text are exempt). Phone number is a `tel:` link; WhatsApp is a normal link.
+- Tab order = visual order: logo → phone → header WhatsApp button (desktop) → hero card WhatsApp button → "Pełny cennik i pakiety" → "Zadzwoń" → linked headache card → steps WhatsApp button → FAQ summaries → final CTA WhatsApp button → "Zadzwoń" → SMS link → "Prywatność" → "Ustawienia cookies" → (phones) sticky bar WhatsApp button → phone button.
+- All tap targets ≥ 44px at 320–1440 (inline links in running text are exempt: the SMS link, the cookie "Szczegóły" link). Phone is a `tel:` link, SMS an `sms:` link, WhatsApp a normal link; "Ustawienia cookies" is a `<button>`.
+- The five WhatsApp buttons share one accessible name on purpose: they do the same thing.
 - One `<h1>`; H2s in the order of the SEO brief; headache/price card titles are H3. Decorative icons `aria-hidden`; photo slots get the owner's alt text.
-- Text contrast (WCAG AA): body `neutral-700` on `neutral-50` 8.7:1, muted `neutral-500` on `primary-50` 5.4:1, `primary-200` on `primary-800` 9.3:1, white on `primary-500` 6.2:1, `secondary-950` on `secondary-50` 13:1.
-- Reduced motion: no transforms or transitions, no smooth scroll.
+- Text contrast (WCAG AA), lowest on the page 5.0:1 (`neutral-500` on `neutral-100`). Body `neutral-700` on `neutral-50` 8.7:1, muted `neutral-500` on `primary-50` 5.4:1, `primary-100` on `primary-800` 11.6:1, `primary-200` on `neutral-900` 9.6:1, **white headings on `primary-800` 13.6:1 and on `neutral-900` 14.2:1 (fixed)**, white on `primary-500` 6.2:1, `secondary-950` on `secondary-50` 13:1.
+- Reduced motion: no transforms or transitions (pseudo-elements included), no smooth scroll.
+- Focus is never hidden under the sticky bar (`scroll-padding-bottom`).
 - Page language `pl`; `lang` on nothing else.
 
 ## 8. Assets and licences
-- **Logo and icons (generated by us from the owner's approved direction B):** `handoff/brand/logo/` — `logo.svg`, `mark.svg`, `mark-small.svg` (favicon at 48px and below), `app-icon.svg`, `app-icon-maskable.svg` (admin app icon, 512 with safe padding). The wordmark is outlined from Bricolage Grotesque (SIL OFL).
-- **Photos: none yet.** Every photo slot is a placeholder awaiting the owner's own photos. No stock photos, no people. Slots and sizes (hand over JPG at 2× the displayed size; the tool serves AVIF/WebP; keep the ratio fixed to avoid layout shift):
+- **Logo and icons (generated by us from the owner's approved direction B):** `handoff/brand/logo/` — unchanged.
+- **Photos: none yet.** The owner is shooting them from the shooting guide. No stock photos, no people, nothing invented. The page launches in the no-photos state if they are not in by then. Slots and sizes are unchanged (hand over JPG at 2× the displayed size; the tool serves AVIF/WebP; keep the ratio fixed to avoid layout shift):
 
 | Slot | Ratio | Displayed (desktop) | Source to supply |
 |---|---|---|---|
@@ -90,24 +143,34 @@ Everything from the database is marked `data-bind` in the prototype. Never hard-
 | Before / after (each image) | 4:3 | ~350 × 262 | 1200 × 900 |
 | Share image | 1200 × 630 (`assets/og-template-1200x630.png`, source `og-template.html`) | — | slot for page title (≤3 lines at 64px; 54px for 4) and one photo, 440 × 518 |
 
-- Icons: Lucide only (`i-lucide-camera`, `phone`, `clock`, `house`, `shield-check`, `badge-check`, `check`, `calendar-check`, `arrow-right`; FAQ sign is a CSS plus). No custom icons are used on this page.
-- Fonts: see `handoff/tokens/fonts.md`.
+- Icons: Lucide only (`i-lucide-camera`, `phone`, `clock`, `house`, `shield-check`, `badge-check`, `check`, `calendar-check`, `arrow-right`; FAQ sign is a CSS plus). No new icons in v1.1. **No WhatsApp brand mark** (owner decision in v1): the WhatsApp button uses the Lucide camera, because the action is "send photos".
+- Fonts: see `handoff/tokens/fonts.md`. Tokens are unchanged.
 
 ## 9. SEO
-- Brief: `seo/briefs/stroller-counter.md` in cleaning-seo (approved by the owner 2026-11-10); design issue #2.
-- Title: option 1 of the brief (53 chars). Meta description: option 1 (142 chars). Canonical `https://nowiutko.pl/poznan/pranie-wozkow-i-fotelikow`.
-- H1 follows the brief's **option (a)**: the search phrase as the real `<h1>`, styled small as an eyebrow, with the hero line as the large visual headline. Option (b) (reworded big H1) would be a copy change only; the layout holds either.
-- H2 order is exactly the brief's anatomy; before/after and reviews are absent from the rendered HTML while hidden (use `v-if`, not just CSS, so empty headings never reach crawlers).
-- Structured data (rendered server-side): Service + Offer per item (from `{price:*}`), FAQPage (same text as visible), BreadcrumbList (Strona główna → Pranie wózków i fotelików). **No AggregateRating or Review** until real reviews exist.
+- Brief: `seo/briefs/stroller-counter.md` in cleaning-seo (approved by the owner 2026-11-10); design issue #2. Early-launch SEO scope: cleaning-seo #2.
+- Title, meta description, canonical, H1 (brief option a) and the H2 order are **unchanged from v1**.
+- **In-content links (brief §4): `/cennik` and `/poznan/obszar-dzialania` are removed for the early launch** because the pages do not exist; the anchors `#cennik` stay. This is a known gap against the brief, to be closed when those pages ship. The logo links to `/` (homepage v0).
+- Structured data (rendered server-side): Service + Offer per item (from `{price:*}`), FAQPage (same text as visible), BreadcrumbList (Strona główna → Pranie wózków i fotelików; needs homepage v0 at `/`). The LocalBusiness `telephone` is now the real number. **No AggregateRating or Review** until real reviews exist.
 - Prices are the real "od" prices in the HTML; none is inside an image. The hero has no image.
-- In-content links: `/cennik`, `/poznan/obszar-dzialania`, anchors; descriptive anchor text.
+- WhatsApp, `tel:` and `sms:` links are outbound or non-HTTP; whether the `wa.me` links get `rel="nofollow"` is the SEO desk's call (the prototype has `rel="noopener"` only).
 
-## 10. Open questions (for the developer with the owner)
-1. **Phone number** is still the placeholder 500 000 000; WhatsApp is `wa.me/48500000000`. Both come from `{business:*}`.
-2. **WhatsApp** is a text-only button, no brand icon (owner decision). Revisit if the developer allows one brand SVG.
-3. **H1 wording** (brief options a or b) and hero line are the brand strategist's call; the design holds either.
-4. **Brand list** in the car-seat H2 (Cybex, Maxi-Cosi, Britax, Avionaut): only brands whose manuals the owner has checked; the SEO brief lists this as open.
-5. **"najczęściej wybierany"** on the Rodzinny package is a claim; show it only if the owner's data supports it.
-6. **Headache copy** ("Co robimy.") was written from the price list and mockup; the owner should confirm the gondola line ("odsysamy wodę") matches the real method.
-7. **Cookie banner** does not appear in the hero screens; it shows on first visit until a choice is made. Whether the sticky bar hides under it is the developer's call (design shows it hidden).
-8. **Package "…-was" prices** (struck-through) are shown only when the owner enters them.
+## 10. Open questions
+
+**For the developer**
+1. **Privacy page route and a cookies anchor.** The prototype uses `/polityka-prywatnosci` and `#cookies`. Use the real ones; both links must resolve on launch day.
+2. **"Ustawienia cookies"** needs a way to reopen the banner (#46). If that is not ready for launch, drop the button rather than ship one that does nothing.
+3. **`/` on launch day.** The logo and the breadcrumb point at `/`. If homepage v0 is not live when the stroller page is, `/` must still answer (for example a temporary redirect to this page), or the logo is rendered without a link.
+4. **`{business:whatsapp}` as a number**, not a ready link: does the admin "Firma" screen already store it that way?
+5. **Sticky bar under the cookie banner** (as in v1): design shows the bar hidden until a choice is made.
+6. **Click measurement** on the `data-cta` links, only after analytics consent.
+7. Please check the two v1 fixes on the built page: white headings on the two dark surfaces, and the FAQ plus sign under reduced motion.
+
+**For the owner**
+1. **Main action = WhatsApp, label "Wyślij zdjęcia na WhatsApp".** Approve, or say if you prefer the call first.
+2. **SMS with photos (MMS):** does your phone and plan receive MMS reliably? If not, the SMS sentence should lose the word "zdjęcia" or go.
+3. **"Cenę podamy dziś"** and step 2 "Zwykle w kilka minut": with you answering by hand, are these true in the evening and on Sunday? If not, an hours line ("Odpisujemy pn–sob 8–20") belongs next to the button.
+4. **Prefilled message** wording (`whatsapp.prefill`).
+5. Still open from v1: brand list in the car-seat H2, "najczęściej wybierany", the gondola line "odsysamy wodę", struck-through package prices.
+6. **Photos:** if they are not ready by launch, the page goes live in the no-photos state (`screens/13`–`14`). All four problem-card photos are needed together to switch that section back.
+
+**For the SEO desk and the brand strategist:** see the designer's hand-over note for this job (links removed against brief §4; "na WhatsApp" vs "na WhatsAppie"; the hours line).

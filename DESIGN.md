@@ -131,7 +131,9 @@ Nuxt UI components, restyled through tokens (the mockup's hand-made versions are
 - **Eyebrow:** label above headings (see Type).
 - **Hero highlight:** key words in the h1 get a `secondary-300` underline (`linear-gradient(transparent 62%, var(--ui-color-secondary-300) 62%)`).
 - **Chips:** one-liners under the hero, each with a Lucide `check` icon (replaces the ✓ character).
-- **Sticky bottom bar on phones:** "Wyślij zdjęcia" plus a phone icon.
+- **Sticky bottom bar on phones:** "Wyślij zdjęcia" plus a phone icon. **Until the quote form is live (early launch)** the button reads "Wyślij zdjęcia na WhatsApp" and is a `wa.me` link with a prefilled message; the label never wraps (below 360px it drops its icon). Pages with the bar set `scroll-padding-bottom` so keyboard focus is never hidden behind it.
+- **The one action before the quote form exists:** every solid button on a counter is the same WhatsApp link with the same label; the phone call is the second action (outline button or text link, number always visible as text); SMS is a one-line fallback. No WhatsApp brand mark: the button uses the Lucide camera. When the quote form ships, the solid buttons go back to it and WhatsApp and phone return to `neutral` outline.
+- **Headings on dark surfaces** (`primary-800` final band, `neutral-900` safety panel) are white; they do not inherit the default `neutral-900` heading colour.
 - **Service area and zones:** text only (postcode field, grouped town picker, list of towns). No map.
 
 ## Admin patterns
@@ -206,3 +208,4 @@ Accent use is limited to small surfaces (icon, eyebrow, highlight underline, ill
 - 2026-11-13 — Logo B (Odznaka) chosen; paper stays cool mint. Accents defined: pets `neutral-700`, mattress `primary-600`; car `primary-800` confirmed. All reuse existing scales, no new colours.
 - 2026-11-14 — **Admin patterns added** (shell navigation, list → edit, explicit save with a save bar and "live on the site" toast, off-not-deleted, reorder mode, live price chips), from the "Cennik i ustawienia" design. No new tokens or colours. Draft until the owner approves `admin-cennik-v1`.
 - 2026-11-15 — **Quote form patterns added** (estimate bar in place of the "Wyślij zdjęcia" bar on the form, sun only on the estimate amount, chosen-row style, step bars, status colours on the public site, no-pressure rule), from the quote-form design. No new tokens or colours. Draft until the owner approves `quote-form-v1`.
+- 2026-11-16 — **Early launch without the quote form** (owner priority #5): the sticky-bar rule and the "one action" rule gain a temporary WhatsApp version ("Wyślij zdjęcia na WhatsApp", same link on every solid button; call second; SMS fallback), because the stroller page goes live before the form. Two rules written down after defects found in `stroller-v1`: headings on dark surfaces are white (they were `neutral-900` on dark, about 1:1), and pages with a sticky bar set `scroll-padding-bottom`. No new tokens or colours. Draft until the owner approves `stroller-v1.1`.

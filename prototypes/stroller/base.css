@@ -11,7 +11,7 @@
  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;--body:"Figtree","Segoe UI",system-ui,sans-serif;
  --r-lg:12px;--r-xl:18px;--r-2xl:24px;--container:70rem}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 body{margin:0;background:var(--bg);color:var(--n700);font:400 17px/1.55 var(--body);-webkit-font-smoothing:antialiased}@media(max-width:639px){body{font-size:16px}}
 h1,h2,h3,.display{color:var(--n900);font-family:var(--display);line-height:1.06;letter-spacing:-.012em;text-wrap:balance;margin:0}
 h1,.display{font-weight:800}h2{font-weight:800}h3{font-weight:700}
@@ -26,6 +26,8 @@ p{margin:0}a{color:inherit}ul,ol{margin:0}
 .btn-ghost{border-color:var(--n900);color:var(--n900);background:transparent}.btn-ghost:hover{background:var(--n100)}
 :where(a,button,summary,input,select):focus-visible{outline:3px solid var(--n900);outline-offset:3px}
 .on-dark :where(a,button,summary):focus-visible{outline-color:#fff}
+/* v1.1 fix: headings on dark surfaces were neutral-900 on primary-800 / neutral-900 (about 1.1:1, unreadable) */
+.on-dark :where(h1,h2,h3){color:#fff}
 /* header: logo + phone only (counter rule) */
 .site-h .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
 .site-h img{height:40px;width:auto;display:block}
@@ -37,6 +39,8 @@ p{margin:0}a{color:inherit}ul,ol{margin:0}
 .sticky .btn{flex:1;padding-inline:12px}.sticky .btn-ghost{flex:0 0 auto}
 @media(min-width:900px){.sticky{display:none}}
 body{padding-bottom:76px}@media(min-width:900px){body{padding-bottom:0}}
+/* v1.1: keep keyboard focus clear of the sticky bar (WCAG 2.2 SC 2.4.11) */
+@media(max-width:899px){html{scroll-padding-bottom:88px}}
 /* sections */
 section{padding-block:clamp(48px,7vw,88px)}section[class^="hero"]{padding-block:0}
 .band{background:var(--bg-muted)}
