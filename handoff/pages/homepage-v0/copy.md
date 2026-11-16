@@ -11,6 +11,10 @@ DRAFT, not approved. Brand decisions applied 2026-11-17 (#6, #7): H1/title appro
 - `hero.h1` (real `<h1>`, the headline itself; "Nowiutko" in `primary-500`) — Nowiutko — pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach
 - `hero.voice` (`<p>`) — Świeżo i jak nowe — bez wychodzenia z domu.
 - `hero.lede` — Przyjeżdżamy z własnym sprzętem i pierzemy u Ciebie, na miejscu: wózki, foteliki, kanapy, materace, dywany i wnętrza aut.
+- **Story board (right side, decorative; whole block `role="img"`):** `story.alt` — Trzy kroki: zaplamiony wózek, zdjęcia wysłane w rozmowie na WhatsApp, wózek jak nowy.
+  - `story.1` — Plama na wózku · `story.2.label` — Przykład: tak wygląda rozmowa · `story.3` — Wózek jak nowe
+  - Chat example (hard-coded illustration, not data; no name, no time, no rating): header *Nowiutko / WhatsApp*; customer bubble = two photo thumbnails (neutral image icons) + *Dzień dobry, proszę o wycenę wózka.*; reply bubble = *Dziękujemy! Cenę podamy dziś.* + `hours`.
+  - Nothing essential lives only in the board: the same facts are in the lede, the promise line, the hours line and "Jak to działa".
 - Buttons: `cta.whatsapp` (solid) · `cta.call` "Zadzwoń: {business:phone}" (outline) — both as in `stroller-v1.2` copy.md
 - `hero.promise` — 2–3 zdjęcia wystarczą. Cenę podamy dziś. *(approved in voice)*
 - `hours` — Odpisujemy pn–pt 9:00–17:00, sob 9:00–14:00 *(`{business:hours}`; under the promise line and under the final CTA buttons)*

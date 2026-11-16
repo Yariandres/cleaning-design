@@ -1371,7 +1371,7 @@
     "H2 Gdzie dojeżdżamy",
     "H2 Wyślij 2–3 zdjęcia. Cenę podamy dziś."
    ],
-   "minBodyFontPx": 12.5,
+   "minBodyFontPx": 12.48,
    "footer": {
     "height": 478,
     "minFontPx": 13,
@@ -1418,6 +1418,471 @@
     "animations": [
      "none"
     ]
+   }
+  },
+  "14-hero-390": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.36,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#uslugi": 1,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 8,
+    "/poznan/pranie-wozkow-i-fotelikow": 1,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "h1Text": "Nowiutko — pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach",
+   "strollerLinks": [
+    "Pranie wózków i fotelików"
+   ],
+   "comingRows": [
+    {
+     "text": "Kanapy, narożniki i fotele — Wycena na WhatsApp",
+     "href": "https://wa.me/48736369704?text=…",
+     "prefill": "Dzień dobry, proszę o wycenę prania kanap, narożników lub foteli. Wysyłam zdjęcia. Miejscowość: ",
+     "linkText": "Kanapy, narożniki i fotele — Wycena na WhatsApp",
+     "h": 72,
+     "wkrotce": false
+    },
+    {
+     "text": "Materace — Wycena na WhatsApp",
+     "href": "https://wa.me/48736369704?text=…",
+     "prefill": "Dzień dobry, proszę o wycenę prania materaca. Wysyłam zdjęcia. Miejscowość: ",
+     "linkText": "Materace — Wycena na WhatsApp",
+     "h": 57,
+     "wkrotce": false
+    },
+    {
+     "text": "Dywany — Wycena na WhatsApp",
+     "href": "https://wa.me/48736369704?text=…",
+     "prefill": "Dzień dobry, proszę o wycenę prania dywanu. Wysyłam zdjęcia. Miejscowość: ",
+     "linkText": "Dywany — Wycena na WhatsApp",
+     "h": 57,
+     "wkrotce": false
+    },
+    {
+     "text": "Tapicerka samochodowa (wnętrze auta) — Wycena na WhatsApp",
+     "href": "https://wa.me/48736369704?text=…",
+     "prefill": "Dzień dobry, proszę o wycenę prania tapicerki samochodowej (wnętrza auta). Wysyłam zdjęcia. Miejscowość: ",
+     "linkText": "Tapicerka samochodowa (wnętrze auta) — Wycena na WhatsApp",
+     "h": 73,
+     "wkrotce": false
+    }
+   ],
+   "emptyHrefs": 0,
+   "headings": [
+    "H1 Nowiutko — pranie tapicerki, wózków i aut u Ciebie w Poznani",
+    "H2 Co pierzemy",
+    "H3 Pranie wózków i fotelików",
+    "H2 Jak to działa",
+    "H3 Wyślij zdjęcia",
+    "H3 Dostań cenę i termin",
+    "H3 Pierzemy u Ciebie",
+    "H2 Gdzie dojeżdżamy",
+    "H2 Wyślij 2–3 zdjęcia. Cenę podamy dziś."
+   ],
+   "minBodyFontPx": 12.5,
+   "footer": {
+    "height": 478,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 390,
+   "hero": {
+    "y": 68,
+    "h": 981.328125,
+    "storyTop": 616.328125,
+    "btnBottom": 460.234375,
+    "h1Bottom": 230.75,
+    "phoneBottom": 520.234375,
+    "overflowX": false,
+    "aboveFold": true
+   }
+  },
+  "15-hero-1440": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.36,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#uslugi": 1,
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 8,
+    "/poznan/pranie-wozkow-i-fotelikow": 1,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "h1Text": "Nowiutko — pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach",
+   "strollerLinks": [
+    "Pranie wózków i fotelików"
+   ],
+   "comingRows": [
+    {
+     "text": "Kanapy, narożniki i fotele — Wycena na WhatsApp",
+     "href": "https://wa.me/48736369704?text=…",
+     "prefill": "Dzień dobry, proszę o wycenę prania kanap, narożników lub foteli. Wysyłam zdjęcia. Miejscowość: ",
+     "linkText": "Kanapy, narożniki i fotele — Wycena na WhatsApp",
+     "h": 56,
+     "wkrotce": false
+    },
+    {
+     "text": "Materace — Wycena na WhatsApp",
+     "href": "https://wa.me/48736369704?text=…",
+     "prefill": "Dzień dobry, proszę o wycenę prania materaca. Wysyłam zdjęcia. Miejscowość: ",
+     "linkText": "Materace — Wycena na WhatsApp",
+     "h": 57,
+     "wkrotce": false
+    },
+    {
+     "text": "Dywany — Wycena na WhatsApp",
+     "href": "https://wa.me/48736369704?text=…",
+     "prefill": "Dzień dobry, proszę o wycenę prania dywanu. Wysyłam zdjęcia. Miejscowość: ",
+     "linkText": "Dywany — Wycena na WhatsApp",
+     "h": 57,
+     "wkrotce": false
+    },
+    {
+     "text": "Tapicerka samochodowa (wnętrze auta) — Wycena na WhatsApp",
+     "href": "https://wa.me/48736369704?text=…",
+     "prefill": "Dzień dobry, proszę o wycenę prania tapicerki samochodowej (wnętrza auta). Wysyłam zdjęcia. Miejscowość: ",
+     "linkText": "Tapicerka samochodowa (wnętrze auta) — Wycena na WhatsApp",
+     "h": 76,
+     "wkrotce": false
+    }
+   ],
+   "emptyHrefs": 0,
+   "headings": [
+    "H1 Nowiutko — pranie tapicerki, wózków i aut u Ciebie w Poznani",
+    "H2 Co pierzemy",
+    "H3 Pranie wózków i fotelików",
+    "H2 Jak to działa",
+    "H3 Wyślij zdjęcia",
+    "H3 Dostań cenę i termin",
+    "H3 Pierzemy u Ciebie",
+    "H2 Gdzie dojeżdżamy",
+    "H2 Wyślij 2–3 zdjęcia. Cenę podamy dziś."
+   ],
+   "minBodyFontPx": 12.5,
+   "footer": {
+    "height": 271,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 1440,
+   "hero": {
+    "y": 80,
+    "h": 713.46875,
+    "storyTop": 182.234375,
+    "btnBottom": 608.375,
+    "h1Bottom": 403.734375,
+    "phoneBottom": 668.375,
+    "overflowX": false,
+    "aboveFold": true
+   }
+  },
+  "16-hero-768": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.36,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#uslugi": 1,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 8,
+    "/poznan/pranie-wozkow-i-fotelikow": 1,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "h1Text": "Nowiutko — pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach",
+   "strollerLinks": [
+    "Pranie wózków i fotelików"
+   ],
+   "comingRows": [
+    {
+     "text": "Kanapy, narożniki i fotele — Wycena na WhatsApp",
+     "href": "https://wa.me/48736369704?text=…",
+     "prefill": "Dzień dobry, proszę o wycenę prania kanap, narożników lub foteli. Wysyłam zdjęcia. Miejscowość: ",
+     "linkText": "Kanapy, narożniki i fotele — Wycena na WhatsApp",
+     "h": 56,
+     "wkrotce": false
+    },
+    {
+     "text": "Materace — Wycena na WhatsApp",
+     "href": "https://wa.me/48736369704?text=…",
+     "prefill": "Dzień dobry, proszę o wycenę prania materaca. Wysyłam zdjęcia. Miejscowość: ",
+     "linkText": "Materace — Wycena na WhatsApp",
+     "h": 57,
+     "wkrotce": false
+    },
+    {
+     "text": "Dywany — Wycena na WhatsApp",
+     "href": "https://wa.me/48736369704?text=…",
+     "prefill": "Dzień dobry, proszę o wycenę prania dywanu. Wysyłam zdjęcia. Miejscowość: ",
+     "linkText": "Dywany — Wycena na WhatsApp",
+     "h": 57,
+     "wkrotce": false
+    },
+    {
+     "text": "Tapicerka samochodowa (wnętrze auta) — Wycena na WhatsApp",
+     "href": "https://wa.me/48736369704?text=…",
+     "prefill": "Dzień dobry, proszę o wycenę prania tapicerki samochodowej (wnętrza auta). Wysyłam zdjęcia. Miejscowość: ",
+     "linkText": "Tapicerka samochodowa (wnętrze auta) — Wycena na WhatsApp",
+     "h": 57,
+     "wkrotce": false
+    }
+   ],
+   "emptyHrefs": 0,
+   "headings": [
+    "H1 Nowiutko — pranie tapicerki, wózków i aut u Ciebie w Poznani",
+    "H2 Co pierzemy",
+    "H3 Pranie wózków i fotelików",
+    "H2 Jak to działa",
+    "H3 Wyślij zdjęcia",
+    "H3 Dostań cenę i termin",
+    "H3 Pierzemy u Ciebie",
+    "H2 Gdzie dojeżdżamy",
+    "H2 Wyślij 2–3 zdjęcia. Cenę podamy dziś."
+   ],
+   "minBodyFontPx": 12.5,
+   "footer": {
+    "height": 376,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 768,
+   "hero": {
+    "y": 68,
+    "h": 1071.078125,
+    "storyTop": 528.703125,
+    "btnBottom": 432.609375,
+    "h1Bottom": 255.234375,
+    "phoneBottom": 432.609375,
+    "overflowX": false,
+    "aboveFold": true
+   }
+  },
+  "17-hero-1024": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.36,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#uslugi": 1,
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 8,
+    "/poznan/pranie-wozkow-i-fotelikow": 1,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "h1Text": "Nowiutko — pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach",
+   "strollerLinks": [
+    "Pranie wózków i fotelików"
+   ],
+   "comingRows": [
+    {
+     "text": "Kanapy, narożniki i fotele — Wycena na WhatsApp",
+     "href": "https://wa.me/48736369704?text=…",
+     "prefill": "Dzień dobry, proszę o wycenę prania kanap, narożników lub foteli. Wysyłam zdjęcia. Miejscowość: ",
+     "linkText": "Kanapy, narożniki i fotele — Wycena na WhatsApp",
+     "h": 75,
+     "wkrotce": false
+    },
+    {
+     "text": "Materace — Wycena na WhatsApp",
+     "href": "https://wa.me/48736369704?text=…",
+     "prefill": "Dzień dobry, proszę o wycenę prania materaca. Wysyłam zdjęcia. Miejscowość: ",
+     "linkText": "Materace — Wycena na WhatsApp",
+     "h": 57,
+     "wkrotce": false
+    },
+    {
+     "text": "Dywany — Wycena na WhatsApp",
+     "href": "https://wa.me/48736369704?text=…",
+     "prefill": "Dzień dobry, proszę o wycenę prania dywanu. Wysyłam zdjęcia. Miejscowość: ",
+     "linkText": "Dywany — Wycena na WhatsApp",
+     "h": 57,
+     "wkrotce": false
+    },
+    {
+     "text": "Tapicerka samochodowa (wnętrze auta) — Wycena na WhatsApp",
+     "href": "https://wa.me/48736369704?text=…",
+     "prefill": "Dzień dobry, proszę o wycenę prania tapicerki samochodowej (wnętrza auta). Wysyłam zdjęcia. Miejscowość: ",
+     "linkText": "Tapicerka samochodowa (wnętrze auta) — Wycena na WhatsApp",
+     "h": 76,
+     "wkrotce": false
+    }
+   ],
+   "emptyHrefs": 0,
+   "headings": [
+    "H1 Nowiutko — pranie tapicerki, wózków i aut u Ciebie w Poznani",
+    "H2 Co pierzemy",
+    "H3 Pranie wózków i fotelików",
+    "H2 Jak to działa",
+    "H3 Wyślij zdjęcia",
+    "H3 Dostań cenę i termin",
+    "H3 Pierzemy u Ciebie",
+    "H2 Gdzie dojeżdżamy",
+    "H2 Wyślij 2–3 zdjęcia. Cenę podamy dziś."
+   ],
+   "minBodyFontPx": 12.5,
+   "footer": {
+    "height": 271,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 1024,
+   "hero": {
+    "y": 80,
+    "h": 604.671875,
+    "storyTop": 142.828125,
+    "btnBottom": 499.578125,
+    "h1Bottom": 294.9375,
+    "phoneBottom": 559.578125,
+    "overflowX": false,
+    "aboveFold": true
+   }
+  },
+  "18-hero-320": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.36,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#uslugi": 1,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 8,
+    "/poznan/pranie-wozkow-i-fotelikow": 1,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "h1Text": "Nowiutko — pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach",
+   "strollerLinks": [
+    "Pranie wózków i fotelików"
+   ],
+   "comingRows": [
+    {
+     "text": "Kanapy, narożniki i fotele — Wycena na WhatsApp",
+     "href": "https://wa.me/48736369704?text=…",
+     "prefill": "Dzień dobry, proszę o wycenę prania kanap, narożników lub foteli. Wysyłam zdjęcia. Miejscowość: ",
+     "linkText": "Kanapy, narożniki i fotele — Wycena na WhatsApp",
+     "h": 72,
+     "wkrotce": false
+    },
+    {
+     "text": "Materace — Wycena na WhatsApp",
+     "href": "https://wa.me/48736369704?text=…",
+     "prefill": "Dzień dobry, proszę o wycenę prania materaca. Wysyłam zdjęcia. Miejscowość: ",
+     "linkText": "Materace — Wycena na WhatsApp",
+     "h": 73,
+     "wkrotce": false
+    },
+    {
+     "text": "Dywany — Wycena na WhatsApp",
+     "href": "https://wa.me/48736369704?text=…",
+     "prefill": "Dzień dobry, proszę o wycenę prania dywanu. Wysyłam zdjęcia. Miejscowość: ",
+     "linkText": "Dywany — Wycena na WhatsApp",
+     "h": 73,
+     "wkrotce": false
+    },
+    {
+     "text": "Tapicerka samochodowa (wnętrze auta) — Wycena na WhatsApp",
+     "href": "https://wa.me/48736369704?text=…",
+     "prefill": "Dzień dobry, proszę o wycenę prania tapicerki samochodowej (wnętrza auta). Wysyłam zdjęcia. Miejscowość: ",
+     "linkText": "Tapicerka samochodowa (wnętrze auta) — Wycena na WhatsApp",
+     "h": 97,
+     "wkrotce": false
+    }
+   ],
+   "emptyHrefs": 0,
+   "headings": [
+    "H1 Nowiutko — pranie tapicerki, wózków i aut u Ciebie w Poznani",
+    "H2 Co pierzemy",
+    "H3 Pranie wózków i fotelików",
+    "H2 Jak to działa",
+    "H3 Wyślij zdjęcia",
+    "H3 Dostań cenę i termin",
+    "H3 Pierzemy u Ciebie",
+    "H2 Gdzie dojeżdżamy",
+    "H2 Wyślij 2–3 zdjęcia. Cenę podamy dziś."
+   ],
+   "minBodyFontPx": 12.48,
+   "footer": {
+    "height": 478,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 320,
+   "hero": {
+    "y": 68,
+    "h": 1103.328125,
+    "storyTop": 700.328125,
+    "btnBottom": 521.1875,
+    "h1Bottom": 264.4375,
+    "phoneBottom": 581.1875,
+    "overflowX": false,
+    "aboveFold": true
    }
   }
  }

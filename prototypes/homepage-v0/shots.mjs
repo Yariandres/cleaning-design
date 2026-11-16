@@ -31,6 +31,11 @@ const FRAMES = [
   ["11-end-of-page-sticky-bar-390", F + "index.html", 390, 844, "bottom"],
   ["12-end-of-page-cookie-banner-390", F + "state-cookie.html", 390, 844, "bottom"],
   ["13-default-320", F + "index.html", 320, 640, "full"],
+  ["14-hero-390", F + "index.html", 390, 844, "hero"],
+  ["15-hero-1440", F + "index.html", 1440, 900, "hero"],
+  ["16-hero-768", F + "index.html", 768, 1024, "hero"],
+  ["17-hero-1024", F + "index.html", 1024, 768, "hero"],
+  ["18-hero-320", F + "index.html", 320, 640, "hero"],
 ];
 
 const proc = spawn(CHROME, ["--headless=new", "--remote-debugging-port=0", "--no-first-run", "--hide-scrollbars", "--disable-gpu",
@@ -163,7 +168,10 @@ for (const [name, file, w, h, mode] of FRAMES) {
     await send("Emulation.setDeviceMetricsOverride", { width: w, height: H, deviceScaleFactor: 2, mobile: w < 700 }, S);
     await ev("new Promise(r=>setTimeout(r,100))"); await png(name);
   } else if (mode === "first") { await png(name); }
-  else if (mode === "footer") {
+  else if (mode === "hero") {
+    const g = JSON.parse(await ev(`(() => { const s = document.querySelector(".sticky"); if (s) s.style.display = "none"; const r = document.querySelector("section.hh").getBoundingClientRect(); const st = document.querySelector(".story"); const sr = st && getComputedStyle(st).display !== "none" ? st.getBoundingClientRect() : null; const btn = document.querySelector(".hh-btns .btn-main").getBoundingClientRect(); return JSON.stringify({ y: r.top + scrollY, h: r.height, storyTop: sr && sr.top + scrollY, btnBottom: btn.bottom + scrollY, h1Bottom: document.querySelector(".hh-h1").getBoundingClientRect().bottom + scrollY, phoneBottom: document.querySelector(".hh-btns .btn-ghost").getBoundingClientRect().bottom + scrollY, overflowX: document.documentElement.scrollWidth > innerWidth }); })()`));
+    c.hero = g; c.hero.aboveFold = g.phoneBottom <= h; await png(name, { x: 0, y: g.y, width: w, height: g.h });
+  } else if (mode === "footer") {
     // hide the fixed phone bar for the crop: it is not part of the footer (frame 25 shows the two together)
     const g = JSON.parse(await ev(`(() => { const s = document.querySelector(".sticky"); if (s) s.style.display = "none"; const f = document.querySelector("footer.site-f").getBoundingClientRect(); return JSON.stringify({ y: Math.max(0, f.top + scrollY - 96), h: f.height + 96 }); })()`));
     await png(name, { x: 0, y: g.y, width: w, height: g.h });

@@ -4,7 +4,7 @@ Early launch (owner priority cleaning-design#5, item 2). SEO mini brief: cleanin
 Reuses the stroller page's header, WhatsApp button, final CTA, footer, sticky bar and cookie banner by importing them
 from prototypes/stroller/build_final.py, so there is exactly one copy of each component (importing it also rebuilds
 the stroller pages, which must come out identical: check `git status`)."""
-import os, sys, re
+import os, sys, re, math
 HERE = os.path.dirname(os.path.abspath(__file__))
 STROLLER = os.path.join(HERE, "..", "stroller")
 sys.path.insert(0, STROLLER)
@@ -32,6 +32,43 @@ LOGO = "../stroller/assets/logo.svg"
 def fix(s):
     return s.replace("../assets/logo.svg", LOGO)
 
+
+# ---------------- story icons ----------------
+# Custom icons on the 24px grid, currentColor, round caps/joins (DESIGN.md -> Icons). Lucide paths for frown / image (ISC licence).
+STROLLER_PATHS = '<path d="M5 11a7 7 0 0 1 7-7v7"/><path d="M3 11h15a4 4 0 0 1-4 5H8a5 5 0 0 1-5-5z"/><path d="M18 11l1.5-6H22"/><circle cx="7.5" cy="19.5" r="1.8"/><circle cx="15.5" cy="19.5" r="1.8"/>'
+def chamomile_paths(r1=4.6, r2=9, n=8):
+    # line version: n petals as round-capped strokes around a ring, a small centre
+    out = ""
+    for i in range(n):
+        a = math.radians(i * 360 / n)
+        out += f'<path d="M{12+r1*math.sin(a):.2f} {12-r1*math.cos(a):.2f}L{12+r2*math.sin(a):.2f} {12-r2*math.cos(a):.2f}"/>'
+    return out + '<circle cx="12" cy="12" r="2"/>'
+def svg(inner, cls="", sw=2, size=None, extra=""):
+    sz = f' width="{size}" height="{size}"' if size else ""
+    return f'<svg class="ico {cls}" viewBox="0 0 24 24"{sz} fill="none" stroke="currentColor" stroke-width="{sw}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" {extra}>{inner}</svg>'
+FROWN = '<circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><path d="M9 9h.01"/><path d="M15 9h.01"/>'
+IMAGE = '<rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>'
+STAINS = '<g class="stain" stroke="none"><circle cx="9.5" cy="7.6" r="1.3"/><circle cx="12.4" cy="13.4" r="1.7"/><circle cx="7.2" cy="13.8" r="1"/><circle cx="15.2" cy="14.4" r="0.9"/><path d="M10.8 16.2c.5 1 .5 1.6 0 2.2-.5-.6-.5-1.2 0-2.2z"/></g>'
+SPARK = '<g class="spark" stroke-width=".9"><path d="M20 2.2v3.2M18.4 3.8h3.2"/><path d="M3.5 3.2v3M2 4.7h3"/></g>'
+FLOWER = '<g class="mini">' + "".join(f'<circle cx="{11+2.0*math.sin(math.radians(i*45)):.2f}" cy="{13.3-2.0*math.cos(math.radians(i*45)):.2f}" r="1"/>' for i in range(8)) + '<circle cx="11" cy="13.3" r="1" class="mid"/></g>'
+
+def badge(inner_svg, cls=""):
+    return f'<span class="sb {cls}">{inner_svg}</span>'
+
+STORY = f'''<div class="story" role="img" aria-label="Trzy kroki: zaplamiony wózek, zdjęcia wysłane w rozmowie na WhatsApp, wózek jak nowy.">
+<div class="sc sc1">{badge(svg(FROWN, size=22), "sb1")}
+<div class="sc-art">{svg(STROLLER_PATHS + STAINS, "art-stroller", sw=1.5)}</div><p class="sc-cap"><b>1</b>Plama na wózku</p></div>
+<div class="chat-card">{badge(svg('<path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/>', size=22), "sb2")}
+<p class="ch-label">Przykład: tak wygląda rozmowa<b>2</b></p>
+<div class="chat"><div class="ch-head"><img src="../stroller/assets/mark.svg" alt="" width="28" height="28"><span><b>Nowiutko</b><i>WhatsApp</i></span></div>
+<div class="ch-body">
+<div class="bub out"><div class="thumbs"><span class="th">{svg(IMAGE, size=24)}</span><span class="th">{svg(IMAGE, size=24)}</span></div><p>Dzień dobry, proszę o wycenę wózka.</p></div>
+<div class="bub in"><p>Dziękujemy! Cenę podamy dziś.</p><small>{F.HOURS}</small></div>
+</div></div></div>
+<div class="sc sc3">{badge(svg(chamomile_paths(), size=24, sw=2), "sb3")}
+<div class="sc-art">{svg(STROLLER_PATHS + FLOWER + SPARK, "art-stroller fresh", sw=1.5)}</div><p class="sc-cap"><b>3</b>Wózek jak nowe</p></div>
+</div>'''
+
 # ---------------- hero ----------------
 # H1 is the headline itself (real text, the name first). The voice line sits under it as a normal paragraph.
 HERO = f'''<section class="hh"><div class="wrap">
@@ -43,7 +80,7 @@ HERO = f'''<section class="hh"><div class="wrap">
 <p class="pc-promise hh-promise">2–3 zdjęcia wystarczą. Cenę podamy dziś.</p>
 <p class="pc-promise hh-promise hh-hours" data-bind="business:hours">{F.HOURS}</p>
 </div>
-<div class="hh-mark" aria-hidden="true"><img src="../stroller/assets/mark.svg" alt="" width="320" height="320"></div>
+{STORY}
 </div></section>'''
 
 # ---------------- Co pierzemy ----------------
@@ -90,16 +127,39 @@ AREA = '''<section class="band" id="obszar"><div class="wrap area-h"><div class=
 CSS = '''
 /* homepage v0 */
 .hh{background:var(--p50);border-bottom:1px solid var(--border);padding-block:0}
-.hh .wrap{display:grid;gap:24px;padding-block:28px 40px}
-.hh-h1{font-size:clamp(1.95rem,6.4vw,3.3rem);line-height:1.08}.hh-h1 .name{color:var(--p500)}
+.hh .wrap{display:grid;gap:28px;padding-block:28px 40px}
+.hh-h1{font-size:clamp(1.95rem,6.4vw,3.3rem);line-height:1.08}@media(min-width:900px){.hh-h1{font-size:clamp(2.3rem,3.5vw,3.1rem)}}.hh-h1 .name{color:var(--p500)}
 .voice{font:700 1.15rem/1.35 var(--body);color:var(--p700);margin-top:16px}
 .hh .lede{margin-top:10px;color:var(--n700);font-size:1.1rem}
 .hh-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.hh-btns .btn{flex:1 1 250px}
 .hh-promise{text-align:left;margin-top:12px}.hh-hours{margin-top:2px}
-.hh-mark{display:none}
-@media(min-width:700px){.hh-btns .btn{flex:0 0 auto}}
-@media(min-width:900px){.hh .wrap{grid-template-columns:1fr 300px;gap:72px;align-items:center;padding-block:64px 80px}.hh-mark{display:block}.hh-mark img{width:100%;height:auto;display:block;border-radius:26%;box-shadow:0 30px 70px -36px rgba(14,60,50,.55)}}
-@media(min-width:1100px){.hh .wrap{grid-template-columns:1fr 340px}}
+.story{display:none}
+/* story board: three beats in icons (problem, message, result). Zigzag like the reference: cards 1 and 3 in the left column, the chat window offset down in the right column. Badges sit on the seam. Static; no motion. */
+.story{display:grid;grid-template-columns:.8fr 1.2fr;grid-template-rows:1fr 1fr;gap:16px;aspect-ratio:358/392;position:relative;--w400:#B77D44;--w500:#A15C00}
+.sc{position:relative;border-radius:var(--r-2xl);display:grid;grid-template-rows:1fr auto;padding:12px 12px 12px;overflow:visible;min-height:0}
+.sc1{background:var(--n100);color:var(--n500);border:1px solid var(--border)}
+.sc3{background:var(--p100);color:var(--p700);border:1px solid var(--p200)}
+.sc-art{display:grid;place-items:center;min-height:0}.sc-art .ico{width:min(100%,104px);height:auto;display:block;overflow:visible}
+.stain{fill:var(--w400)}.fresh .mini circle{fill:#fff;stroke:var(--p700);stroke-width:.35}.fresh .mini .mid{fill:var(--s300);stroke:var(--p700);stroke-width:.35}.fresh .spark{stroke:var(--s500)}
+.sc-cap{font:700 .86rem/1.2 var(--body);color:var(--n900);display:flex;gap:8px;align-items:center}
+.sc-cap b,.ch-label b{flex:none;display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--n900);color:#fff;font-size:.75rem}
+.sb{position:absolute;z-index:2;width:36px;height:36px;border-radius:50%;background:var(--n900);color:#fff;display:grid;place-items:center;box-shadow:0 0 0 3px var(--p50)}
+.sb .ico{width:18px;height:18px}.sb3{background:var(--p500)}
+.sb1{right:-26px;top:14px}.sb3{right:-26px;bottom:14px}.sb2{left:-26px;top:52%}
+.chat-card{grid-column:2;grid-row:1/3;margin-top:28px;align-self:start;position:relative;display:grid;grid-template-rows:auto 1fr;gap:8px;min-height:0}
+.ch-label{font:700 .8rem/1.25 var(--body);color:var(--n900);display:flex;gap:8px;align-items:center;margin:0;padding-left:24px}
+.chat{background:#fff;border:1px solid var(--border);border-radius:var(--r-2xl);overflow:hidden;display:grid;grid-template-rows:auto 1fr;box-shadow:0 24px 50px -34px rgba(14,60,50,.5);min-height:0}
+.ch-head{display:flex;gap:8px;align-items:center;padding:8px 10px;border-bottom:1px solid var(--border);background:var(--n50)}
+.ch-head img{width:26px;height:26px;border-radius:8px}.ch-head span{display:grid;line-height:1.15}.ch-head b{font:700 .85rem var(--body);color:var(--n900)}.ch-head i{font-style:normal;font-size:.72rem;color:var(--text-muted)}
+.ch-body{background:var(--p50);padding:10px;display:grid;gap:8px;align-content:start;overflow:hidden}
+.bub{border-radius:14px;padding:8px 10px;max-width:92%;display:grid;gap:6px;font-size:.82rem;line-height:1.3;color:var(--n900)}
+.bub.out{background:var(--p100);justify-self:end;border-bottom-right-radius:4px}.bub.in{background:#fff;justify-self:start;border-bottom-left-radius:4px;border:1px solid var(--border)}
+.bub small{font-size:.74rem;line-height:1.3;color:var(--n700)}
+.thumbs{display:grid;grid-template-columns:1fr 1fr;gap:4px}.th{aspect-ratio:1;border-radius:8px;background:var(--n200);color:var(--n500);display:grid;place-items:center}.th .ico{width:55%;height:55%}
+@media(max-width:359px){.story{aspect-ratio:288/430}.sc-art .ico{width:72px}.sc-cap{font-size:.78rem}.sc{padding:10px}.sb3{bottom:56px}}
+@media(max-width:899px){.hh .wrap{gap:36px}.story{display:grid;margin-inline:auto;width:min(100%,520px)}}
+@media(min-width:900px){.hh .wrap{grid-template-columns:1fr 500px;gap:64px;align-items:center;padding-block:56px 64px}.story{display:grid;grid-template-columns:.8fr 1.2fr;aspect-ratio:500/470;gap:20px}.sc{padding:16px}.sc-art .ico{width:min(100%,128px)}.sc-cap{font-size:.95rem}.sb{width:44px;height:44px}.sb .ico{width:22px;height:22px}.sb1,.sb3{right:-32px}.sb2{left:-32px}.chat-card{margin-top:44px}.bub{font-size:.95rem}.bub small{font-size:.82rem}.ch-head b{font-size:.95rem}.ch-label{font-size:.88rem;padding-left:30px}.ch-body{padding:14px;gap:12px}.th .ico{width:50%}}
+@media(min-width:1100px){.hh .wrap{grid-template-columns:1fr 540px}.story{aspect-ratio:540/500}}
 /* services */
 .svc{display:grid;gap:20px}
 @media(min-width:900px){.svc{grid-template-columns:1.2fr 1fr;gap:28px;align-items:stretch}}
