@@ -1,0 +1,1294 @@
+{
+ "note": "Automatic checks for homepage-v0 (draft), run 2026-11-16 in headless Chrome on prototypes/homepage-v0/*.html by prototypes/homepage-v0/shots.mjs. contrastMin is the lowest text contrast found; smallTargets lists controls under 44px (inline links in running text are exempt, WCAG 2.5.8); deadLinks lists link targets that will not exist on launch day; placeholdersLeft lists unknown company values still shown as placeholders (must be empty before launch).",
+ "frames": {
+  "01-default-390": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.36,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#uslugi": 1,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 4,
+    "/poznan/pranie-wozkow-i-fotelikow": 1,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "h1Text": "Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach",
+   "strollerLinks": [
+    "Pranie wózków i fotelików"
+   ],
+   "comingRows": [
+    {
+     "text": "Kanapy, narożniki i fotelewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Materacewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Dywanywkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Tapicerka samochodowa (wnętrze auta)wkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    }
+   ],
+   "emptyHrefs": 0,
+   "headings": [
+    "H1 Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznani",
+    "H2 Co pierzemy",
+    "H3 Pranie wózków i fotelików",
+    "H2 Jak to działa",
+    "H3 Wyślij zdjęcia",
+    "H3 Dostań cenę i termin",
+    "H3 Pierzemy u Ciebie",
+    "H2 Gdzie dojeżdżamy",
+    "H2 Wyślij 2–3 zdjęcia. Cenę podamy dziś."
+   ],
+   "minBodyFontPx": 12.5,
+   "footer": {
+    "height": 478,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 390,
+   "keyboard": {
+    "stops": 15,
+    "order": [
+     "Przejdź do usług",
+     "Nowiutko, strona główna",
+     "736 369 704 [header]",
+     "Wyślij zdjęcia na WhatsApp [hero]",
+     "Zadzwoń: 736 369 704 [hero]",
+     "Pranie wózków i fotelików",
+     "Wyślij zdjęcia na WhatsApp [final]",
+     "Zadzwoń: 736 369 704 [final]",
+     "SMS-em na ten sam numer [final]",
+     "Telefon 736 369 704 [footer]",
+     "WhatsApp 736 369 704 [footer]",
+     "Prywatność",
+     "Ustawienia cookies",
+     "Wyślij zdjęcia na WhatsApp [sticky]",
+     "Zadzwoń: 736 369 704 [sticky]"
+    ],
+    "footerStops": [
+     "Telefon 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "WhatsApp 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "Prywatność · solid 3px rgb(18, 48, 43)",
+     "Ustawienia cookies · solid 3px rgb(18, 48, 43)"
+    ],
+    "problems": []
+   },
+   "reducedMotion": {
+    "scroll": "auto",
+    "transitions": [
+     "0s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "02-default-1440": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.36,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#uslugi": 1,
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 4,
+    "/poznan/pranie-wozkow-i-fotelikow": 1,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "h1Text": "Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach",
+   "strollerLinks": [
+    "Pranie wózków i fotelików"
+   ],
+   "comingRows": [
+    {
+     "text": "Kanapy, narożniki i fotelewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Materacewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Dywanywkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Tapicerka samochodowa (wnętrze auta)wkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    }
+   ],
+   "emptyHrefs": 0,
+   "headings": [
+    "H1 Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznani",
+    "H2 Co pierzemy",
+    "H3 Pranie wózków i fotelików",
+    "H2 Jak to działa",
+    "H3 Wyślij zdjęcia",
+    "H3 Dostań cenę i termin",
+    "H3 Pierzemy u Ciebie",
+    "H2 Gdzie dojeżdżamy",
+    "H2 Wyślij 2–3 zdjęcia. Cenę podamy dziś."
+   ],
+   "minBodyFontPx": 12.5,
+   "footer": {
+    "height": 271,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 1440,
+   "keyboard": {
+    "stops": 14,
+    "order": [
+     "Przejdź do usług",
+     "Nowiutko, strona główna",
+     "736 369 704 [header]",
+     "Wyślij zdjęcia na WhatsApp [header]",
+     "Wyślij zdjęcia na WhatsApp [hero]",
+     "Zadzwoń: 736 369 704 [hero]",
+     "Pranie wózków i fotelików",
+     "Wyślij zdjęcia na WhatsApp [final]",
+     "Zadzwoń: 736 369 704 [final]",
+     "SMS-em na ten sam numer [final]",
+     "Telefon 736 369 704 [footer]",
+     "WhatsApp 736 369 704 [footer]",
+     "Prywatność",
+     "Ustawienia cookies"
+    ],
+    "footerStops": [
+     "Telefon 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "WhatsApp 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "Prywatność · solid 3px rgb(18, 48, 43)",
+     "Ustawienia cookies · solid 3px rgb(18, 48, 43)"
+    ],
+    "problems": []
+   },
+   "reducedMotion": {
+    "scroll": "auto",
+    "transitions": [
+     "0s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "03-hold-768": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.36,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#uslugi": 1,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 4,
+    "/poznan/pranie-wozkow-i-fotelikow": 1,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "h1Text": "Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach",
+   "strollerLinks": [
+    "Pranie wózków i fotelików"
+   ],
+   "comingRows": [
+    {
+     "text": "Kanapy, narożniki i fotelewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Materacewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Dywanywkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Tapicerka samochodowa (wnętrze auta)wkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    }
+   ],
+   "emptyHrefs": 0,
+   "headings": [
+    "H1 Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznani",
+    "H2 Co pierzemy",
+    "H3 Pranie wózków i fotelików",
+    "H2 Jak to działa",
+    "H3 Wyślij zdjęcia",
+    "H3 Dostań cenę i termin",
+    "H3 Pierzemy u Ciebie",
+    "H2 Gdzie dojeżdżamy",
+    "H2 Wyślij 2–3 zdjęcia. Cenę podamy dziś."
+   ],
+   "minBodyFontPx": 12.5,
+   "footer": {
+    "height": 376,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 768,
+   "keyboard": {
+    "stops": 15,
+    "order": [
+     "Przejdź do usług",
+     "Nowiutko, strona główna",
+     "736 369 704 [header]",
+     "Wyślij zdjęcia na WhatsApp [hero]",
+     "Zadzwoń: 736 369 704 [hero]",
+     "Pranie wózków i fotelików",
+     "Wyślij zdjęcia na WhatsApp [final]",
+     "Zadzwoń: 736 369 704 [final]",
+     "SMS-em na ten sam numer [final]",
+     "Telefon 736 369 704 [footer]",
+     "WhatsApp 736 369 704 [footer]",
+     "Prywatność",
+     "Ustawienia cookies",
+     "Wyślij zdjęcia na WhatsApp [sticky]",
+     "Zadzwoń: 736 369 704 [sticky]"
+    ],
+    "footerStops": [
+     "Telefon 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "WhatsApp 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "Prywatność · solid 3px rgb(18, 48, 43)",
+     "Ustawienia cookies · solid 3px rgb(18, 48, 43)"
+    ],
+    "problems": []
+   },
+   "reducedMotion": {
+    "scroll": "auto",
+    "transitions": [
+     "0s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "04-hold-1024": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.36,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#uslugi": 1,
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 4,
+    "/poznan/pranie-wozkow-i-fotelikow": 1,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "h1Text": "Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach",
+   "strollerLinks": [
+    "Pranie wózków i fotelików"
+   ],
+   "comingRows": [
+    {
+     "text": "Kanapy, narożniki i fotelewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Materacewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Dywanywkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Tapicerka samochodowa (wnętrze auta)wkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    }
+   ],
+   "emptyHrefs": 0,
+   "headings": [
+    "H1 Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznani",
+    "H2 Co pierzemy",
+    "H3 Pranie wózków i fotelików",
+    "H2 Jak to działa",
+    "H3 Wyślij zdjęcia",
+    "H3 Dostań cenę i termin",
+    "H3 Pierzemy u Ciebie",
+    "H2 Gdzie dojeżdżamy",
+    "H2 Wyślij 2–3 zdjęcia. Cenę podamy dziś."
+   ],
+   "minBodyFontPx": 12.5,
+   "footer": {
+    "height": 271,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 1024,
+   "keyboard": {
+    "stops": 14,
+    "order": [
+     "Przejdź do usług",
+     "Nowiutko, strona główna",
+     "736 369 704 [header]",
+     "Wyślij zdjęcia na WhatsApp [header]",
+     "Wyślij zdjęcia na WhatsApp [hero]",
+     "Zadzwoń: 736 369 704 [hero]",
+     "Pranie wózków i fotelików",
+     "Wyślij zdjęcia na WhatsApp [final]",
+     "Zadzwoń: 736 369 704 [final]",
+     "SMS-em na ten sam numer [final]",
+     "Telefon 736 369 704 [footer]",
+     "WhatsApp 736 369 704 [footer]",
+     "Prywatność",
+     "Ustawienia cookies"
+    ],
+    "footerStops": [
+     "Telefon 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "WhatsApp 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "Prywatność · solid 3px rgb(18, 48, 43)",
+     "Ustawienia cookies · solid 3px rgb(18, 48, 43)"
+    ],
+    "problems": []
+   },
+   "reducedMotion": {
+    "scroll": "auto",
+    "transitions": [
+     "0s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "05-first-screen-390": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.36,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#uslugi": 1,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 4,
+    "/poznan/pranie-wozkow-i-fotelikow": 1,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "h1Text": "Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach",
+   "strollerLinks": [
+    "Pranie wózków i fotelików"
+   ],
+   "comingRows": [
+    {
+     "text": "Kanapy, narożniki i fotelewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Materacewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Dywanywkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Tapicerka samochodowa (wnętrze auta)wkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    }
+   ],
+   "emptyHrefs": 0,
+   "headings": [
+    "H1 Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznani",
+    "H2 Co pierzemy",
+    "H3 Pranie wózków i fotelików",
+    "H2 Jak to działa",
+    "H3 Wyślij zdjęcia",
+    "H3 Dostań cenę i termin",
+    "H3 Pierzemy u Ciebie",
+    "H2 Gdzie dojeżdżamy",
+    "H2 Wyślij 2–3 zdjęcia. Cenę podamy dziś."
+   ],
+   "minBodyFontPx": 12.5,
+   "footer": {
+    "height": 478,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 390
+  },
+  "06-first-screen-1440": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.36,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#uslugi": 1,
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 4,
+    "/poznan/pranie-wozkow-i-fotelikow": 1,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "h1Text": "Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach",
+   "strollerLinks": [
+    "Pranie wózków i fotelików"
+   ],
+   "comingRows": [
+    {
+     "text": "Kanapy, narożniki i fotelewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Materacewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Dywanywkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Tapicerka samochodowa (wnętrze auta)wkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    }
+   ],
+   "emptyHrefs": 0,
+   "headings": [
+    "H1 Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznani",
+    "H2 Co pierzemy",
+    "H3 Pranie wózków i fotelików",
+    "H2 Jak to działa",
+    "H3 Wyślij zdjęcia",
+    "H3 Dostań cenę i termin",
+    "H3 Pierzemy u Ciebie",
+    "H2 Gdzie dojeżdżamy",
+    "H2 Wyślij 2–3 zdjęcia. Cenę podamy dziś."
+   ],
+   "minBodyFontPx": 12.5,
+   "footer": {
+    "height": 271,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 1440
+  },
+  "07-state-cookie-390": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.36,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer",
+    "Szczegóły"
+   ],
+   "links": {
+    "#uslugi": 1,
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 3,
+    "/poznan/pranie-wozkow-i-fotelikow": 1,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1,
+    "/polityka-prywatnosci#cookies": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "h1Text": "Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach",
+   "strollerLinks": [
+    "Pranie wózków i fotelików"
+   ],
+   "comingRows": [
+    {
+     "text": "Kanapy, narożniki i fotelewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Materacewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Dywanywkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Tapicerka samochodowa (wnętrze auta)wkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    }
+   ],
+   "emptyHrefs": 0,
+   "headings": [
+    "H1 Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznani",
+    "H2 Co pierzemy",
+    "H3 Pranie wózków i fotelików",
+    "H2 Jak to działa",
+    "H3 Wyślij zdjęcia",
+    "H3 Dostań cenę i termin",
+    "H3 Pierzemy u Ciebie",
+    "H2 Gdzie dojeżdżamy",
+    "H2 Wyślij 2–3 zdjęcia. Cenę podamy dziś.",
+    "H2 Ciasteczka"
+   ],
+   "minBodyFontPx": 12.5,
+   "footer": {
+    "height": 478,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 390
+  },
+  "08-state-cookie-1440": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.36,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer",
+    "Szczegóły"
+   ],
+   "links": {
+    "#uslugi": 1,
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 4,
+    "/poznan/pranie-wozkow-i-fotelikow": 1,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1,
+    "/polityka-prywatnosci#cookies": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "h1Text": "Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach",
+   "strollerLinks": [
+    "Pranie wózków i fotelików"
+   ],
+   "comingRows": [
+    {
+     "text": "Kanapy, narożniki i fotelewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Materacewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Dywanywkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Tapicerka samochodowa (wnętrze auta)wkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    }
+   ],
+   "emptyHrefs": 0,
+   "headings": [
+    "H1 Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznani",
+    "H2 Co pierzemy",
+    "H3 Pranie wózków i fotelików",
+    "H2 Jak to działa",
+    "H3 Wyślij zdjęcia",
+    "H3 Dostań cenę i termin",
+    "H3 Pierzemy u Ciebie",
+    "H2 Gdzie dojeżdżamy",
+    "H2 Wyślij 2–3 zdjęcia. Cenę podamy dziś.",
+    "H2 Ciasteczka"
+   ],
+   "minBodyFontPx": 12.5,
+   "footer": {
+    "height": 271,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 1440
+  },
+  "09-state-service-live-390": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.36,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#uslugi": 1,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 4,
+    "/poznan/pranie-wozkow-i-fotelikow": 1,
+    "/poznan/pranie-kanap": 1,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "h1Text": "Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach",
+   "strollerLinks": [
+    "Pranie wózków i fotelików"
+   ],
+   "comingRows": [
+    {
+     "text": "Pranie kanap i foteli",
+     "hasLink": true,
+     "hasWkrotce": false,
+     "cursor": "auto"
+    },
+    {
+     "text": "Materacewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Dywanywkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Tapicerka samochodowa (wnętrze auta)wkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    }
+   ],
+   "emptyHrefs": 0,
+   "headings": [
+    "H1 Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznani",
+    "H2 Co pierzemy",
+    "H3 Pranie wózków i fotelików",
+    "H2 Jak to działa",
+    "H3 Wyślij zdjęcia",
+    "H3 Dostań cenę i termin",
+    "H3 Pierzemy u Ciebie",
+    "H2 Gdzie dojeżdżamy",
+    "H2 Wyślij 2–3 zdjęcia. Cenę podamy dziś."
+   ],
+   "minBodyFontPx": 12.5,
+   "footer": {
+    "height": 478,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 390,
+   "keyboard": {
+    "stops": 16,
+    "order": [
+     "Przejdź do usług",
+     "Nowiutko, strona główna",
+     "736 369 704 [header]",
+     "Wyślij zdjęcia na WhatsApp [hero]",
+     "Zadzwoń: 736 369 704 [hero]",
+     "Pranie wózków i fotelików",
+     "Pranie kanap i foteli",
+     "Wyślij zdjęcia na WhatsApp [final]",
+     "Zadzwoń: 736 369 704 [final]",
+     "SMS-em na ten sam numer [final]",
+     "Telefon 736 369 704 [footer]",
+     "WhatsApp 736 369 704 [footer]",
+     "Prywatność",
+     "Ustawienia cookies",
+     "Wyślij zdjęcia na WhatsApp [sticky]",
+     "Zadzwoń: 736 369 704 [sticky]"
+    ],
+    "footerStops": [
+     "Telefon 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "WhatsApp 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "Prywatność · solid 3px rgb(18, 48, 43)",
+     "Ustawienia cookies · solid 3px rgb(18, 48, 43)"
+    ],
+    "problems": []
+   },
+   "reducedMotion": {
+    "scroll": "auto",
+    "transitions": [
+     "0s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "10-state-service-live-1440": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.36,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#uslugi": 1,
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 4,
+    "/poznan/pranie-wozkow-i-fotelikow": 1,
+    "/poznan/pranie-kanap": 1,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "h1Text": "Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach",
+   "strollerLinks": [
+    "Pranie wózków i fotelików"
+   ],
+   "comingRows": [
+    {
+     "text": "Pranie kanap i foteli",
+     "hasLink": true,
+     "hasWkrotce": false,
+     "cursor": "auto"
+    },
+    {
+     "text": "Materacewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Dywanywkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Tapicerka samochodowa (wnętrze auta)wkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    }
+   ],
+   "emptyHrefs": 0,
+   "headings": [
+    "H1 Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznani",
+    "H2 Co pierzemy",
+    "H3 Pranie wózków i fotelików",
+    "H2 Jak to działa",
+    "H3 Wyślij zdjęcia",
+    "H3 Dostań cenę i termin",
+    "H3 Pierzemy u Ciebie",
+    "H2 Gdzie dojeżdżamy",
+    "H2 Wyślij 2–3 zdjęcia. Cenę podamy dziś."
+   ],
+   "minBodyFontPx": 12.5,
+   "footer": {
+    "height": 271,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 1440,
+   "keyboard": {
+    "stops": 15,
+    "order": [
+     "Przejdź do usług",
+     "Nowiutko, strona główna",
+     "736 369 704 [header]",
+     "Wyślij zdjęcia na WhatsApp [header]",
+     "Wyślij zdjęcia na WhatsApp [hero]",
+     "Zadzwoń: 736 369 704 [hero]",
+     "Pranie wózków i fotelików",
+     "Pranie kanap i foteli",
+     "Wyślij zdjęcia na WhatsApp [final]",
+     "Zadzwoń: 736 369 704 [final]",
+     "SMS-em na ten sam numer [final]",
+     "Telefon 736 369 704 [footer]",
+     "WhatsApp 736 369 704 [footer]",
+     "Prywatność",
+     "Ustawienia cookies"
+    ],
+    "footerStops": [
+     "Telefon 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "WhatsApp 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "Prywatność · solid 3px rgb(18, 48, 43)",
+     "Ustawienia cookies · solid 3px rgb(18, 48, 43)"
+    ],
+    "problems": []
+   },
+   "reducedMotion": {
+    "scroll": "auto",
+    "transitions": [
+     "0s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "11-end-of-page-sticky-bar-390": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.36,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#uslugi": 1,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 4,
+    "/poznan/pranie-wozkow-i-fotelikow": 1,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "h1Text": "Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach",
+   "strollerLinks": [
+    "Pranie wózków i fotelików"
+   ],
+   "comingRows": [
+    {
+     "text": "Kanapy, narożniki i fotelewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Materacewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Dywanywkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Tapicerka samochodowa (wnętrze auta)wkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    }
+   ],
+   "emptyHrefs": 0,
+   "headings": [
+    "H1 Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznani",
+    "H2 Co pierzemy",
+    "H3 Pranie wózków i fotelików",
+    "H2 Jak to działa",
+    "H3 Wyślij zdjęcia",
+    "H3 Dostań cenę i termin",
+    "H3 Pierzemy u Ciebie",
+    "H2 Gdzie dojeżdżamy",
+    "H2 Wyślij 2–3 zdjęcia. Cenę podamy dziś."
+   ],
+   "minBodyFontPx": 12.5,
+   "footer": {
+    "height": 478,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 390,
+   "footerReach": [
+    {
+     "control": "Telefon 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "WhatsApp 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Prywatność",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Ustawienia cookies",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    }
+   ]
+  },
+  "12-end-of-page-cookie-banner-390": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.36,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer",
+    "Szczegóły"
+   ],
+   "links": {
+    "#uslugi": 1,
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 3,
+    "/poznan/pranie-wozkow-i-fotelikow": 1,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1,
+    "/polityka-prywatnosci#cookies": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "h1Text": "Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach",
+   "strollerLinks": [
+    "Pranie wózków i fotelików"
+   ],
+   "comingRows": [
+    {
+     "text": "Kanapy, narożniki i fotelewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Materacewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Dywanywkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Tapicerka samochodowa (wnętrze auta)wkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    }
+   ],
+   "emptyHrefs": 0,
+   "headings": [
+    "H1 Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznani",
+    "H2 Co pierzemy",
+    "H3 Pranie wózków i fotelików",
+    "H2 Jak to działa",
+    "H3 Wyślij zdjęcia",
+    "H3 Dostań cenę i termin",
+    "H3 Pierzemy u Ciebie",
+    "H2 Gdzie dojeżdżamy",
+    "H2 Wyślij 2–3 zdjęcia. Cenę podamy dziś.",
+    "H2 Ciasteczka"
+   ],
+   "minBodyFontPx": 12.5,
+   "footer": {
+    "height": 478,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 390,
+   "footerReach": [
+    {
+     "control": "Telefon 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "WhatsApp 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Prywatność",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Ustawienia cookies",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    }
+   ]
+  },
+  "13-default-320": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.36,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#uslugi": 1,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 4,
+    "/poznan/pranie-wozkow-i-fotelikow": 1,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "h1Text": "Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach",
+   "strollerLinks": [
+    "Pranie wózków i fotelików"
+   ],
+   "comingRows": [
+    {
+     "text": "Kanapy, narożniki i fotelewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Materacewkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Dywanywkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    },
+    {
+     "text": "Tapicerka samochodowa (wnętrze auta)wkrótce",
+     "hasLink": false,
+     "hasWkrotce": true,
+     "cursor": "auto"
+    }
+   ],
+   "emptyHrefs": 0,
+   "headings": [
+    "H1 Nowiutko – pranie tapicerki, wózków i aut u Ciebie w Poznani",
+    "H2 Co pierzemy",
+    "H3 Pranie wózków i fotelików",
+    "H2 Jak to działa",
+    "H3 Wyślij zdjęcia",
+    "H3 Dostań cenę i termin",
+    "H3 Pierzemy u Ciebie",
+    "H2 Gdzie dojeżdżamy",
+    "H2 Wyślij 2–3 zdjęcia. Cenę podamy dziś."
+   ],
+   "minBodyFontPx": 12.5,
+   "footer": {
+    "height": 478,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 320,
+   "keyboard": {
+    "stops": 15,
+    "order": [
+     "Przejdź do usług",
+     "Nowiutko, strona główna",
+     "736 369 704 [header]",
+     "Wyślij zdjęcia na WhatsApp [hero]",
+     "Zadzwoń: 736 369 704 [hero]",
+     "Pranie wózków i fotelików",
+     "Wyślij zdjęcia na WhatsApp [final]",
+     "Zadzwoń: 736 369 704 [final]",
+     "SMS-em na ten sam numer [final]",
+     "Telefon 736 369 704 [footer]",
+     "WhatsApp 736 369 704 [footer]",
+     "Prywatność",
+     "Ustawienia cookies",
+     "Wyślij zdjęcia na WhatsApp [sticky]",
+     "Zadzwoń: 736 369 704 [sticky]"
+    ],
+    "footerStops": [
+     "Telefon 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "WhatsApp 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "Prywatność · solid 3px rgb(18, 48, 43)",
+     "Ustawienia cookies · solid 3px rgb(18, 48, 43)"
+    ],
+    "problems": []
+   },
+   "reducedMotion": {
+    "scroll": "auto",
+    "transitions": [
+     "0s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  }
+ }
+}
