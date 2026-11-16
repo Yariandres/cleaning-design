@@ -1,6 +1,6 @@
 # Share image (Open Graph), 1200 × 630
 
-> **DRAFT — awaiting the owner's approval (2026-11-16).** Part of the draft `stroller-v1.2`.
+> Approved by the owner with `stroller-v1.2` (2026-11-16).
 
 One template, two variants, per `docs/design-constraints.md` ("one 1200 × 630 template with slots for page title and one photo"). Owner priority [cleaning-design #5](https://github.com/Yariandres/cleaning-design/issues/5), scope item 3.
 

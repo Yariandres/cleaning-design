@@ -1,6 +1,6 @@
 # Copy: stroller counter
 
-> **DRAFT `stroller-v1.2`:** the sections "Footer" and "Share image" below are new and await the owner's approval. Everything else is `stroller-v1.1`, unchanged.
+> **`stroller-v1.2` (approved by the owner on 2026-11-16):** the sections "Footer" and "Share image" below are new. Everything else is `stroller-v1.1`, unchanged.
 
 **`stroller-v1.1` (approved by the owner on 2026-11-16): early launch without the quote form.** Changed keys are marked *(v1.1)*; everything else is as in `stroller-v1`. The one action is "Wyślij zdjęcia na WhatsApp"; the label is the same in every place.
 
@@ -99,7 +99,7 @@ Final Polish copy, keyed. `{...}` = comes from the database, never hard-coded. V
 - `final.text` — Przyjeżdżamy na czas. Płacisz tyle, ile podaliśmy ze zdjęć. Jeśli coś wyjdzie po wyschnięciu, wracamy za darmo.
 - Buttons *(v1.1)*: `cta.whatsapp` (white solid) · `cta.call` (white outline, Lucide `phone`) · then the line `cta.sms`
 
-## Footer *(v1.2, DRAFT: awaiting the owner's approval; shared component, `handoff/components/footer.md`)*
+## Footer *(v1.2; shared component, `handoff/components/footer.md`)*
 - `footer.logo.alt` — Nowiutko
 - `footer.tagline` — Pranie tapicerki, wózków i aut u Ciebie. *(the descriptive tagline from `docs/brand.md`; the logo supplies "Nowiutko")*
 - `footer.area` — Poznań i okolice.
@@ -116,7 +116,7 @@ Final Polish copy, keyed. `{...}` = comes from the database, never hard-coded. V
 - **No company value is real yet.** The prototype shows bracketed placeholders such as "[nazwa firmy z CEIDG]"; they are not copy and must never ship.
 - In v1.1 the footer was one line: "Nowiutko · pranie tapicerki, wózków i aut u Ciebie · Poznań". "Cookies" and "Regulamin" stay removed: those pages do not exist at the early launch.
 
-## Share image *(v1.2, DRAFT; `handoff/components/share-image.md`)*
+## Share image *(v1.2; `handoff/components/share-image.md`)*
 - `og.title` — Pranie wózków i fotelików w Poznaniu *(text inside the image; non-breaking spaces after "i" and "w"; not the H1, not the `<title>`, no price)*
 - `og.line` — U Ciebie w domu · tego samego dnia
 - `og.alt` — Nowiutko: pranie wózków i fotelików w Poznaniu, u Ciebie w domu.

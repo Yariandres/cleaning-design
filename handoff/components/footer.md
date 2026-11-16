@@ -1,6 +1,6 @@
 # Footer (shared: counters, homepage v0, quote form)
 
-> **DRAFT — awaiting the owner's approval (2026-11-16).** Part of the draft `stroller-v1.2`. Do not build from this until it is tagged.
+> Approved by the owner with `stroller-v1.2` (2026-11-16).
 
 One footer for every public page. It replaces the one-line footer of `stroller-v1.1`. Owner priority [cleaning-design #5](https://github.com/Yariandres/cleaning-design/issues/5), scope item 4 ("company details, privacy link, Ustawienia cookies").
 

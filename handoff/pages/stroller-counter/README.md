@@ -1,16 +1,14 @@
 # Stroller counter — `/poznan/pranie-wozkow-i-fotelikow`
 
-> **DRAFT `stroller-v1.2` — awaiting the owner's approval (prepared 2026-11-16). Not pushed, not tagged.** Until it is tagged, the approved version is **`stroller-v1.1`**: read this file at that tag. Everything marked *(v1.2)* below is draft.
-
 ## 1. Tag and status
-- **Draft tag:** `stroller-v1.2` = `stroller-v1.1` + the full **footer**, the **share image** and the **favicon / app-icon bitmaps** (owner priority [cleaning-design #5](https://github.com/Yariandres/cleaning-design/issues/5), scope items 4 and 3). The page above the footer is unchanged.
-- **Tag:** `stroller-v1.1`, approved by the owner on 2026-11-16. Build the early launch from this tag.
+- **Tag:** `stroller-v1.2`, approved by the owner on 2026-11-16. Build the early launch from this tag. `stroller-v1.2` = `stroller-v1.1` + the full **footer**, the **share image** and the **favicon / app-icon bitmaps** (owner priority [cleaning-design #5](https://github.com/Yariandres/cleaning-design/issues/5), scope items 4 and 3). The page above the footer is unchanged.
+- `stroller-v1.1` (approved 2026-11-16) is the page above the footer; the developer built it on 2026-11-16 (cleaning-sell-system #9).
 - `stroller-v1.1` is the **early-launch version** (owner priority [cleaning-design #5](https://github.com/Yariandres/cleaning-design/issues/5), developer [#8](https://github.com/Yariandres/cleaning-sell-system/issues/8)): the page goes live on nowiutko.pl before the quote form exists. Booking is by WhatsApp and phone.
 - `stroller-v1` (approved 2026-11-13, Direction 2 "Cennik pierwszy") stays as it is at its tag. It is the version **with** the quote form; see "After the quote form is live" at the end of the next section.
 - Designed against `docs/design-constraints.md` in cleaning-sell-system at commit `85dee45` (unchanged since v1), and `DESIGN.md` in this repo at the tag.
 - **No Figma for this handover** (owner decision, 2026-11-13). The visuals are the PNGs in `screens/` and the working HTML reference below.
 
-## What changed since `stroller-v1.1` (draft v1.2, read this first)
+## What changed since `stroller-v1.1` (v1.2, read this first)
 
 Everything from the header to the final CTA is **unchanged**: same HTML, copy, tokens, prices, headings. Four things are new or different.
 
@@ -190,13 +188,13 @@ Everything from the database is marked `data-bind` in the prototype. Never hard-
 ## 10. Open questions
 
 **For the developer**
-1. **Privacy page route and a cookies anchor.** The prototype uses `/polityka-prywatnosci` and `#cookies`. Use the real ones; both links must resolve on launch day.
-2. **"Ustawienia cookies"** needs a way to reopen the banner (#46). If that is not ready for launch, drop the button rather than ship one that does nothing.
-3. **`/` on launch day.** The logo and the breadcrumb point at `/`. If homepage v0 is not live when the stroller page is, `/` must still answer (for example a temporary redirect to this page), or the logo is rendered without a link.
-4. **`{business:whatsapp}` as a number**, not a ready link: does the admin "Firma" screen already store it that way?
+1. *Answered (cleaning-sell-system #9): `/polityka-prywatnosci` and `#cookies`, built before launch; the links stay out until the page exists.* **Privacy page route and a cookies anchor.** The prototype uses `/polityka-prywatnosci` and `#cookies`. Use the real ones; both links must resolve on launch day.
+2. *Answered: built with #46.* **"Ustawienia cookies"** needs a way to reopen the banner (#46). If that is not ready for launch, drop the button rather than ship one that does nothing.
+3. *Answered (#9): `/` answers 200 with a placeholder page until homepage v0.* **`/` on launch day.** The logo and the breadcrumb point at `/`. If homepage v0 is not live when the stroller page is, `/` must still answer (for example a temporary redirect to this page), or the logo is rendered without a link.
+4. *Answered (#9): stored in E.164, edited in admin "Firma".* **`{business:whatsapp}` as a number**, not a ready link: does the admin "Firma" screen already store it that way?
 5. **Sticky bar under the cookie banner** (as in v1): design shows the bar hidden until a choice is made.
-6. **Click measurement** on the `data-cta` links, only after analytics consent.
-7. Please check the two v1 fixes on the built page: white headings on the two dark surfaces, and the FAQ plus sign under reduced motion.
+6. *Answered (#9): `contact_click` event, after consent only.* **Click measurement** on the `data-cta` links, only after analytics consent.
+7. *Done by the developer (#9).* Please check the two v1 fixes on the built page: white headings on the two dark surfaces, and the FAQ plus sign under reduced motion.
 
 8. *(v1.2)* **Where do the company details live?** The admin "Firma" screen has no fields for them. For the launch a config value is enough; say if you want the fields designed into "Firma" (a small change to `admin-cennik`).
 9. *(v1.2)* **Cookie banner space:** can the page reserve the banner's height while it is open (prototype: `--cookie-h`), so the footer's last line is never under it?
@@ -213,10 +211,10 @@ Everything from the database is marked `data-bind` in the prototype. Never hard-
 5. Still open from v1: brand list in the car-seat H2, "najczęściej wybierany", the gondola line "odsysamy wodę", struck-through package prices.
 6. **Photos:** if they are not ready by launch, the page goes live in the no-photos state (`screens/13`–`14`). All four problem-card photos are needed together to switch that section back.
 
-**For the SEO desk** *(v1.2, not yet posted; the owner reviews first)*: address in the footer versus "no public address" in LocalBusiness and the Business Profile; `legalName` / `taxID` in LocalBusiness; any OG rules beyond 1200 × 630 (title wording, `og:image:alt`, a second square image).
+**For the SEO desk** *(v1.2, asked on [cleaning-seo #2](https://github.com/Yariandres/cleaning-seo/issues/2))*: address in the footer versus "no public address" in LocalBusiness and the Business Profile; `legalName` / `taxID` in LocalBusiness; any OG rules beyond 1200 × 630 (title wording, `og:image:alt`, a second square image).
 
-**For the SEO desk (v1.1):** asked on [cleaning-seo #2](https://github.com/Yariandres/cleaning-seo/issues/2) (links removed against brief §4, `rel` on `wa.me` links, phone in LocalBusiness, breadcrumb while `/` is not live).
+**For the SEO desk (v1.1), answered on cleaning-seo #2 (links may stay out until the pages ship; no `nofollow` on `wa.me`; `telephone` on LocalBusiness; breadcrumb is safe while `/` answers 200):** asked on [cleaning-seo #2](https://github.com/Yariandres/cleaning-seo/issues/2) (links removed against brief §4, `rel` on `wa.me` links, phone in LocalBusiness, breadcrumb while `/` is not live).
 
-**For the brand strategist** *(v1.2, not yet raised)*: `footer.address-note`; the labels "Kontakt" / "Dane firmy"; the share image's `og.line` ("U Ciebie w domu · tego samego dnia", carried over from the v1 template); the footer tagline keeps "tapicerki, wózków i aut" although only strollers and car seats are sold at the early launch.
+**For the brand strategist** *(v1.2, added to [cleaning-design #6](https://github.com/Yariandres/cleaning-design/issues/6))*: `footer.address-note`; the labels "Kontakt" / "Dane firmy"; the share image's `og.line` ("U Ciebie w domu · tego samego dnia", carried over from the v1 template); the footer tagline keeps "tapicerki, wózków i aut" although only strollers and car seats are sold at the early launch.
 
 **For the brand strategist (v1.1):** raised as a "Brand:" issue in cleaning-design ("na WhatsApp" vs "na WhatsAppie" / "przez WhatsApp"; the new hero line; an answering-hours line).
