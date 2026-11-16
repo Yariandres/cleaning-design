@@ -15,6 +15,7 @@ handoff/
     fonts.md                   families, weights, source and licence
   brand/
     logo/                      approved logo SVGs (full logo, symbol, small-size symbol, app icon, maskable)
+      png/                     favicon.ico, apple-touch-icon and app-icon PNGs rendered from those SVGs
   components/
     <component>.md             anatomy, states, behaviour, spacing, motion, accessibility; Figma link to the component
   pages/

@@ -1,5 +1,7 @@
 # Copy: stroller counter
 
+> **DRAFT `stroller-v1.2`:** the sections "Footer" and "Share image" below are new and await the owner's approval. Everything else is `stroller-v1.1`, unchanged.
+
 **`stroller-v1.1` (approved by the owner on 2026-11-16): early launch without the quote form.** Changed keys are marked *(v1.1)*; everything else is as in `stroller-v1`. The one action is "Wyślij zdjęcia na WhatsApp"; the label is the same in every place.
 
 Final Polish copy, keyed. `{...}` = comes from the database, never hard-coded. Voice: "Ty", short, concrete. **Wording of the H1 and hero is the brand strategist's call** (see README, open questions); the keys below hold the version in the approved design.
@@ -97,8 +99,27 @@ Final Polish copy, keyed. `{...}` = comes from the database, never hard-coded. V
 - `final.text` — Przyjeżdżamy na czas. Płacisz tyle, ile podaliśmy ze zdjęć. Jeśli coś wyjdzie po wyschnięciu, wracamy za darmo.
 - Buttons *(v1.1)*: `cta.whatsapp` (white solid) · `cta.call` (white outline, Lucide `phone`) · then the line `cta.sms`
 
-## Footer
-Nowiutko · pranie tapicerki, wózków i aut u Ciebie · Poznań — *(v1.1)* link **Prywatność** (privacy page, issue #47) and button **Ustawienia cookies** (reopens the cookie banner). "Cookies" and "Regulamin" are removed: those pages do not exist at the early launch. Company details arrive with the footer job (cleaning-design #5, item 4).
+## Footer *(v1.2, DRAFT: awaiting the owner's approval; shared component, `handoff/components/footer.md`)*
+- `footer.logo.alt` — Nowiutko
+- `footer.tagline` — Pranie tapicerki, wózków i aut u Ciebie. *(the descriptive tagline from `docs/brand.md`; the logo supplies "Nowiutko")*
+- `footer.area` — Poznań i okolice.
+- `footer.contact.label` — Kontakt
+- `footer.contact.phone` — Telefon · `{business:phone}` → `tel:`
+- `footer.contact.whatsapp` — WhatsApp · `{business:whatsapp}` shown as the number → the page's WhatsApp link (`cta.whatsapp`)
+- `footer.contact.email` — E-mail · `{business:email}` → `mailto:` *(optional; no address exists yet)*
+- `footer.company.label` — Dane firmy
+- `footer.company.name` — `{business:legal-name}` *(not known yet)*
+- `footer.company.address` — `{business:address-line1}` / `{business:address-line2}` *(optional; not known yet)*
+- `footer.address-note` — To adres firmy, nie punkt przyjęć. Pierzemy u Ciebie. *(only with an address; wording for the brand strategist)*
+- `footer.company.ids` — NIP `{business:nip}` · REGON `{business:regon}` *(REGON optional; neither known yet)*
+- `footer.privacy` — Prywatność (privacy page, issue #47) · `cookies.settings` — Ustawienia cookies (button, reopens the cookie banner)
+- **No company value is real yet.** The prototype shows bracketed placeholders such as "[nazwa firmy z CEIDG]"; they are not copy and must never ship.
+- In v1.1 the footer was one line: "Nowiutko · pranie tapicerki, wózków i aut u Ciebie · Poznań". "Cookies" and "Regulamin" stay removed: those pages do not exist at the early launch.
+
+## Share image *(v1.2, DRAFT; `handoff/components/share-image.md`)*
+- `og.title` — Pranie wózków i fotelików w Poznaniu *(text inside the image; non-breaking spaces after "i" and "w"; not the H1, not the `<title>`, no price)*
+- `og.line` — U Ciebie w domu · tego samego dnia
+- `og.alt` — Nowiutko: pranie wózków i fotelików w Poznaniu, u Ciebie w domu.
 
 ## Cookie banner
 - Title *Ciasteczka* · text *Używamy niezbędnych ciasteczek, żeby strona działała. Za Twoją zgodą także analitycznych, żeby wiedzieć, co poprawić.* · link *Szczegóły* → the cookies section of the privacy page *(v1.1; was `/cookies`)* · buttons *Akceptuję* / *Odrzucam* (identical style and size).

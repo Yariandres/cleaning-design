@@ -1,163 +1,374 @@
 {
- "note": "Automatic checks for stroller-v1.1 (draft), run 2026-11-16 in headless Chrome on prototypes/stroller/final/*.html. contrastMin is the lowest text contrast found; smallTargets lists controls under 44px (inline links in running text are exempt, WCAG 2.5.8).",
+ "note": "Automatic checks for stroller-v1.2 (draft), run 2026-11-16 in headless Chrome on prototypes/stroller/final/*.html by prototypes/stroller/shots.mjs. contrastMin is the lowest text contrast found; smallTargets lists controls under 44px (inline links in running text are exempt, WCAG 2.5.8); deadLinks lists link targets that will not exist on launch day; placeholdersLeft lists unknown company values still shown as placeholders (must be empty before launch).",
  "frames": {
-  "default-390": {
-   "width": 390,
+  "01-default-390": {
    "horizontalScroll": false,
    "h1Count": 1,
-   "contrastMin": 5.03,
-   "contrastFails": [],
-   "smallTargets": [],
-   "inlineLinksExempt": [],
-   "hiddenSlots": [
-    "nextFreeSlot: hidden",
-    "nextFreeSlot.label: hidden",
-    "before-after: hidden",
-    "reviews: hidden"
-   ],
-   "leftoverV1Strings": [],
-   "motion": {
-    "scroll": "smooth",
-    "transitions": [
-     "0s",
-     "0.15s, 0.15s",
-     "0.2s",
-     "0.2s, 0.2s",
-     "0.35s"
-    ],
-    "animations": [
-     "none"
-    ]
-   }
-  },
-  "default-1440": {
-   "width": 1440,
-   "horizontalScroll": false,
-   "h1Count": 1,
+   "headingsInFooter": 0,
    "contrastMin": 5.03,
    "contrastFails": [],
    "smallTargets": [],
    "inlineLinksExempt": [
     "SMS-em na ten sam numer"
    ],
-   "hiddenSlots": [
-    "nextFreeSlot: hidden",
-    "nextFreeSlot.label: hidden",
-    "before-after: hidden",
-    "reviews: hidden"
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
    ],
-   "leftoverV1Strings": [],
-   "motion": {
-    "scroll": "smooth",
+   "footer": {
+    "height": 478,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 390,
+   "keyboard": {
+    "stops": 24,
+    "order": [
+     "Przejdź do cennika",
+     "Nowiutko, strona główna",
+     "736 369 704 [header]",
+     "Wyślij zdjęcia na WhatsApp [hero]",
+     "Pełny cennik i pakiety",
+     "Zadzwoń: 736 369 704 [hero]",
+     "zdjęcie własne wózek i fotelik PROBLEM Drugi",
+     "Wyślij zdjęcia na WhatsApp [steps]",
+     "Ile kosztuje pranie wózka dziecięcego?",
+     "Ile kosztuje pranie fotelika samochodowego?",
+     "Jak pierzecie foteliki Cybex czy Maxi-Cosi?",
+     "Czy środki są bezpieczne dla niemowlęcia?",
+     "Kiedy wózek będzie gotowy?",
+     "Czy usuniecie pleśń z gondoli?",
+     "Czy czyścicie też stelaż i koła?",
+     "Wyślij zdjęcia na WhatsApp [final]",
+     "Zadzwoń: 736 369 704 [final]",
+     "SMS-em na ten sam numer [final]",
+     "Telefon 736 369 704 [footer]",
+     "WhatsApp 736 369 704 [footer]",
+     "Prywatność",
+     "Ustawienia cookies",
+     "Wyślij zdjęcia na WhatsApp [sticky]",
+     "Zadzwoń: 736 369 704 [sticky]"
+    ],
+    "footerStops": [
+     "Telefon 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "WhatsApp 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "Prywatność · solid 3px rgb(18, 48, 43)",
+     "Ustawienia cookies · solid 3px rgb(18, 48, 43)"
+    ],
+    "problems": []
+   },
+   "reducedMotion": {
+    "scroll": "auto",
     "transitions": [
-     "0s",
-     "0.15s, 0.15s",
-     "0.2s",
-     "0.2s, 0.2s",
-     "0.35s"
+     "0s"
     ],
     "animations": [
      "none"
     ]
    }
   },
-  "hold-768": {
+  "02-default-1440": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "footer": {
+    "height": 271,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 1440,
+   "keyboard": {
+    "stops": 23,
+    "order": [
+     "Przejdź do cennika",
+     "Nowiutko, strona główna",
+     "736 369 704 [header]",
+     "Wyślij zdjęcia na WhatsApp [header]",
+     "Wyślij zdjęcia na WhatsApp [hero]",
+     "Pełny cennik i pakiety",
+     "Zadzwoń: 736 369 704 [hero]",
+     "zdjęcie własne wózek i fotelik PROBLEM Drugi",
+     "Wyślij zdjęcia na WhatsApp [steps]",
+     "Ile kosztuje pranie wózka dziecięcego?",
+     "Ile kosztuje pranie fotelika samochodowego?",
+     "Jak pierzecie foteliki Cybex czy Maxi-Cosi?",
+     "Czy środki są bezpieczne dla niemowlęcia?",
+     "Kiedy wózek będzie gotowy?",
+     "Czy usuniecie pleśń z gondoli?",
+     "Czy czyścicie też stelaż i koła?",
+     "Wyślij zdjęcia na WhatsApp [final]",
+     "Zadzwoń: 736 369 704 [final]",
+     "SMS-em na ten sam numer [final]",
+     "Telefon 736 369 704 [footer]",
+     "WhatsApp 736 369 704 [footer]",
+     "Prywatność",
+     "Ustawienia cookies"
+    ],
+    "footerStops": [
+     "Telefon 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "WhatsApp 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "Prywatność · solid 3px rgb(18, 48, 43)",
+     "Ustawienia cookies · solid 3px rgb(18, 48, 43)"
+    ],
+    "problems": []
+   },
+   "reducedMotion": {
+    "scroll": "auto",
+    "transitions": [
+     "0s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "03-hold-768": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "footer": {
+    "height": 376,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
    "width": 768,
-   "horizontalScroll": false,
-   "h1Count": 1,
-   "contrastMin": 5.03,
-   "contrastFails": [],
-   "smallTargets": [],
-   "inlineLinksExempt": [
-    "SMS-em na ten sam numer"
-   ],
-   "hiddenSlots": [
-    "nextFreeSlot: hidden",
-    "nextFreeSlot.label: hidden",
-    "before-after: hidden",
-    "reviews: hidden"
-   ],
-   "leftoverV1Strings": [],
-   "motion": {
-    "scroll": "smooth",
+   "keyboard": {
+    "stops": 24,
+    "order": [
+     "Przejdź do cennika",
+     "Nowiutko, strona główna",
+     "736 369 704 [header]",
+     "Wyślij zdjęcia na WhatsApp [hero]",
+     "Pełny cennik i pakiety",
+     "Zadzwoń: 736 369 704 [hero]",
+     "zdjęcie własne wózek i fotelik PROBLEM Drugi",
+     "Wyślij zdjęcia na WhatsApp [steps]",
+     "Ile kosztuje pranie wózka dziecięcego?",
+     "Ile kosztuje pranie fotelika samochodowego?",
+     "Jak pierzecie foteliki Cybex czy Maxi-Cosi?",
+     "Czy środki są bezpieczne dla niemowlęcia?",
+     "Kiedy wózek będzie gotowy?",
+     "Czy usuniecie pleśń z gondoli?",
+     "Czy czyścicie też stelaż i koła?",
+     "Wyślij zdjęcia na WhatsApp [final]",
+     "Zadzwoń: 736 369 704 [final]",
+     "SMS-em na ten sam numer [final]",
+     "Telefon 736 369 704 [footer]",
+     "WhatsApp 736 369 704 [footer]",
+     "Prywatność",
+     "Ustawienia cookies",
+     "Wyślij zdjęcia na WhatsApp [sticky]",
+     "Zadzwoń: 736 369 704 [sticky]"
+    ],
+    "footerStops": [
+     "Telefon 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "WhatsApp 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "Prywatność · solid 3px rgb(18, 48, 43)",
+     "Ustawienia cookies · solid 3px rgb(18, 48, 43)"
+    ],
+    "problems": []
+   },
+   "reducedMotion": {
+    "scroll": "auto",
     "transitions": [
-     "0s",
-     "0.15s, 0.15s",
-     "0.2s",
-     "0.2s, 0.2s",
-     "0.35s"
+     "0s"
     ],
     "animations": [
      "none"
     ]
    }
   },
-  "hold-1024": {
+  "04-hold-1024": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "footer": {
+    "height": 271,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
    "width": 1024,
+   "keyboard": {
+    "stops": 23,
+    "order": [
+     "Przejdź do cennika",
+     "Nowiutko, strona główna",
+     "736 369 704 [header]",
+     "Wyślij zdjęcia na WhatsApp [header]",
+     "Wyślij zdjęcia na WhatsApp [hero]",
+     "Pełny cennik i pakiety",
+     "Zadzwoń: 736 369 704 [hero]",
+     "zdjęcie własne wózek i fotelik PROBLEM Drugi",
+     "Wyślij zdjęcia na WhatsApp [steps]",
+     "Ile kosztuje pranie wózka dziecięcego?",
+     "Ile kosztuje pranie fotelika samochodowego?",
+     "Jak pierzecie foteliki Cybex czy Maxi-Cosi?",
+     "Czy środki są bezpieczne dla niemowlęcia?",
+     "Kiedy wózek będzie gotowy?",
+     "Czy usuniecie pleśń z gondoli?",
+     "Czy czyścicie też stelaż i koła?",
+     "Wyślij zdjęcia na WhatsApp [final]",
+     "Zadzwoń: 736 369 704 [final]",
+     "SMS-em na ten sam numer [final]",
+     "Telefon 736 369 704 [footer]",
+     "WhatsApp 736 369 704 [footer]",
+     "Prywatność",
+     "Ustawienia cookies"
+    ],
+    "footerStops": [
+     "Telefon 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "WhatsApp 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "Prywatność · solid 3px rgb(18, 48, 43)",
+     "Ustawienia cookies · solid 3px rgb(18, 48, 43)"
+    ],
+    "problems": []
+   },
+   "reducedMotion": {
+    "scroll": "auto",
+    "transitions": [
+     "0s"
+    ],
+    "animations": [
+     "none"
+    ]
+   }
+  },
+  "05-first-screen-390": {
    "horizontalScroll": false,
    "h1Count": 1,
+   "headingsInFooter": 0,
    "contrastMin": 5.03,
    "contrastFails": [],
    "smallTargets": [],
    "inlineLinksExempt": [
     "SMS-em na ten sam numer"
    ],
-   "hiddenSlots": [
-    "nextFreeSlot: hidden",
-    "nextFreeSlot.label: hidden",
-    "before-after: hidden",
-    "reviews: hidden"
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
    ],
-   "leftoverV1Strings": [],
-   "motion": {
-    "scroll": "smooth",
-    "transitions": [
-     "0s",
-     "0.15s, 0.15s",
-     "0.2s",
-     "0.2s, 0.2s",
-     "0.35s"
-    ],
-    "animations": [
-     "none"
-    ]
-   }
+   "footer": {
+    "height": 478,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 390
   },
-  "cookie-390": {
-   "width": 390,
+  "06-first-screen-1440": {
    "horizontalScroll": false,
    "h1Count": 1,
+   "headingsInFooter": 0,
    "contrastMin": 5.03,
    "contrastFails": [],
    "smallTargets": [],
    "inlineLinksExempt": [
-    "Szczegóły"
+    "SMS-em na ten sam numer"
    ],
-   "hiddenSlots": [
-    "nextFreeSlot: hidden",
-    "nextFreeSlot.label: hidden",
-    "before-after: hidden",
-    "reviews: hidden"
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
    ],
-   "leftoverV1Strings": [],
-   "motion": {
-    "scroll": "smooth",
-    "transitions": [
-     "0s",
-     "0.15s, 0.15s",
-     "0.2s",
-     "0.2s, 0.2s",
-     "0.35s"
-    ],
-    "animations": [
-     "none"
-    ]
-   }
+   "footer": {
+    "height": 271,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 1440
   },
-  "cookie-1440": {
-   "width": 1440,
+  "07-state-cookie-390": {
    "horizontalScroll": false,
    "h1Count": 1,
+   "headingsInFooter": 0,
    "contrastMin": 5.03,
    "contrastFails": [],
    "smallTargets": [],
@@ -165,775 +376,1209 @@
     "SMS-em na ten sam numer",
     "Szczegóły"
    ],
-   "hiddenSlots": [
-    "nextFreeSlot: hidden",
-    "nextFreeSlot.label: hidden",
-    "before-after: hidden",
-    "reviews: hidden"
+   "links": {
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 4,
+    "#cennik": 2,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1,
+    "/polityka-prywatnosci#cookies": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
    ],
-   "leftoverV1Strings": [],
-   "motion": {
-    "scroll": "smooth",
-    "transitions": [
-     "0s",
-     "0.15s, 0.15s",
-     "0.2s",
-     "0.2s, 0.2s",
-     "0.35s"
-    ],
-    "animations": [
-     "none"
-    ]
-   }
+   "footer": {
+    "height": 478,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 390
   },
-  "live-390": {
-   "width": 390,
+  "08-state-cookie-1440": {
    "horizontalScroll": false,
    "h1Count": 1,
+   "headingsInFooter": 0,
    "contrastMin": 5.03,
    "contrastFails": [],
    "smallTargets": [],
-   "inlineLinksExempt": [],
-   "hiddenSlots": [
-    "nextFreeSlot: VISIBLE",
-    "nextFreeSlot.label: VISIBLE",
-    "before-after: VISIBLE",
-    "reviews: VISIBLE"
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer",
+    "Szczegóły"
    ],
-   "leftoverV1Strings": [],
-   "motion": {
-    "scroll": "smooth",
-    "transitions": [
-     "0s",
-     "0.15s, 0.15s",
-     "0.2s",
-     "0.2s, 0.2s",
-     "0.35s"
-    ],
-    "animations": [
-     "none"
-    ]
-   }
+   "links": {
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 5,
+    "#cennik": 2,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1,
+    "/polityka-prywatnosci#cookies": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "footer": {
+    "height": 271,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 1440
   },
-  "live-1440": {
-   "width": 1440,
+  "09-state-slots-live-390": {
    "horizontalScroll": false,
    "h1Count": 1,
+   "headingsInFooter": 0,
    "contrastMin": 5.03,
    "contrastFails": [],
    "smallTargets": [],
    "inlineLinksExempt": [
     "SMS-em na ten sam numer"
    ],
-   "hiddenSlots": [
-    "nextFreeSlot: VISIBLE",
-    "nextFreeSlot.label: VISIBLE",
-    "before-after: VISIBLE",
-    "reviews: VISIBLE"
+   "links": {
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 5,
+    "#cennik": 2,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
    ],
-   "leftoverV1Strings": [],
-   "motion": {
-    "scroll": "smooth",
-    "transitions": [
-     "0s",
-     "0.15s, 0.15s",
-     "0.2s",
-     "0.2s, 0.2s",
-     "0.35s"
-    ],
-    "animations": [
-     "none"
-    ]
-   }
+   "footer": {
+    "height": 478,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 390
   },
-  "faq-390": {
-   "width": 390,
+  "10-state-slots-live-1440": {
    "horizontalScroll": false,
    "h1Count": 1,
-   "contrastMin": 5.03,
-   "contrastFails": [],
-   "smallTargets": [],
-   "inlineLinksExempt": [],
-   "hiddenSlots": [
-    "nextFreeSlot: hidden",
-    "nextFreeSlot.label: hidden",
-    "before-after: hidden",
-    "reviews: hidden"
-   ],
-   "leftoverV1Strings": [],
-   "motion": {
-    "scroll": "smooth",
-    "transitions": [
-     "0s",
-     "0.15s, 0.15s",
-     "0.2s",
-     "0.2s, 0.2s",
-     "0.35s"
-    ],
-    "animations": [
-     "none"
-    ]
-   }
-  },
-  "faq-1440": {
-   "width": 1440,
-   "horizontalScroll": false,
-   "h1Count": 1,
+   "headingsInFooter": 0,
    "contrastMin": 5.03,
    "contrastFails": [],
    "smallTargets": [],
    "inlineLinksExempt": [
     "SMS-em na ten sam numer"
    ],
-   "hiddenSlots": [
-    "nextFreeSlot: hidden",
-    "nextFreeSlot.label: hidden",
-    "before-after: hidden",
-    "reviews: hidden"
+   "links": {
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 5,
+    "#cennik": 2,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
    ],
-   "leftoverV1Strings": [],
-   "motion": {
-    "scroll": "smooth",
-    "transitions": [
-     "0s",
-     "0.15s, 0.15s",
-     "0.2s",
-     "0.2s, 0.2s",
-     "0.35s"
-    ],
-    "animations": [
-     "none"
-    ]
-   }
+   "footer": {
+    "height": 271,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 1440
   },
-  "hold-320": {
+  "11-state-faq-open-long-text-390": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 5,
+    "#cennik": 2,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "footer": {
+    "height": 478,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 390
+  },
+  "12-state-faq-open-long-text-1440": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 5,
+    "#cennik": 2,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "footer": {
+    "height": 271,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 1440
+  },
+  "13-state-no-photos-390": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "footer": {
+    "height": 478,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 390
+  },
+  "14-state-no-photos-1440": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "footer": {
+    "height": 271,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 1440
+  },
+  "15-footer-default-390": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "footer": {
+    "height": 478,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 390
+  },
+  "16-footer-default-1440": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "footer": {
+    "height": 271,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 1440
+  },
+  "17-footer-default-768": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "footer": {
+    "height": 376,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 768
+  },
+  "18-footer-default-1024": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "footer": {
+    "height": 271,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 1024
+  },
+  "19-footer-long-390": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:email",
+    "business:legal-name",
+    "business:address-line1",
+    "business:address-line2",
+    "business:nip",
+    "business:regon"
+   ],
+   "footer": {
+    "height": 618,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 390
+  },
+  "20-footer-long-1440": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:email",
+    "business:legal-name",
+    "business:address-line1",
+    "business:address-line2",
+    "business:nip",
+    "business:regon"
+   ],
+   "footer": {
+    "height": 336,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 1440
+  },
+  "21-footer-long-768": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:email",
+    "business:legal-name",
+    "business:address-line1",
+    "business:address-line2",
+    "business:nip",
+    "business:regon"
+   ],
+   "footer": {
+    "height": 441,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 768
+  },
+  "22-footer-long-1024": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:email",
+    "business:legal-name",
+    "business:address-line1",
+    "business:address-line2",
+    "business:nip",
+    "business:regon"
+   ],
+   "footer": {
+    "height": 359,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 1024
+  },
+  "23-footer-no-company-390": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [],
+   "footer": {
+    "height": 372,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 390
+  },
+  "24-footer-no-company-1440": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [],
+   "footer": {
+    "height": 271,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 1440
+  },
+  "25-footer-end-of-page-sticky-bar-390": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "footer": {
+    "height": 478,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 390,
+   "footerReach": [
+    {
+     "control": "Telefon 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "WhatsApp 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Prywatność",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Ustawienia cookies",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    }
+   ]
+  },
+  "26-footer-end-of-page-cookie-banner-390": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer",
+    "Szczegóły"
+   ],
+   "links": {
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 4,
+    "#cennik": 2,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1,
+    "/polityka-prywatnosci#cookies": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "footer": {
+    "height": 478,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 390,
+   "footerReach": [
+    {
+     "control": "Telefon 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "WhatsApp 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Prywatność",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Ustawienia cookies",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    }
+   ]
+  },
+  "27-footer-end-of-page-cookie-banner-1440": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer",
+    "Szczegóły"
+   ],
+   "links": {
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 5,
+    "#cennik": 2,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1,
+    "/polityka-prywatnosci#cookies": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "footer": {
+    "height": 271,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 1440,
+   "footerReach": [
+    {
+     "control": "Telefon 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "WhatsApp 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Prywatność",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Ustawienia cookies",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    }
+   ]
+  },
+  "28-footer-long-320": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:email",
+    "business:legal-name",
+    "business:address-line1",
+    "business:address-line2",
+    "business:nip",
+    "business:regon"
+   ],
+   "footer": {
+    "height": 662,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 320
+  },
+  "footer-long-390-keyboard": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:email",
+    "business:legal-name",
+    "business:address-line1",
+    "business:address-line2",
+    "business:nip",
+    "business:regon"
+   ],
+   "footer": {
+    "height": 618,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 390,
+   "keyboard": {
+    "stops": 24,
+    "order": [
+     "Przejdź do cennika",
+     "Nowiutko, strona główna",
+     "736 369 704 [header]",
+     "Wyślij zdjęcia na WhatsApp [hero]",
+     "Pełny cennik i pakiety",
+     "Zadzwoń: 736 369 704 [hero]",
+     "zdjęcie własne wózek i fotelik PROBLEM Drugi",
+     "Wyślij zdjęcia na WhatsApp [steps]",
+     "Ile kosztuje pranie wózka dziecięcego?",
+     "Ile kosztuje pranie fotelika samochodowego?",
+     "Jak pierzecie foteliki Cybex czy Maxi-Cosi?",
+     "Czy środki są bezpieczne dla niemowlęcia?",
+     "Kiedy wózek będzie gotowy?",
+     "Czy usuniecie pleśń z gondoli?",
+     "Czy czyścicie też stelaż i koła?",
+     "Wyślij zdjęcia na WhatsApp [final]",
+     "Zadzwoń: 736 369 704 [final]",
+     "SMS-em na ten sam numer [final]",
+     "Telefon 736 369 704 [footer]",
+     "WhatsApp 736 369 704 [footer]",
+     "Prywatność",
+     "Ustawienia cookies",
+     "Wyślij zdjęcia na WhatsApp [sticky]",
+     "Zadzwoń: 736 369 704 [sticky]"
+    ],
+    "footerStops": [
+     "Telefon 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "WhatsApp 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "Prywatność · solid 3px rgb(18, 48, 43)",
+     "Ustawienia cookies · solid 3px rgb(18, 48, 43)"
+    ],
+    "problems": []
+   },
+   "footerReach": [
+    {
+     "control": "Telefon 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "WhatsApp 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Prywatność",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Ustawienia cookies",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    }
+   ]
+  },
+  "footer-long-1440-keyboard": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:email",
+    "business:legal-name",
+    "business:address-line1",
+    "business:address-line2",
+    "business:nip",
+    "business:regon"
+   ],
+   "footer": {
+    "height": 336,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 1440,
+   "keyboard": {
+    "stops": 23,
+    "order": [
+     "Przejdź do cennika",
+     "Nowiutko, strona główna",
+     "736 369 704 [header]",
+     "Wyślij zdjęcia na WhatsApp [header]",
+     "Wyślij zdjęcia na WhatsApp [hero]",
+     "Pełny cennik i pakiety",
+     "Zadzwoń: 736 369 704 [hero]",
+     "zdjęcie własne wózek i fotelik PROBLEM Drugi",
+     "Wyślij zdjęcia na WhatsApp [steps]",
+     "Ile kosztuje pranie wózka dziecięcego?",
+     "Ile kosztuje pranie fotelika samochodowego?",
+     "Jak pierzecie foteliki Cybex czy Maxi-Cosi?",
+     "Czy środki są bezpieczne dla niemowlęcia?",
+     "Kiedy wózek będzie gotowy?",
+     "Czy usuniecie pleśń z gondoli?",
+     "Czy czyścicie też stelaż i koła?",
+     "Wyślij zdjęcia na WhatsApp [final]",
+     "Zadzwoń: 736 369 704 [final]",
+     "SMS-em na ten sam numer [final]",
+     "Telefon 736 369 704 [footer]",
+     "WhatsApp 736 369 704 [footer]",
+     "Prywatność",
+     "Ustawienia cookies"
+    ],
+    "footerStops": [
+     "Telefon 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "WhatsApp 736 369 704 · solid 3px rgb(18, 48, 43)",
+     "Prywatność · solid 3px rgb(18, 48, 43)",
+     "Ustawienia cookies · solid 3px rgb(18, 48, 43)"
+    ],
+    "problems": []
+   },
+   "footerReach": [
+    {
+     "control": "Telefon 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "WhatsApp 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Prywatność",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Ustawienia cookies",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    }
+   ]
+  },
+  "default-320": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "footer": {
+    "height": 478,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
    "width": 320,
+   "footerReach": [
+    {
+     "control": "Telefon 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "WhatsApp 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Prywatność",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Ustawienia cookies",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    }
+   ]
+  },
+  "footer-long-360": {
    "horizontalScroll": false,
    "h1Count": 1,
+   "headingsInFooter": 0,
    "contrastMin": 5.03,
    "contrastFails": [],
    "smallTargets": [],
    "inlineLinksExempt": [
     "SMS-em na ten sam numer"
    ],
-   "hiddenSlots": [
-    "nextFreeSlot: hidden",
-    "nextFreeSlot.label: hidden",
-    "before-after: hidden",
-    "reviews: hidden"
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:email",
+    "business:legal-name",
+    "business:address-line1",
+    "business:address-line2",
+    "business:nip",
+    "business:regon"
    ],
-   "leftoverV1Strings": [],
-   "motion": {
-    "scroll": "smooth",
-    "transitions": [
-     "0s",
-     "0.15s, 0.15s",
-     "0.2s",
-     "0.2s, 0.2s",
-     "0.35s"
-    ],
-    "animations": [
-     "none"
-    ]
-   }
-  },
-  "hold-360": {
+   "footer": {
+    "height": 618,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
    "width": 360,
+   "footerReach": [
+    {
+     "control": "Telefon 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "WhatsApp 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Prywatność",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Ustawienia cookies",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    }
+   ]
+  },
+  "footer-long-900": {
    "horizontalScroll": false,
    "h1Count": 1,
+   "headingsInFooter": 0,
    "contrastMin": 5.03,
    "contrastFails": [],
    "smallTargets": [],
-   "inlineLinksExempt": [],
-   "hiddenSlots": [
-    "nextFreeSlot: hidden",
-    "nextFreeSlot.label: hidden",
-    "before-after: hidden",
-    "reviews: hidden"
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
    ],
-   "leftoverV1Strings": [],
-   "motion": {
-    "scroll": "smooth",
-    "transitions": [
-     "0s",
-     "0.15s, 0.15s",
-     "0.2s",
-     "0.2s, 0.2s",
-     "0.35s"
-    ],
-    "animations": [
-     "none"
-    ]
-   }
-  },
-  "hold-900": {
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:email",
+    "business:legal-name",
+    "business:address-line1",
+    "business:address-line2",
+    "business:nip",
+    "business:regon"
+   ],
+   "footer": {
+    "height": 380,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
    "width": 900,
+   "footerReach": [
+    {
+     "control": "Telefon 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "WhatsApp 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Prywatność",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Ustawienia cookies",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    }
+   ]
+  },
+  "footer-long-640": {
    "horizontalScroll": false,
    "h1Count": 1,
+   "headingsInFooter": 0,
    "contrastMin": 5.03,
    "contrastFails": [],
    "smallTargets": [],
    "inlineLinksExempt": [
     "SMS-em na ten sam numer"
    ],
-   "hiddenSlots": [
-    "nextFreeSlot: hidden",
-    "nextFreeSlot.label: hidden",
-    "before-after: hidden",
-    "reviews: hidden"
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:email",
+    "business:legal-name",
+    "business:address-line1",
+    "business:address-line2",
+    "business:nip",
+    "business:regon"
    ],
-   "leftoverV1Strings": [],
-   "motion": {
-    "scroll": "smooth",
-    "transitions": [
-     "0s",
-     "0.15s, 0.15s",
-     "0.2s",
-     "0.2s, 0.2s",
-     "0.35s"
-    ],
-    "animations": [
-     "none"
-    ]
-   }
-  },
-  "reduced-390": {
-   "width": 390,
-   "horizontalScroll": false,
-   "h1Count": 1,
-   "contrastMin": 5.03,
-   "contrastFails": [],
-   "smallTargets": [],
-   "inlineLinksExempt": [],
-   "hiddenSlots": [
-    "nextFreeSlot: hidden",
-    "nextFreeSlot.label: hidden",
-    "before-after: hidden",
-    "reviews: hidden"
-   ],
-   "leftoverV1Strings": [],
-   "motion": {
-    "scroll": "auto",
-    "transitions": [
-     "0s"
-    ],
-    "animations": [
-     "none"
-    ]
-   }
-  },
-  "reduced-1440": {
-   "width": 1440,
-   "horizontalScroll": false,
-   "h1Count": 1,
-   "contrastMin": 5.03,
-   "contrastFails": [],
-   "smallTargets": [],
-   "inlineLinksExempt": [
-    "SMS-em na ten sam numer"
-   ],
-   "hiddenSlots": [
-    "nextFreeSlot: hidden",
-    "nextFreeSlot.label: hidden",
-    "before-after: hidden",
-    "reviews: hidden"
-   ],
-   "leftoverV1Strings": [],
-   "motion": {
-    "scroll": "auto",
-    "transitions": [
-     "0s"
-    ],
-    "animations": [
-     "none"
-    ]
-   }
-  },
-  "nophotos-390": {
-   "width": 390,
-   "horizontalScroll": false,
-   "h1Count": 1,
-   "contrastMin": 5.03,
-   "contrastFails": [],
-   "smallTargets": [],
-   "inlineLinksExempt": [],
-   "hiddenSlots": [
-    "nextFreeSlot: hidden",
-    "nextFreeSlot.label: hidden",
-    "before-after: hidden",
-    "reviews: hidden"
-   ],
-   "leftoverV1Strings": [],
-   "motion": {
-    "scroll": "smooth",
-    "transitions": [
-     "0s",
-     "0.15s, 0.15s",
-     "0.2s",
-     "0.2s, 0.2s"
-    ],
-    "animations": [
-     "none"
-    ]
-   }
-  },
-  "nophotos-1440": {
-   "width": 1440,
-   "horizontalScroll": false,
-   "h1Count": 1,
-   "contrastMin": 5.03,
-   "contrastFails": [],
-   "smallTargets": [],
-   "inlineLinksExempt": [
-    "SMS-em na ten sam numer"
-   ],
-   "hiddenSlots": [
-    "nextFreeSlot: hidden",
-    "nextFreeSlot.label: hidden",
-    "before-after: hidden",
-    "reviews: hidden"
-   ],
-   "leftoverV1Strings": [],
-   "motion": {
-    "scroll": "smooth",
-    "transitions": [
-     "0s",
-     "0.15s, 0.15s",
-     "0.2s",
-     "0.2s, 0.2s"
-    ],
-    "animations": [
-     "none"
-    ]
-   }
-  },
-  "nophotos-768": {
-   "width": 768,
-   "horizontalScroll": false,
-   "h1Count": 1,
-   "contrastMin": 5.03,
-   "contrastFails": [],
-   "smallTargets": [],
-   "inlineLinksExempt": [
-    "SMS-em na ten sam numer"
-   ],
-   "hiddenSlots": [
-    "nextFreeSlot: hidden",
-    "nextFreeSlot.label: hidden",
-    "before-after: hidden",
-    "reviews: hidden"
-   ],
-   "leftoverV1Strings": [],
-   "motion": {
-    "scroll": "smooth",
-    "transitions": [
-     "0s",
-     "0.15s, 0.15s",
-     "0.2s",
-     "0.2s, 0.2s"
-    ],
-    "animations": [
-     "none"
-    ]
-   }
-  },
-  "nophotos-1024": {
-   "width": 1024,
-   "horizontalScroll": false,
-   "h1Count": 1,
-   "contrastMin": 5.03,
-   "contrastFails": [],
-   "smallTargets": [],
-   "inlineLinksExempt": [
-    "SMS-em na ten sam numer"
-   ],
-   "hiddenSlots": [
-    "nextFreeSlot: hidden",
-    "nextFreeSlot.label: hidden",
-    "before-after: hidden",
-    "reviews: hidden"
-   ],
-   "leftoverV1Strings": [],
-   "motion": {
-    "scroll": "smooth",
-    "transitions": [
-     "0s",
-     "0.15s, 0.15s",
-     "0.2s",
-     "0.2s, 0.2s"
-    ],
-    "animations": [
-     "none"
-    ]
-   }
+   "footer": {
+    "height": 484,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 640,
+   "footerReach": [
+    {
+     "control": "Telefon 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "WhatsApp 736 369 704",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Prywatność",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    },
+    {
+     "control": "Ustawienia cookies",
+     "inViewport": true,
+     "covered": false,
+     "coveredBy": ""
+    }
+   ]
   }
- },
- "links": [
-  {
-   "text": "Przejdź do cennika",
-   "href": "#cennik"
-  },
-  {
-   "text": "Nowiutko, strona główna",
-   "href": "/"
-  },
-  {
-   "text": "736 369 704",
-   "href": "tel:+48736369704"
-  },
-  {
-   "text": "Wyślij zdjęcia na WhatsApp",
-   "href": "https://wa.me/48736369704?text=Dzie%C5%84%20dobry%2C%20prosz…"
-  },
-  {
-   "text": "Wyślij zdjęcia na WhatsApp",
-   "href": "https://wa.me/48736369704?text=Dzie%C5%84%20dobry%2C%20prosz…"
-  },
-  {
-   "text": "Pełny cennik i pakiety",
-   "href": "#cennik"
-  },
-  {
-   "text": "Zadzwoń: 736 369 704",
-   "href": "tel:+48736369704"
-  },
-  {
-   "text": "zdjęcie własnewózek i fotelikProblemDrugie dz",
-   "href": "#cennik"
-  },
-  {
-   "text": "Wyślij zdjęcia na WhatsApp",
-   "href": "https://wa.me/48736369704?text=Dzie%C5%84%20dobry%2C%20prosz…"
-  },
-  {
-   "text": "Wyślij zdjęcia na WhatsApp",
-   "href": "https://wa.me/48736369704?text=Dzie%C5%84%20dobry%2C%20prosz…"
-  },
-  {
-   "text": "Zadzwoń: 736 369 704",
-   "href": "tel:+48736369704"
-  },
-  {
-   "text": "SMS-em na ten sam numer",
-   "href": "sms:+48736369704"
-  },
-  {
-   "text": "Prywatność",
-   "href": "/polityka-prywatnosci"
-  },
-  {
-   "text": "Ustawienia cookies",
-   "href": "(button open-cookie-settings)"
-  },
-  {
-   "text": "Wyślij zdjęcia na WhatsApp",
-   "href": "https://wa.me/48736369704?text=Dzie%C5%84%20dobry%2C%20prosz…"
-  },
-  {
-   "text": "Zadzwoń: 736 369 704",
-   "href": "tel:+48736369704"
-  },
-  {
-   "text": "Wyślij zdjęcia na WhatsApp (sticky, phones)",
-   "href": "https://wa.me/48736369704?text=…"
-  },
-  {
-   "text": "Zadzwoń: 736 369 704 (sticky, phones)",
-   "href": "tel:+48736369704"
-  }
- ],
- "headings": [
-  "H1 Pranie wózków i fotelików dziecięcych w Poznaniu i",
-  "H2 Dlaczego nie wyprać wózka samemu?",
-  "H3 Gondola żółta od oliwki",
-  "H3 Fotelik po podróży",
-  "H3 Spacerówka po lecie",
-  "H3 Drugie dziecko w drodze",
-  "H2 Pranie wózka i fotelika – cena",
-  "H3 Fotelik to sprzęt bezpieczeństwa. Tak go traktujem",
-  "H3 Nowy Członek Rodziny",
-  "H3 Rodzinny",
-  "H3 Auto i Maluch",
-  "H2 Jak to działa",
-  "H3 Wyślij zdjęcia",
-  "H3 Dostań cenę i termin",
-  "H3 Pierzemy u Ciebie",
-  "H2 Foteliki Cybex, Maxi-Cosi, Britax i Avionaut – wed",
-  "H2 Najczęstsze pytania",
-  "H2 Gdzie dojeżdżamy",
-  "H3 Strefa 1",
-  "H3 Strefa 2",
-  "H3 Dalej",
-  "H2 Wyślij 2–3 zdjęcia. Cenę podamy dziś."
- ],
- "keyboard": {
-  "k390-tabs": [
-   {
-    "focus": "Przejdź do cennika",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Nowiutko, strona główna",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "736 369 704",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Wyślij zdjęcia na WhatsApp",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Pełny cennik i pakiety",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Zadzwoń: 736 369 704",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "zdjęcie własnewózek i fotelikP",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Wyślij zdjęcia na WhatsApp",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Ile kosztuje pranie wózka dzie",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Ile kosztuje pranie fotelika s",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Jak pierzecie foteliki Cybex c",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Czy środki są bezpieczne dla n",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Kiedy wózek będzie gotowy?",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Czy usuniecie pleśń z gondoli?",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Czy czyścicie też stelaż i koł",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Wyślij zdjęcia na WhatsApp",
-    "ring": "3px solid rgb(255, 255, 255) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Zadzwoń: 736 369 704",
-    "ring": "3px solid rgb(255, 255, 255) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "SMS-em na ten sam numer",
-    "ring": "3px solid rgb(255, 255, 255) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Prywatność",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Ustawienia cookies",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Wyślij zdjęcia na WhatsApp",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Zadzwoń: 736 369 704",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   }
-  ],
-  "k1440-tabs": [
-   {
-    "focus": "Przejdź do cennika",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Nowiutko, strona główna",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "736 369 704",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Wyślij zdjęcia na WhatsApp",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Wyślij zdjęcia na WhatsApp",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Pełny cennik i pakiety",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Zadzwoń: 736 369 704",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "zdjęcie własnewózek i fotelikP",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Wyślij zdjęcia na WhatsApp",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Ile kosztuje pranie wózka dzie",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Ile kosztuje pranie fotelika s",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Jak pierzecie foteliki Cybex c",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Czy środki są bezpieczne dla n",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Kiedy wózek będzie gotowy?",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Czy usuniecie pleśń z gondoli?",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Czy czyścicie też stelaż i koł",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Wyślij zdjęcia na WhatsApp",
-    "ring": "3px solid rgb(255, 255, 255) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Zadzwoń: 736 369 704",
-    "ring": "3px solid rgb(255, 255, 255) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "SMS-em na ten sam numer",
-    "ring": "3px solid rgb(255, 255, 255) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Prywatność",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Ustawienia cookies",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   },
-   {
-    "focus": "Przejdź do cennika",
-    "ring": "3px solid rgb(18, 48, 43) +3px",
-    "inView": true,
-    "coveredByStickyBar": false
-   }
-  ]
  }
 }

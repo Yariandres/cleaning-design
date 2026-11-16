@@ -76,15 +76,44 @@ AREA = B.AREA  # v1.1: no link to /poznan/obszar-dzialania until that page exist
 
 FINAL = f'''<section id="kontakt" class="final on-dark"><div class="wrap"><h2>Wyślij 2–3 zdjęcia. Cenę podamy dziś.</h2><p>Przyjeżdżamy na czas. Płacisz tyle, ile podaliśmy ze zdjęć. Jeśli coś wyjdzie po wyschnięciu, wracamy za darmo.</p>
 <div class="fin-btns">{wa_btn("final")}<a class="btn btn-ghost-light num" href="{TEL}" data-bind="business:phone" data-cta="phone" data-cta-pos="final">{ico("phone")}Zadzwoń: {PHONE}</a></div>
-<p class="fin-note">Nie masz WhatsAppa? Wyślij zdjęcia <a href="{SMS}" data-bind="business:phone" data-cta="sms" data-cta-pos="final">SMS-em na ten sam numer</a>.</p></div></section>
-<footer><div class="wrap foot"><span>Nowiutko · pranie tapicerki, wózków i aut u Ciebie · Poznań</span><nav aria-label="Informacje"><a href="/polityka-prywatnosci">Prywatność</a><button type="button" data-action="open-cookie-settings">Ustawienia cookies</button></nav></div></footer>'''
+<p class="fin-note">Nie masz WhatsAppa? Wyślij zdjęcia <a href="{SMS}" data-bind="business:phone" data-cta="sms" data-cta-pos="final">SMS-em na ten sam numer</a>.</p></div></section>'''
 
-def page(extra_head="", body_extra=""):
+# ---------------- footer (stroller-v1.2 draft; shared component: handoff/components/footer.md) ----------------
+# Company details are NOT known yet (asked of the owner, 2026-11-16). Nothing here is a real or realistic value:
+# every unknown is a bracketed, dashed placeholder (.tbd) and a data key. Never ship a placeholder; a missing
+# optional key removes its line, and a missing legal name or NIP removes the whole "Dane firmy" block.
+def tbd(key, text):
+    return f'<span class="tbd" data-bind="business:{key}">[{text}]</span>'
+COMPANY_DEFAULT = dict(name=tbd("legal-name", "nazwa firmy z CEIDG"), nip=tbd("nip", "NIP"))
+COMPANY_LONG = dict(name=tbd("legal-name", "Imię Nazwisko Nazwa Firmy – pełna nazwa z CEIDG, także gdy jest długa"),
+                    address=[tbd("address-line1", "ulica, numer domu i numer lokalu"), tbd("address-line2", "kod pocztowy i miejscowość")],
+                    nip=tbd("nip", "NIP: 10 cyfr"), regon=tbd("regon", "REGON: 9 cyfr"), email=tbd("email", "adres e-mail na nowiutko.pl"))
+def footer(company=COMPANY_DEFAULT):
+    c = company or {}
+    email = f'<div class="f-row"><span class="k">E-mail</span><span class="v">{c["email"]}</span></div>' if c.get("email") else ""
+    firm = ""
+    if c.get("name") and c.get("nip"):
+        addr = ""
+        if c.get("address"):
+            addr = "<p>" + "<br>".join(c["address"]) + '</p><p class="f-note">To adres firmy, nie punkt przyjęć. Pierzemy u Ciebie.</p>'
+        ids = f'<span class="nw">NIP {c["nip"]}</span>' + (f' <span class="nw">REGON {c["regon"]}</span>' if c.get("regon") else "")
+        firm = f'<div class="f-col f-firm"><p class="eyebrow">Dane firmy</p><p class="f-name">{c["name"]}</p>{addr}<p class="f-ids num">{ids}</p></div>'
+    return f'''<footer class="site-f"><div class="wrap">
+<div class="f-grid{"" if firm else " no-firm"}">
+<div class="f-brand"><img src="../assets/logo.svg" alt="Nowiutko" width="128" height="36"><p>Pranie tapicerki, wózków i aut u Ciebie.<br>Poznań i okolice.</p></div>
+<address class="f-col f-contact"><p class="eyebrow">Kontakt</p>
+<a class="f-row" href="{TEL}" data-bind="business:phone" data-cta="phone" data-cta-pos="footer"><span class="k">Telefon</span><span class="v num">{PHONE}</span></a>
+<a class="f-row" href="{WA}" rel="noopener" data-bind="business:whatsapp" data-cta="whatsapp" data-cta-pos="footer"><span class="k">WhatsApp</span><span class="v num">{PHONE}</span></a>{email}</address>
+{firm}</div>
+<nav class="f-legal" aria-label="Informacje"><a href="/polityka-prywatnosci">Prywatność</a><button type="button" data-action="open-cookie-settings">Ustawienia cookies</button></nav>
+</div></footer>'''
+
+def page(extra_head="", body_extra="", company=COMPANY_DEFAULT):
     main = (HERO + B.PROOF2 + B.HEADACHE2.replace("{band}", "band") + price_section("") + STEPS + BEFORE_AFTER + B.SEATS.replace("{band}", "band") + REVIEWS + B.FAQ + AREA.replace("{band}", "band") + FINAL)
     return f'''<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>{TITLE}</title><meta name="description" content="{DESC}"><link rel="canonical" href="https://nowiutko.pl/poznan/pranie-wozkow-i-fotelikow">
 <link rel="stylesheet" href="../base.css"><style>{B.CSS2}{FINAL_CSS}</style>{extra_head}</head><body>
-{HEADER}<main>{main}</main>{STICKY}{body_extra}</body></html>'''
+{HEADER}<main>{main}</main>{footer(company)}{STICKY}{body_extra}</body></html>'''
 
 FINAL_CSS = '''
 .pc-links{display:flex;justify-content:center;gap:0 24px;flex-wrap:wrap}
@@ -95,7 +124,23 @@ FINAL_CSS = '''
 .final .fin-btns{display:flex;gap:12px;flex-wrap:wrap;width:100%}.final .fin-btns .btn{flex:1 1 240px}@media(min-width:700px){.final .fin-btns .btn{flex:0 0 auto}}
 .btn-ghost-light{border-color:#fff;color:#fff;background:transparent}.btn-ghost-light:hover{background:rgba(255,255,255,.12)}
 .fin-note{color:var(--p100)}.fin-note a{font-weight:700;color:#fff}
-.foot{display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;align-items:center}.foot nav{display:flex;gap:4px 20px;flex-wrap:wrap}.foot a,.foot button{min-height:44px;display:inline-grid;align-items:center}.foot button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+/* footer (v1.2): brand line, contact, company details, legal row. Quiet: no solid button, no page navigation. */
+.site-f{padding-block:40px 20px;color:var(--text-muted);font-size:.9rem;border-top:1px solid var(--border)}
+.f-grid{display:grid;gap:28px}
+.f-brand{display:grid;gap:12px;align-content:start}.f-brand img{height:36px;width:auto;display:block}
+.f-col{display:grid;align-content:start;font-style:normal;min-width:0}.f-col .eyebrow{margin-bottom:4px}
+.f-row{display:flex;align-items:center;gap:12px;min-height:44px;text-decoration:none}
+.f-row .k{flex:0 0 5.5rem}.f-row .v{font-weight:700;color:var(--n900);min-width:0;overflow-wrap:anywhere}
+a.f-row .v{text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:2px;text-underline-offset:4px;transition:text-decoration-color .2s}a.f-row:hover .v{text-decoration-color:currentColor}
+.f-firm{gap:4px}.f-firm .eyebrow{margin-bottom:9px}.f-firm p{overflow-wrap:anywhere}.f-name{font-weight:700;color:var(--n700)}.f-note{font-size:.84rem}
+.f-ids{display:flex;flex-wrap:wrap;gap:0 16px}.nw{white-space:nowrap}
+.f-legal{display:flex;flex-wrap:wrap;gap:0 24px;margin-top:28px;padding-top:8px;border-top:1px solid var(--border)}
+.f-legal a,.f-legal button{min-height:44px;display:inline-grid;align-items:center;font-weight:600;color:var(--n700)}
+.f-legal button{font:inherit;font-weight:600;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+@media(min-width:640px){.f-grid{grid-template-columns:1fr 1fr;gap:32px 40px}.f-brand{grid-column:1/-1}.f-grid.no-firm .f-brand{grid-column:auto}}
+@media(min-width:900px){.site-f{padding-block:56px 24px}.f-grid{grid-template-columns:1.25fr 1fr 1.25fr;gap:56px}.f-brand{grid-column:auto}.f-grid.no-firm{grid-template-columns:1.25fr 2.25fr}}
+/* prototype only: an unknown value. Never ships. */
+.tbd{display:inline;padding:1px 6px;border:1.5px dashed var(--n400);border-radius:6px;background:repeating-linear-gradient(135deg,var(--n100) 0 6px,var(--n50) 6px 12px);color:var(--n700);font-weight:600;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .nextslot[hidden]{display:none}
 .pc-promise{text-align:center;color:var(--text-muted);font-size:.93rem;margin-top:-6px}
 .sticky .btn-main{white-space:nowrap}.sticky .btn-ghost{flex:0 0 48px;padding-inline:0}@media(max-width:359px){.sticky .btn-main .ico{display:none}.sticky .btn-main{padding-inline:8px;font-size:.94rem}}
@@ -121,8 +166,16 @@ COOKIE_CSS = '''
 '''
 # Both cookie buttons: same variant, same size (equal weight, per dev constraint). Stacked above the sticky phone bar on mobile.
 open(os.path.join(OUT, "cookie.css"), "w").write(COOKIE_CSS)
-cookie_page = page(extra_head='<link rel="stylesheet" href="cookie.css">', body_extra=COOKIE).replace("body{padding-bottom:76px}", "")
-open(os.path.join(OUT, "state-cookie.html"), "w").write(cookie_page.replace("</style>", ".sticky{display:none!important}</style>", 1))
+# v1.2: while the banner is open the page reserves the banner's height at the bottom, so the footer's last line
+# ("Prywatność", "Ustawienia cookies") can always be scrolled into view above it. The script is prototype-only.
+COOKIE_SPACE = """<script>(function(){var b=document.querySelector('.cookie'),r=document.documentElement;function f(){r.style.setProperty('--cookie-h',b.offsetHeight+'px')}f();if(window.ResizeObserver)new ResizeObserver(f).observe(b);addEventListener('resize',f)})()</script>"""
+cookie_page = page(extra_head='<link rel="stylesheet" href="cookie.css">', body_extra=COOKIE + COOKIE_SPACE)
+open(os.path.join(OUT, "state-cookie.html"), "w").write(cookie_page.replace("</style>", ".sticky{display:none!important}body{padding-bottom:var(--cookie-h,240px)!important}html{scroll-padding-bottom:calc(var(--cookie-h,240px) + 12px)!important}</style>", 1))
+
+# footer states (v1.2): every company field present and long; and no company details at all (the block is left out)
+SKIP = '<body>\n<a class="skip" href="#cennik">Przejdź do cennika</a>\n'
+open(os.path.join(OUT, "state-footer-long.html"), "w").write(page(company=COMPANY_LONG).replace("<body>\n", SKIP, 1))
+open(os.path.join(OUT, "state-footer-no-company.html"), "w").write(page(company=None).replace("<body>\n", SKIP, 1))
 
 # before/after + reviews live (wireframe: labelled placeholders, never real-looking content)
 live = page().replace('id="przed-po" hidden', 'id="przed-po"').replace('id="opinie" hidden', 'id="opinie"').replace('data-bind="nextFreeSlot" hidden', 'data-bind="nextFreeSlot"')
