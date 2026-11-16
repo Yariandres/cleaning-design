@@ -1,7 +1,7 @@
 # Homepage v0: `/` (early launch)
 
 ## 1. Tag and status
-**DRAFT, not approved, not tagged.** Intended tag `homepage-v0-v1` after the owner's "go". Designed against `docs/design-constraints.md` in cleaning-sell-system (Nuxt 4, Nuxt UI v4, Tailwind v4 tokens, Lucide, light only, CSS-only motion) and `DESIGN.md` here. **No Figma** (as for the stroller page). Replaces the "Wkrótce otwieramy" placeholder at `/`. Not the full homepage (PRD S1); that gets its own brief.
+Tag `homepage-v0`, approved by the owner on 2026-11-17. Designed against `docs/design-constraints.md` in cleaning-sell-system (Nuxt 4, Nuxt UI v4, Tailwind v4 tokens, Lucide, light only, CSS-only motion) and `DESIGN.md` here. **No Figma** (as for the stroller page). Replaces the "Wkrótce otwieramy" placeholder at `/`. Not the full homepage (PRD S1); that gets its own brief.
 
 **Brand decisions applied 2026-11-17** ([#6](https://github.com/Yariandres/cleaning-design/issues/6), [#7](https://github.com/Yariandres/cleaning-design/issues/7)): H1 and title approved (em dash as in `docs/brand.md`); the owner replaced "wkrótce" with **"Wycena na WhatsApp"** (sofas, mattresses, rugs and car interiors are taken by hand; no page link); buttons "na WhatsApp"; hours line "Odpisujemy pn–pt 9:00–17:00, sob 9:00–14:00" under the hero promise and the final CTA buttons.
 
@@ -53,5 +53,5 @@ Only the owner's logo/mark SVGs and generated HTML text; no photos, no stock, no
 - Developer: `:has()` focus ring on the card is fine for your browser targets? (Fallback: ring on the title link.)
 - Share image: static PNG for launch, as for the stroller page.
 
-## Answers to the SEO brief §10 (draft comments for #7, not posted)
+## Answers to the SEO brief §10 (posted on #7)
 1. H1 is the headline itself (em dash, "Nowiutko" in teal), voice line under it in a `<p>`. 2. Whole card clickable via a stretched title link; anchor text is "Pranie wózków i fotelików". 3. Counter header reused unchanged. 4. Area: a sentence with five towns from `{zones}` (nominative). 5. Share image: 80px gives 4 lines and the one-line `og.line` leaves the crop, so 64px with a two-line, dot-less line (final). 6. **Changed by the owner's decision (#7, 2026-11-17):** the other services are not "plain text, nothing clickable" any more. They are one-link rows to the WhatsApp action ("<service> — Wycena na WhatsApp"), in one muted panel. Still no link to a page that does not exist, no heading/paragraph/price per service, no Service/Offer structured data for them.

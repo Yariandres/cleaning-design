@@ -8,7 +8,7 @@
 - Designed against `docs/design-constraints.md` in cleaning-sell-system at commit `85dee45` (unchanged since v1), and `DESIGN.md` in this repo at the tag.
 - **No Figma for this handover** (owner decision, 2026-11-13). The visuals are the PNGs in `screens/` and the working HTML reference below.
 
-## DRAFT revision after `stroller-v1.2` (2026-11-17, not approved, not tagged)
+## Revision `stroller-v1.3` (2026-11-17, approved by the owner; changes since `stroller-v1.2`)
 Brand decisions ([#6](https://github.com/Yariandres/cleaning-design/issues/6)). Everything else is `stroller-v1.2`.
 - **Answering hours line** (new copy key `hours`, `{business:hours}` later): "Odpisujemy pn–pt 9:00–17:00, sob 9:00–14:00", one muted line under the hero card promise and under the final CTA buttons (above the SMS line). Together with "2–3 zdjęcia wystarczą. Cenę podamy dziś." (approved, in voice). "Zwykle w kilka minut" stays (owner confirmed).
 - **WhatsApp wording:** buttons "Wyślij zdjęcia na WhatsApp"; running text "przez WhatsApp lub SMS"; never "na WhatsAppie". Already true on this page; no change.
