@@ -1,6 +1,6 @@
 # Copy: stroller counter
 
-**`stroller-v1.1` (draft, awaiting the owner's approval): early launch without the quote form.** Changed keys are marked *(v1.1)*; everything else is as in `stroller-v1`. The one action is "Wyślij zdjęcia na WhatsApp"; the label is the same in every place.
+**`stroller-v1.1` (approved by the owner on 2026-11-16): early launch without the quote form.** Changed keys are marked *(v1.1)*; everything else is as in `stroller-v1`. The one action is "Wyślij zdjęcia na WhatsApp"; the label is the same in every place.
 
 Final Polish copy, keyed. `{...}` = comes from the database, never hard-coded. Voice: "Ty", short, concrete. **Wording of the H1 and hero is the brand strategist's call** (see README, open questions); the keys below hold the version in the approved design.
 

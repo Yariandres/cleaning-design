@@ -1,7 +1,7 @@
 # Stroller counter — `/poznan/pranie-wozkow-i-fotelikow`
 
 ## 1. Tag and status
-- **Tag: `stroller-v1.1` — DRAFT, awaiting the owner's approval (prepared 2026-11-16). Not tagged, not pushed. Until it is tagged, `stroller-v1` is the only approved version.**
+- **Tag:** `stroller-v1.1`, approved by the owner on 2026-11-16. Build the early launch from this tag.
 - `stroller-v1.1` is the **early-launch version** (owner priority [cleaning-design #5](https://github.com/Yariandres/cleaning-design/issues/5), developer [#8](https://github.com/Yariandres/cleaning-sell-system/issues/8)): the page goes live on nowiutko.pl before the quote form exists. Booking is by WhatsApp and phone.
 - `stroller-v1` (approved 2026-11-13, Direction 2 "Cennik pierwszy") stays as it is at its tag. It is the version **with** the quote form; see "After the quote form is live" at the end of the next section.
 - Designed against `docs/design-constraints.md` in cleaning-sell-system at commit `85dee45` (unchanged since v1), and `DESIGN.md` in this repo at the tag.
@@ -166,11 +166,13 @@ Everything from the database is marked `data-bind` in the prototype. Never hard-
 7. Please check the two v1 fixes on the built page: white headings on the two dark surfaces, and the FAQ plus sign under reduced motion.
 
 **For the owner**
-1. **Main action = WhatsApp, label "Wyślij zdjęcia na WhatsApp".** Approve, or say if you prefer the call first.
+1. Approved with the handover (2026-11-16): **main action = WhatsApp, label "Wyślij zdjęcia na WhatsApp"**, call second. Questions 2–6 are still open.
 2. **SMS with photos (MMS):** does your phone and plan receive MMS reliably? If not, the SMS sentence should lose the word "zdjęcia" or go.
 3. **"Cenę podamy dziś"** and step 2 "Zwykle w kilka minut": with you answering by hand, are these true in the evening and on Sunday? If not, an hours line ("Odpisujemy pn–sob 8–20") belongs next to the button.
 4. **Prefilled message** wording (`whatsapp.prefill`).
 5. Still open from v1: brand list in the car-seat H2, "najczęściej wybierany", the gondola line "odsysamy wodę", struck-through package prices.
 6. **Photos:** if they are not ready by launch, the page goes live in the no-photos state (`screens/13`–`14`). All four problem-card photos are needed together to switch that section back.
 
-**For the SEO desk and the brand strategist:** see the designer's hand-over note for this job (links removed against brief §4; "na WhatsApp" vs "na WhatsAppie"; the hours line).
+**For the SEO desk:** asked on [cleaning-seo #2](https://github.com/Yariandres/cleaning-seo/issues/2) (links removed against brief §4, `rel` on `wa.me` links, phone in LocalBusiness, breadcrumb while `/` is not live).
+
+**For the brand strategist:** raised as a "Brand:" issue in cleaning-design ("na WhatsApp" vs "na WhatsAppie" / "przez WhatsApp"; the new hero line; an answering-hours line).

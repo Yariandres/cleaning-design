@@ -33,12 +33,12 @@ This repo is the **design studio** for a one-person mobile cleaning business in 
 
 ## What's next
 
-**0. PRIORITY — early launch (owner, 15 Nov 2026):** the stroller page goes live on nowiutko.pl by Fri 20 Nov, booking by phone + WhatsApp only. Do [#5](https://github.com/Yariandres/cleaning-design/issues/5) first: stroller page without the quote form, homepage v0 (after the SEO mini brief), OG images, footer. Sofa counter, full homepage and remaining admin screens are paused until it's live.
+**0. PRIORITY — early launch (owner, 15 Nov 2026):** the stroller page goes live on nowiutko.pl by Fri 20 Nov, booking by phone + WhatsApp only. Do [#5](https://github.com/Yariandres/cleaning-design/issues/5) first: stroller page without the quote form, homepage v0 (after the SEO mini brief), OG images, footer. Sofa counter, full homepage and remaining admin screens are paused until it's live. **Item 1 done: handed over as `stroller-v1.1` (2026-11-16)**, WhatsApp as the one action, phone 736 369 704 (WhatsApp on the same number), a no-photos state for launch; waiting for the owner's photos and answers to the README's open questions. Next: homepage v0 (waits for the SEO mini brief), then OG images, footer.
 
 1. ~~Snapshot the owner's Pinterest board~~ (done 2026-11-12).
 2. Connect **Figma** in Claude Code and read the owner's file, if any (read tools only so far; no write tools).
 3. ~~Logo~~ — direction B approved 2026-11-13; per-service accents and icon set in DESIGN.md. Custom icons (chamomile, stroller, sofa, paw, mattress, car) still to draw.
-4. First page: the **stroller counter** (`/poznan/pranie-wozkow-i-fotelikow`, per the SEO brief, issue #2) — **handed over as `stroller-v1` (2026-11-13)**; waiting for the developer's questions and the owner's photos, phone number and brand-list checks.
+4. First page: the **stroller counter** (`/poznan/pranie-wozkow-i-fotelikow`, per the SEO brief, issue #2) — **handed over as `stroller-v1` (2026-11-13)**; superseded for the early launch by `stroller-v1.1` (see item 0); still waiting for the owner's photos and brand-list checks.
 5. Admin: **shell navigation + "Cennik i ustawienia"** (developer brief, issue #3) — **handed over as `admin-cennik-v1` (2026-11-14)**; waiting for the developer's answers to the README's open questions. The owner's phone number is still a placeholder here too.
 6. **Quote form** (`/poznan/wycena`, developer brief, issue #4) — **handed over as `quote-form-v1` (2026-11-15)**; waiting for the developer's answers to the README's open questions, an SEO brief (`h1`, title, indexing), a legal read of the consent and privacy wording, and the owner's phone number.
 7. Next: counter template states, homepage, sofa counter, remaining admin screens (order in `docs/prd.md` §9). Custom service icons (chamomile, stroller, sofa, paw, mattress, car) still to draw.
