@@ -20,6 +20,8 @@ SMS = "sms:+48736369704"
 WA_PREFILL = "Dzień dobry, proszę o wycenę prania wózka lub fotelika. Wysyłam zdjęcia. Miejscowość: "
 WA = "https://wa.me/48736369704?text=" + quote(WA_PREFILL)
 WA_LABEL = "Wyślij zdjęcia na WhatsApp"
+# Answering hours: decided by the owner and the brand strategist on 2026-11-17 (cleaning-design#6); data later ({business:hours}), text for now
+HOURS = "Odpisujemy pn–pt 9:00–17:00, sob 9:00–14:00"
 def wa_btn(pos, cls="btn btn-main"):
     return f'<a class="{cls}" href="{WA}" rel="noopener" data-bind="business:whatsapp" data-cta="whatsapp" data-cta-pos="{pos}">{ico("camera")}{WA_LABEL}</a>'
 
@@ -40,7 +42,7 @@ HERO = f'''<section class="hero2"><div class="wrap">
 <ul class="pc-rows">{hero_rows()}</ul>
 <p class="nextslot" data-bind="nextFreeSlot" hidden>{ico("calendar-check")}<span>Najbliższy wolny termin: <b data-bind="nextFreeSlot.label">jutro, 10:00</b></span></p>
 {wa_btn("hero")}
-<p class="pc-promise">2–3 zdjęcia wystarczą. Cenę podamy dziś.</p>
+<p class="pc-promise">2–3 zdjęcia wystarczą. Cenę podamy dziś.</p><p class="pc-promise pc-hours" data-bind="business:hours">{HOURS}</p>
 <div class="pc-links"><a class="ulink" href="#cennik">Pełny cennik i pakiety</a><a class="ulink num" href="{TEL}" data-bind="business:phone" data-cta="phone" data-cta-pos="hero">Zadzwoń: {PHONE}</a></div></div></div></section>'''
 
 PRICE_ROWS = [("Wózek spacerowy", "siedzisko, budka, pasy, stelaż i koła", 90, "stroller-single"),
@@ -76,6 +78,7 @@ AREA = B.AREA  # v1.1: no link to /poznan/obszar-dzialania until that page exist
 
 FINAL = f'''<section id="kontakt" class="final on-dark"><div class="wrap"><h2>Wyślij 2–3 zdjęcia. Cenę podamy dziś.</h2><p>Przyjeżdżamy na czas. Płacisz tyle, ile podaliśmy ze zdjęć. Jeśli coś wyjdzie po wyschnięciu, wracamy za darmo.</p>
 <div class="fin-btns">{wa_btn("final")}<a class="btn btn-ghost-light num" href="{TEL}" data-bind="business:phone" data-cta="phone" data-cta-pos="final">{ico("phone")}Zadzwoń: {PHONE}</a></div>
+<p class="fin-hours" data-bind="business:hours">{HOURS}</p>
 <p class="fin-note">Nie masz WhatsAppa? Wyślij zdjęcia <a href="{SMS}" data-bind="business:phone" data-cta="sms" data-cta-pos="final">SMS-em na ten sam numer</a>.</p></div></section>'''
 
 # ---------------- footer (stroller-v1.2 draft; shared component: handoff/components/footer.md) ----------------
@@ -123,6 +126,7 @@ FINAL_CSS = '''
 .pnote .ulink,.lede .ulink,.cookie .ulink{display:inline;min-height:0;text-decoration-color:currentColor}
 .final .fin-btns{display:flex;gap:12px;flex-wrap:wrap;width:100%}.final .fin-btns .btn{flex:1 1 240px}@media(min-width:700px){.final .fin-btns .btn{flex:0 0 auto}}
 .btn-ghost-light{border-color:#fff;color:#fff;background:transparent}.btn-ghost-light:hover{background:rgba(255,255,255,.12)}
+.fin-hours{color:var(--p100);font-size:.95rem;margin-top:-8px}.pc-hours{margin-top:-12px}
 .fin-note{color:var(--p100)}.fin-note a{font-weight:700;color:#fff}
 /* footer (v1.2): brand line, contact, company details, legal row. Quiet: no solid button, no page navigation. */
 .site-f{padding-block:40px 20px;color:var(--text-muted);font-size:.9rem;border-top:1px solid var(--border)}

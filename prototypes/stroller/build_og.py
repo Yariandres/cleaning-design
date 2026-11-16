@@ -37,7 +37,7 @@ html,body{margin:0}body{width:1200px;height:630px;overflow:hidden;padding:0!impo
 .og.nophoto .meta{font-size:32px;color:#fff;gap:18px}.og.nophoto .meta i{width:14px;height:14px;background:var(--p200)}
 .og.nophoto .flower{position:absolute;width:860px;height:860px;left:-440px;top:-115px}
 '''
-def page(variant, title, line=("U Ciebie w domu", "tego samego dnia"), long=False, photo=None):
+def page(variant, title, line=("U Ciebie w domu", "Poznań i okolice"), long=False, photo=None):
     meta = f'<div class="meta" data-slot="line"><span>{line[0]}</span><i></i><span>{line[1]}</span></div>'
     if variant == "photo":
         slot = f'<img src="{photo}" alt="">' if photo else '<div class="ph">miejsce na własne zdjęcie<br>(przycięcie 440 × 518, bez ludzi)</div>'

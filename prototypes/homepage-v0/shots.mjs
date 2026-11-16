@@ -95,7 +95,7 @@ const CHECK = `(() => {
   const sa = [...document.querySelectorAll('a[href="/poznan/pranie-wozkow-i-fotelikow"]')];
   out.strollerLinks = sa.map((a) => a.textContent.trim());
   const soonLis = [...document.querySelectorAll(".soon li")];
-  out.comingRows = soonLis.map((li) => ({ text: li.textContent.trim().replace(/\\s+/g, " "), hasLink: !!li.querySelector("a"), hasWkrotce: /wkrótce/.test(li.textContent), cursor: getComputedStyle(li).cursor }));
+  out.comingRows = soonLis.map((li) => ({ text: li.textContent.trim().replace(/\\s+/g, " "), href: (li.querySelector("a") || {}).getAttribute ? li.querySelector("a").getAttribute("href").replace(/\\?text=.*/, "?text=…") : null, prefill: decodeURIComponent((li.querySelector("a").getAttribute("href").split("text=")[1] || "")), linkText: li.querySelector("a").textContent.trim().replace(/\\s+/g, " "), h: Math.round(li.getBoundingClientRect().height), wkrotce: /wkrótce/i.test(document.body.textContent) }));
   out.emptyHrefs = [...document.querySelectorAll("a")].filter((a) => !a.getAttribute("href") || a.getAttribute("href") === "#").length;
   out.headings = [...document.querySelectorAll("h1,h2,h3,h4")].map((e) => e.tagName + " " + e.textContent.trim().replace(/\\s+/g, " ").slice(0, 60));
   out.minBodyFontPx = Math.min(...[...document.querySelectorAll("main p, main li, main span, main a")].filter(vis).map((e) => parseFloat(getComputedStyle(e).fontSize)));

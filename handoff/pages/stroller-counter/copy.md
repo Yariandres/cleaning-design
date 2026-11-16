@@ -1,5 +1,7 @@
 # Copy: stroller counter
 
+> **DRAFT revision after `stroller-v1.2` (2026-11-17, not approved, not tagged; the changelog and tag come with the owner's approval).** Brand decisions from [#6](https://github.com/Yariandres/cleaning-design/issues/6): (1) buttons say "na WhatsApp", running text "przez WhatsApp lub SMS", never "na WhatsAppie" (already so; checked); (2) new key `hours` shown under the hero promise and under the final CTA buttons; (3) `og.line` changed. Footer wording unchanged and approved (full brand line, "Kontakt", "Dane firmy", address note).
+
 > **`stroller-v1.2` (approved by the owner on 2026-11-16):** the sections "Footer" and "Share image" below are new. Everything else is `stroller-v1.1`, unchanged.
 
 **`stroller-v1.1` (approved by the owner on 2026-11-16): early launch without the quote form.** Changed keys are marked *(v1.1)*; everything else is as in `stroller-v1`. The one action is "Wyślij zdjęcia na WhatsApp"; the label is the same in every place.
@@ -19,6 +21,7 @@ Final Polish copy, keyed. `{...}` = comes from the database, never hard-coded. V
 - `cta.whatsapp` — Wyślij zdjęcia na WhatsApp → `https://wa.me/{business:whatsapp}?text={whatsapp.prefill}` (`{business:whatsapp}` = `48736369704`)
 - `whatsapp.prefill` — Dzień dobry, proszę o wycenę prania wózka lub fotelika. Wysyłam zdjęcia. Miejscowość:␣ *(ends with a space; URL-encoded in the link; page copy, not owner data)*
 - `cta.call` — Zadzwoń: `{business:phone}` → `tel:`
+- `hours` — Odpisujemy pn–pt 9:00–17:00, sob 9:00–14:00 *(draft 2026-11-17; `{business:hours}` in time; one muted line under `hero.card.promise` and under the final buttons, before `cta.sms`; not in the sticky bar or header)*
 - `cta.sms` — Nie masz WhatsAppa? Wyślij zdjęcia [SMS-em na ten sam numer](sms:+48736369704).
 
 ## Hero
@@ -118,7 +121,7 @@ Final Polish copy, keyed. `{...}` = comes from the database, never hard-coded. V
 
 ## Share image *(v1.2; `handoff/components/share-image.md`)*
 - `og.title` — Pranie wózków i fotelików w Poznaniu *(text inside the image; non-breaking spaces after "i" and "w"; not the H1, not the `<title>`, no price)*
-- `og.line` — U Ciebie w domu · tego samego dnia
+- `og.line` — U Ciebie w domu · Poznań i okolice *(draft 2026-11-17; was "…tego samego dnia", a promise the brand does not make)*
 - `og.alt` — Nowiutko: pranie wózków i fotelików w Poznaniu, u Ciebie w domu.
 
 ## Cookie banner

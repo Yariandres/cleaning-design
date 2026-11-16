@@ -15,9 +15,9 @@ os.chdir(cwd)
 ico = F.ico
 
 # ---------------- head (proposals from the SEO brief §2, §8; wording is the brand strategist's call, issue #6) ----------------
-TITLE = "Nowiutko – pranie tapicerki, wózków i aut u Ciebie | Poznań"
-DESC = "Nowiutko: pierzemy wózki dziecięce i foteliki samochodowe u Ciebie w domu, w Poznaniu i okolicach. Wkrótce także kanapy, materace, dywany i wnętrza aut."
-OG_TITLE = "Nowiutko – pranie tapicerki, wózków i aut u Ciebie"
+TITLE = "Nowiutko — pranie tapicerki, wózków i aut u Ciebie | Poznań"
+DESC = "Nowiutko: pierzemy wózki, foteliki, kanapy, materace, dywany i wnętrza aut u Ciebie w domu, w Poznaniu i okolicach. Cena ze zdjęć na WhatsApp."
+OG_TITLE = "Nowiutko — pranie tapicerki, wózków i aut u Ciebie"
 OG_ALT = "Nowiutko: pranie tapicerki, wózków i aut u Ciebie. Poznań i okolice."
 assert len(TITLE) <= 60 and len(DESC) <= 155, (len(TITLE), len(DESC))
 STROLLER_URL = "/poznan/pranie-wozkow-i-fotelikow"
@@ -36,11 +36,12 @@ def fix(s):
 # H1 is the headline itself (real text, the name first). The voice line sits under it as a normal paragraph.
 HERO = f'''<section class="hh"><div class="wrap">
 <div class="hh-copy">
-<h1 class="hh-h1"><span class="name">Nowiutko</span> – pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach</h1>
+<h1 class="hh-h1"><span class="name">Nowiutko</span> — pranie tapicerki, wózków i aut u Ciebie w Poznaniu i okolicach</h1>
 <p class="voice">Świeżo i jak nowe — bez wychodzenia z domu.</p>
-<p class="lede">Przyjeżdżamy z własnym sprzętem i pierzemy u Ciebie, na miejscu. Na początek: wózki i foteliki samochodowe.</p>
+<p class="lede">Przyjeżdżamy z własnym sprzętem i pierzemy u Ciebie, na miejscu: wózki, foteliki, kanapy, materace, dywany i wnętrza aut.</p>
 <div class="hh-btns">{F.wa_btn("hero")}<a class="btn btn-ghost num" href="{F.TEL}" data-bind="business:phone" data-cta="phone" data-cta-pos="hero">{ico("phone")}Zadzwoń: {F.PHONE}</a></div>
 <p class="pc-promise hh-promise">2–3 zdjęcia wystarczą. Cenę podamy dziś.</p>
+<p class="pc-promise hh-promise hh-hours" data-bind="business:hours">{F.HOURS}</p>
 </div>
 <div class="hh-mark" aria-hidden="true"><img src="../stroller/assets/mark.svg" alt="" width="320" height="320"></div>
 </div></section>'''
@@ -48,23 +49,31 @@ HERO = f'''<section class="hh"><div class="wrap">
 # ---------------- Co pierzemy ----------------
 # One bookable card: only the title is the <a> (service name in its text); a stretched ::after makes the whole card clickable.
 # The other services are plain rows: no <a>, no heading, no paragraph, no price; "wkrótce" is real text.
-SOON = ["Kanapy, narożniki i fotele", "Materace", "Dywany", "Tapicerka samochodowa (wnętrze auta)"]
+# Service rows. Stroller + car seats: one card linking to its page. Every other service is bookable by hand (owner decision, 2026-11-17, #7):
+# its row is ONE link to the WhatsApp action (prefilled message that names the service), text "<service> — Wycena na WhatsApp".
+# Never a link to a page that does not exist; no heading, paragraph or price per service.
+from urllib.parse import quote
+SOON = [("Kanapy, narożniki i fotele", "kanap, narożników lub foteli"), ("Materace", "materaca"), ("Dywany", "dywanu"), ("Tapicerka samochodowa (wnętrze auta)", "tapicerki samochodowej (wnętrza auta)")]
+WA_LABEL = "Wycena na WhatsApp"
+def wa_for(prefill_obj):
+    return "https://wa.me/48736369704?text=" + quote(f"Dzień dobry, proszę o wycenę prania {prefill_obj}. Wysyłam zdjęcia. Miejscowość: ")
 def soon_rows(live=None):
     out = ""
-    for n in SOON:
+    for n, obj in SOON:
         if live and n == live[0]:
-            out += f'<li class="live"><a href="{live[1]}">{live[2]}{ico("arrow-right")}</a></li>'
+            out += f'<li><a class="sv-link sv-page" href="{live[1]}"><span class="sv-name">{live[2]}</span>{ico("arrow-right")}</a></li>'
         else:
-            out += f'<li><span class="sv-name">{n}</span><span class="sv-tag">wkrótce</span></li>'
+            out += (f'<li><a class="sv-link" href="{wa_for(obj)}" rel="noopener" data-cta="whatsapp" data-cta-pos="services" data-bind="business:whatsapp">'
+                    f'<span class="sv-name">{n}</span><span class="vh"> — </span><span class="sv-wa">{ico("message-circle")}{WA_LABEL}</span></a></li>')
     return out
 def services(live=None):
-    return f'''<section id="uslugi"><div class="wrap"><div class="sec-head"><span class="eyebrow">Usługi</span><h2>Co pierzemy</h2><p class="lede">Dziś umawiamy pranie wózków i fotelików. Kolejne usługi dodajemy po kolei.</p></div>
+    return f'''<section id="uslugi"><div class="wrap"><div class="sec-head"><span class="eyebrow">Usługi</span><h2>Co pierzemy</h2><p class="lede">Wybierz, co chcesz odświeżyć. Cenę podajemy ze zdjęć, zanim przyjedziemy.</p></div>
 <div class="svc">
-<div class="svc-card"><span class="svc-chip">Dostępne teraz</span>
+<div class="svc-card"><span class="svc-chip">Wózki i foteliki</span>
 <h3><a href="{STROLLER_URL}">Pranie wózków i fotelików</a></h3>
-<p>Wózki spacerowe, gondole, 2w1 i 3w1 oraz foteliki samochodowe. Cenę podajemy ze zdjęć, zanim przyjedziemy.</p>
+<p>Wózki spacerowe, gondole, 2w1 i 3w1 oraz foteliki samochodowe. Cennik i pakiety na osobnej stronie.</p>
 <span class="svc-more" aria-hidden="true">Cennik i szczegóły {ico("arrow-right")}</span></div>
-<div class="soon"><p class="eyebrow">Kolejne usługi</p><ul>{soon_rows(live)}</ul></div>
+<div class="soon"><p class="eyebrow">Pozostałe usługi</p><ul>{soon_rows(live)}</ul></div>
 </div></div></section>'''
 
 # ---------------- Jak to działa (short form of the stroller steps; same copy, v1.1) ----------------
@@ -86,7 +95,7 @@ CSS = '''
 .voice{font:700 1.15rem/1.35 var(--body);color:var(--p700);margin-top:16px}
 .hh .lede{margin-top:10px;color:var(--n700);font-size:1.1rem}
 .hh-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.hh-btns .btn{flex:1 1 250px}
-.hh-promise{text-align:left;margin-top:12px}
+.hh-promise{text-align:left;margin-top:12px}.hh-hours{margin-top:2px}
 .hh-mark{display:none}
 @media(min-width:700px){.hh-btns .btn{flex:0 0 auto}}
 @media(min-width:900px){.hh .wrap{grid-template-columns:1fr 300px;gap:72px;align-items:center;padding-block:64px 80px}.hh-mark{display:block}.hh-mark img{width:100%;height:auto;display:block;border-radius:26%;box-shadow:0 30px 70px -36px rgba(14,60,50,.55)}}
@@ -107,10 +116,12 @@ CSS = '''
 .svc-card:hover .svc-more{text-decoration-color:currentColor}
 .soon{background:var(--bg-muted);border-radius:var(--r-2xl);padding:22px 24px 12px;display:grid;gap:4px;align-content:start}
 .soon ul{list-style:none;padding:0}
-.soon li{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:14px;border-top:1px solid var(--n200);font-weight:600;color:var(--n700);min-height:56px}
-.soon li:first-child{border-top:0}
-.sv-tag{flex:none;background:#fff;border:1px solid var(--n300);border-radius:999px;padding:2px 12px;font-size:.85rem;font-weight:600;color:var(--n700)}
-.soon li.live{padding:0}.soon li.live a{flex:1;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:56px;color:var(--p600);font-weight:700;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px;text-decoration-color:transparent;transition:text-decoration-color .2s}.soon li.live a:hover{text-decoration-color:currentColor}
+.soon li{border-top:1px solid var(--n200);min-height:56px;display:flex}.soon li:first-child{border-top:0}
+.sv-link{flex:1;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:2px 16px;padding-block:10px;min-height:56px;color:var(--n700);font-weight:600;text-decoration:none}
+.sv-wa{display:inline-flex;align-items:center;gap:6px;color:var(--p600);font-weight:700;text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:2px;text-underline-offset:4px;transition:text-decoration-color .2s}
+.sv-link:hover .sv-wa,.sv-link:hover .ico{text-decoration-color:currentColor}.sv-link .ico{color:var(--p600)}
+.sv-page{color:var(--p600);font-weight:700}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 /* steps */
 .steps-s .steps{gap:20px}
 /* area */
@@ -138,9 +149,9 @@ write("index.html", page())
 cookie = page(extra_head="", body_extra=F.COOKIE + F.COOKIE_SPACE, extra_css=F.COOKIE_CSS + ".sticky{display:none!important}body{padding-bottom:var(--cookie-h,240px)!important}html{scroll-padding-bottom:calc(var(--cookie-h,240px) + 12px)!important}")
 write("state-cookie.html", cookie)
 
-# state: a second counter has shipped. Its row loses "wkrótce" and becomes a link (illustration only: the sofa page does not exist yet,
+# state: a second counter has shipped. Its WhatsApp row becomes a link to the new page (illustration only: the sofa page does not exist yet,
 # and its anchor text is the sofa brief's to decide).
-write("state-service-live.html", page(live=("Kanapy, narożniki i fotele", "/poznan/pranie-kanap", "Pranie kanap i foteli")))
+write("state-service-live.html", page(live=("Kanapy, narożniki i fotele", "/poznan/pranie-kanap", "Pranie kanap, narożników i foteli")))
 
 # ---------------- share image (no-photo variant, same template as the stroller page) ----------------
 OGDIR = HERE
