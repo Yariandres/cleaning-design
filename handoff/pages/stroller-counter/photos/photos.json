@@ -93,18 +93,46 @@
    "source": "owner-supplied; generated image (labelled as generated, not a photograph of the owner's own work); originals in /photos (not committed)"
   },
   {
-   "slot": "before-after",
+   "slot": "before-after-reference",
    "file": "before-after-reference.jpg",
    "ratio": "8:3",
    "size": "2048x768",
-   "section": "Before/after slot (STAYS HIDDEN)",
-   "alt": "Dwa zdjęcia wyściółki gondoli obok siebie: z lewej z żółtymi plamami, z prawej czysta.",
+   "section": "Source of the before/after pair (combined image, not wired; kept for reference)",
+   "alt": "",
    "objectPosition": "50% 50%",
    "source_file": "Bassinet lining, before and after.png",
-   "crop": "not cropped, not wired",
+   "crop": "split at x=1024 into two 4:3 halves; the seam is a clean hard cut: no gutter, divider or label, nothing cut off",
    "status": "reference",
-   "note": "One combined generated image, not a same-angle pair of real photos. Project rules forbid invented before/after photos. Do not publish.",
    "source": "owner-supplied; generated image (labelled as generated, not a photograph of the owner's own work); originals in /photos (not committed)"
+  },
+  {
+   "slot": "before-after-1-before",
+   "file": "before-after-1-before.jpg",
+   "ratio": "4:3",
+   "size": "1024x768",
+   "section": "Before/after, pair 1, left (Przed)",
+   "alt": "Wyściółka gondoli przed praniem: na dnie widać żółtawe plamy.",
+   "objectPosition": "50% 50%",
+   "source_file": "Bassinet lining, before and after.png (left half)",
+   "crop": "left 1024x768 of the combined image",
+   "status": "final",
+   "source": "owner-supplied; generated image (labelled as generated, not a photograph of the owner's own work); originals in /photos (not committed)",
+   "note": "Owner decision 2026-11-17: ship the supplied generated pair for the first launch although it is not a pair of real photos; replace with real same-angle photos when available."
+  },
+  {
+   "slot": "before-after-1-after",
+   "file": "before-after-1-after.jpg",
+   "ratio": "4:3",
+   "size": "1024x768",
+   "section": "Before/after, pair 1, right (Po)",
+   "alt": "Ta sama wyściółka po praniu: dno gondoli jest czyste i jednolite.",
+   "objectPosition": "50% 50%",
+   "source_file": "Bassinet lining, before and after.png (right half)",
+   "crop": "right 1024x768 of the combined image",
+   "status": "final",
+   "source": "owner-supplied; generated image (labelled as generated, not a photograph of the owner's own work); originals in /photos (not committed)",
+   "note": "See before-after-1-before."
   }
- ]
+ ],
+ "caption_before_after_1": "Gondola wózka: plamy na wyściółce przed i po praniu."
 }
