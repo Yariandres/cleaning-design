@@ -111,14 +111,33 @@ def footer(company=COMPANY_DEFAULT):
 <nav class="f-legal" aria-label="Informacje"><a href="/polityka-prywatnosci">Prywatność</a><button type="button" data-action="open-cookie-settings">Ustawienia cookies</button></nav>
 </div></footer>'''
 
-def page(extra_head="", body_extra="", company=COMPANY_DEFAULT):
+# ---------------- photos (stroller-v1.4 draft): handoff/pages/stroller-counter/photos/photos.json ----------------
+import json, re as _re
+PH_DIR = "../../../handoff/pages/stroller-counter/photos/"
+_PH = {x["slot"]: x for x in json.load(open(os.path.join(OUT, PH_DIR, "photos.json")))["images"]}
+def _img(slot, cls):
+    x = _PH[slot]; w, h = x["size"].split("x")
+    return f'<img class="{cls}" src="{PH_DIR}{x["file"]}" alt="{x["alt"]}" width="{w}" height="{h}" loading="lazy" decoding="async" data-slot="{slot}" style="object-position:{x["objectPosition"]}">'
+def with_photos(html):
+    # the four problem cards switch together; then the car-seat photo. Placeholders stay in the source for the no-photos fallback state.
+    it = iter(["headache-1", "headache-2", "headache-3", "headache-4"])
+    html, n1 = _re.subn(r'<div class="ph pic" role="img"[^>]*>.*?</div>', lambda m: _img(next(it), "pic"), html)
+    html, n2 = _re.subn(r'<div class="ph" style="aspect-ratio:4/3" role="img"[^>]*>.*?</div>', lambda m: _img("carseat", "seat-img"), html)
+    assert (n1, n2) == (4, 1), (n1, n2)
+    return html
+
+def page(extra_head="", body_extra="", company=COMPANY_DEFAULT, photos=True):
     main = (HERO + B.PROOF2 + B.HEADACHE2.replace("{band}", "band") + price_section("") + STEPS + BEFORE_AFTER + B.SEATS.replace("{band}", "band") + REVIEWS + B.FAQ + AREA.replace("{band}", "band") + FINAL)
-    return f'''<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    html = f'''<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>{TITLE}</title><meta name="description" content="{DESC}"><link rel="canonical" href="https://nowiutko.pl/poznan/pranie-wozkow-i-fotelikow">
 <link rel="stylesheet" href="../base.css"><style>{B.CSS2}{FINAL_CSS}</style>{extra_head}</head><body>
 {HEADER}<main>{main}</main>{footer(company)}{STICKY}{body_extra}</body></html>'''
+    return with_photos(html) if photos else html
 
 FINAL_CSS = '''
+img.pic{display:block;width:100%;height:auto;align-self:start;object-fit:cover;background:var(--n100)}
+.pc.big img.pic{height:100%;align-self:stretch}@media(min-width:900px){.pc.wide img.pic{height:100%;align-self:stretch}}
+.seat-img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-2xl);background:var(--n100)}
 .pc-links{display:flex;justify-content:center;gap:0 24px;flex-wrap:wrap}
 .ulink{font-weight:700;color:var(--p600);text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:2px;text-underline-offset:4px;transition:text-decoration-color .2s;min-height:44px;display:inline-grid;align-items:center}
 .nextslot{display:flex;gap:10px;align-items:center;background:var(--s50);border:1px solid var(--s200);border-radius:var(--r-lg);padding:10px 14px;color:var(--s950);font-size:.95rem;margin:0}.nextslot .ico{color:var(--s800)}
@@ -199,7 +218,7 @@ open(os.path.join(OUT, "state-faq-open-long.html"), "w").write(longp)
 # No photos yet (the likely early-launch state): no placeholder ever ships. Problem cards become text cards in a 2 x 2 grid,
 # the car-seat section becomes one text column. Same copy, same order, same links.
 import re
-nop = page()
+nop = page(photos=False)
 nop, n1 = re.subn(r'<div class="ph pic" role="img"[^>]*>.*?</div>', '', nop)
 nop, n2 = re.subn(r'<div class="ph" style="aspect-ratio:4/3" role="img"[^>]*>.*?</div>', '', nop)
 assert (n1, n2) == (4, 1), (n1, n2)

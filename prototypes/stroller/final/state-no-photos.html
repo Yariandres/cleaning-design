@@ -39,6 +39,9 @@ a.pc:hover{transform:translateY(-2px);box-shadow:0 18px 40px -26px rgba(14,60,50
  .pc.wide{grid-column:span 2;grid-template-columns:.8fr 1.2fr}.pc.wide .pic{aspect-ratio:auto;height:100%;min-height:200px}.pc.wide .pc-body{align-content:center}
 }
 
+img.pic{display:block;width:100%;height:auto;align-self:start;object-fit:cover;background:var(--n100)}
+.pc.big img.pic{height:100%;align-self:stretch}@media(min-width:900px){.pc.wide img.pic{height:100%;align-self:stretch}}
+.seat-img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-2xl);background:var(--n100)}
 .pc-links{display:flex;justify-content:center;gap:0 24px;flex-wrap:wrap}
 .ulink{font-weight:700;color:var(--p600);text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:2px;text-underline-offset:4px;transition:text-decoration-color .2s;min-height:44px;display:inline-grid;align-items:center}
 .nextslot{display:flex;gap:10px;align-items:center;background:var(--s50);border:1px solid var(--s200);border-radius:var(--r-lg);padding:10px 14px;color:var(--s950);font-size:.95rem;margin:0}.nextslot .ico{color:var(--s800)}
