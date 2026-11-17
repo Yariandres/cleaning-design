@@ -1112,6 +1112,68 @@
     }
    ]
   },
+  "32-before-after-390": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 5,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "footer": {
+    "height": 478,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 390
+  },
+  "33-before-after-1440": {
+   "horizontalScroll": false,
+   "h1Count": 1,
+   "headingsInFooter": 0,
+   "contrastMin": 5.03,
+   "contrastFails": [],
+   "smallTargets": [],
+   "inlineLinksExempt": [
+    "SMS-em na ten sam numer"
+   ],
+   "links": {
+    "#cennik": 3,
+    "/": 1,
+    "tel:+48736369704": 4,
+    "https://wa.me/48736369704?text=…": 5,
+    "sms:+48736369704": 1,
+    "/polityka-prywatnosci": 1
+   },
+   "deadLinks": [],
+   "placeholdersLeft": [
+    "business:legal-name",
+    "business:nip"
+   ],
+   "footer": {
+    "height": 271,
+    "minFontPx": 13,
+    "clippedText": [],
+    "outsideFooter": []
+   },
+   "width": 1440
+  },
   "28-footer-long-320": {
    "horizontalScroll": false,
    "h1Count": 1,

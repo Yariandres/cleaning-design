@@ -70,7 +70,7 @@ Final Polish copy, keyed. `{...}` = comes from the database, never hard-coded. V
 - 3 **Pierzemy u Ciebie** — Przywozimy sprzęt i środki. Potrzebujemy tylko wody i gniazdka.
 - `steps.cta` — `cta.whatsapp` *(v1.1; was "Wyślij 2–3 zdjęcia")*
 
-## Before/after (hidden until real photos exist)
+## Before/after (live from the v1.4 draft, owner override 2026-11-17; the generated pair is to be replaced with real photos)
 - `beforeafter.h2` — Wózki przed i po praniu · eyebrow *Efekty* · each pair with a one-line caption written by the owner. Data: `{beforeAfter:stroller}`.
 
 ## Car seats by brand (H2)
@@ -135,7 +135,9 @@ Final Polish copy, keyed. `{...}` = comes from the database, never hard-coded. V
 - `carseat` — Jasnoszary fotelik samochodowy dla niemowląt z czystym obiciem i pasami, na brzegu siedziska leży zielona ściereczka.
 - `og-photo` (share image, photo variant only) — Pusty zielony wózek spacerowy w jasnym przedpokoju, w świetle poranka.
 - `process` (no slot yet) — Dłoń trzyma końcówkę odkurzacza piorącego nad wyściółką gondoli, na tkaninie widać pianę.
-- Before/after: hidden, no alt (reference image only).
+- `before-after-1-before` — Wyściółka gondoli przed praniem: na dnie widać żółtawe plamy. (tag "Przed")
+- `before-after-1-after` — Ta sama wyściółka po praniu: dno gondoli jest czyste i jednolite. (tag "Po")
+- `beforeafter.caption.1` — Gondola wózka: plamy na wyściółce przed i po praniu. *(no names, dates or ratings; the owner may add a caption per pair later)*
 
 ## Alt texts, earlier plan (superseded)
 - Slots: `gondola-podszewka` · `fotelik-baza` · `spacerowka-szwy` · `wozek-i-fotelik` · `fotelik-samochodowy` · before/after pairs. Example: "Gondola wózka przed praniem – żółta plama po oliwce na podszewce". Decorative stand-ins get `alt=""`. File names Polish, hyphenated (`pranie-gondoli-wozka-przed-po.webp`).

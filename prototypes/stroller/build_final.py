@@ -118,12 +118,19 @@ _PH = {x["slot"]: x for x in json.load(open(os.path.join(OUT, PH_DIR, "photos.js
 def _img(slot, cls):
     x = _PH[slot]; w, h = x["size"].split("x")
     return f'<img class="{cls}" src="{PH_DIR}{x["file"]}" alt="{x["alt"]}" width="{w}" height="{h}" loading="lazy" decoding="async" data-slot="{slot}" style="object-position:{x["objectPosition"]}">'
+def before_after_live():
+    b, a = _PH["before-after-1-before"], _PH["before-after-1-after"]
+    def im(x, tag): return f'<div class="ba-img"><img src="{PH_DIR}{x["file"]}" alt="{x["alt"]}" width="1024" height="768" loading="lazy" decoding="async" data-slot="{x["slot"]}"><span class="ba-tag">{tag}</span></div>'
+    return (f'<section id="przed-po" data-slot="before-after"><div class="wrap"><div class="sec-head"><span class="eyebrow">Efekty</span><h2>Wózki przed i po praniu</h2></div>'
+            f'<div class="ba-grid"><figure class="ba"><div class="ba-pair">{im(b, "Przed")}{im(a, "Po")}</div><figcaption>Gondola wózka: plamy na wyściółce przed i po praniu.</figcaption></figure></div></div></section>')
 def with_photos(html):
     # the four problem cards switch together; then the car-seat photo. Placeholders stay in the source for the no-photos fallback state.
     it = iter(["headache-1", "headache-2", "headache-3", "headache-4"])
     html, n1 = _re.subn(r'<div class="ph pic" role="img"[^>]*>.*?</div>', lambda m: _img(next(it), "pic"), html)
     html, n2 = _re.subn(r'<div class="ph" style="aspect-ratio:4/3" role="img"[^>]*>.*?</div>', lambda m: _img("carseat", "seat-img"), html)
     assert (n1, n2) == (4, 1), (n1, n2)
+    html, n3 = _re.subn(r'<section id="przed-po" hidden.*?</section>', lambda m: before_after_live(), html, flags=_re.S)
+    assert n3 == 1
     return html
 
 def page(extra_head="", body_extra="", company=COMPANY_DEFAULT, photos=True):
@@ -135,6 +142,11 @@ def page(extra_head="", body_extra="", company=COMPANY_DEFAULT, photos=True):
     return with_photos(html) if photos else html
 
 FINAL_CSS = '''
+/* before/after pair (live, owner decision 2026-11-17): two 4:3 images side by side with text tags */
+.ba-grid{max-width:760px}.ba-grid .ba{display:block;margin:0}.ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}.ba-img{position:relative}
+.ba-img img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-xl);background:var(--n100)}
+.ba-tag{position:absolute;left:10px;top:10px;background:#fff;color:var(--n900);font:700 .82rem/1 var(--body);padding:6px 12px;border-radius:999px}
+.ba figcaption{color:var(--text-muted);font-size:.95rem;margin-top:12px}
 img.pic{display:block;width:100%;height:auto;align-self:start;object-fit:cover;background:var(--n100)}
 .pc.big img.pic{height:100%;align-self:stretch}@media(min-width:900px){.pc.wide img.pic{height:100%;align-self:stretch}}
 .seat-img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-2xl);background:var(--n100)}
@@ -167,7 +179,7 @@ a.f-row .v{text-decoration:underline;text-decoration-color:transparent;text-deco
 .nextslot[hidden]{display:none}
 .pc-promise{text-align:center;color:var(--text-muted);font-size:.93rem;margin-top:-6px}
 .sticky .btn-main{white-space:nowrap}.sticky .btn-ghost{flex:0 0 48px;padding-inline:0}@media(max-width:359px){.sticky .btn-main .ico{display:none}.sticky .btn-main{padding-inline:8px;font-size:.94rem}}
-.ratio43{aspect-ratio:4/3}.ba-grid .ba{display:grid;gap:12px;grid-template-columns:1fr 1fr;margin:0}
+.ratio43{aspect-ratio:4/3}.ba-grid .ba:not(:has(.ba-pair)){display:grid;gap:12px;grid-template-columns:1fr 1fr;margin:0}
 .btn:hover{background-color:var(--p600)}.btn-ghost:hover{background:var(--n100)}
 .btn-main:hover{transform:translateY(-1px)}
 .plist li{padding-block:18px}
@@ -201,10 +213,8 @@ open(os.path.join(OUT, "state-footer-long.html"), "w").write(page(company=COMPAN
 open(os.path.join(OUT, "state-footer-no-company.html"), "w").write(page(company=None).replace("<body>\n", SKIP, 1))
 
 # before/after + reviews live (wireframe: labelled placeholders, never real-looking content)
-live = page().replace('id="przed-po" hidden', 'id="przed-po"').replace('id="opinie" hidden', 'id="opinie"').replace('data-bind="nextFreeSlot" hidden', 'data-bind="nextFreeSlot"')
+live = page().replace('id="opinie" hidden', 'id="opinie"').replace('data-bind="nextFreeSlot" hidden', 'data-bind="nextFreeSlot"')
 assert 'data-bind="nextFreeSlot">' in live
-live = live.replace('<div class="ba-grid"><figure class="ba"><div class="ph ratio43" role="img" aria-label="Przed">przed</div><div class="ph ratio43" role="img" aria-label="Po">po</div></figure></div>',
-  '<div class="ba-grid3">' + "".join('<figure class="ba"><div class="ph ratio43" role="img" aria-label="Zdjęcie przed">przed<br>(zdjęcie własne)</div><div class="ph ratio43" role="img" aria-label="Zdjęcie po">po<br>(zdjęcie własne)</div><figcaption>Gondola, plama po oliwce</figcaption></figure>' for _ in range(3)) + '</div>')
 live = live.replace('<div class="wrap"><div class="sec-head"><span class="eyebrow">Opinie</span><h2>Co mówią rodzice</h2></div></div>',
   '<div class="wrap"><div class="sec-head"><span class="eyebrow">Opinie</span><h2>Co mówią rodzice</h2></div><div class="rv-grid">' + "".join('<blockquote class="rv"><p class="rv-t">[tekst opinii wpisany przez właścicielkę]</p><footer>[imię i miejscowość, za zgodą]</footer></blockquote>' for _ in range(3)) + '</div></div>')
 live = live.replace("</style>", ".ba-grid3{display:grid;gap:20px}@media(min-width:900px){.ba-grid3{grid-template-columns:repeat(3,1fr)}}.ba figcaption{grid-column:1/-1;color:var(--text-muted);font-size:.9rem}.rv-grid{display:grid;gap:16px}@media(min-width:900px){.rv-grid{grid-template-columns:repeat(3,1fr)}}.rv{margin:0;background:#fff;border:1px solid var(--border);border-radius:var(--r-2xl);padding:22px;display:grid;gap:12px}.rv-t{font-size:1.05rem;color:var(--text-muted)}.rv footer{font-weight:700;color:var(--text)}</style>")

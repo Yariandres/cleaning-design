@@ -46,6 +46,8 @@ const FRAMES = [
   ["25-footer-end-of-page-sticky-bar-390", F + "stroller-counter.html", 390, 844, "bottom"],
   ["26-footer-end-of-page-cookie-banner-390", F + "state-cookie.html", 390, 844, "bottom"],
   ["27-footer-end-of-page-cookie-banner-1440", F + "state-cookie.html", 1440, 900, "bottom"],
+  ["32-before-after-390", F + "stroller-counter.html", 390, 844, "ba"],
+  ["33-before-after-1440", F + "stroller-counter.html", 1440, 900, "ba"],
   ["28-footer-long-320", F + "state-footer-long.html", 320, 640, "footer"],
 ];
 
@@ -169,7 +171,11 @@ for (const [name, file, w, h, mode] of FRAMES) {
     await send("Emulation.setDeviceMetricsOverride", { width: w, height: H, deviceScaleFactor: 2, mobile: w < 700 }, S);
     await ev("new Promise(r=>setTimeout(r,100))"); await png(name);
   } else if (mode === "first") { await png(name); }
-  else if (mode === "footer") {
+  else if (mode === "ba") {
+    const g = JSON.parse(await ev(`(() => { const s = document.querySelector(".sticky"); if (s) s.style.display = "none"; const r = document.querySelector("#przed-po").getBoundingClientRect(); return JSON.stringify({ y: r.top + scrollY, h: r.height }); })()`));
+    await ev("Promise.all([...document.querySelectorAll('img[loading=lazy]')].map(i=>{i.loading='eager';return i.decode().catch(()=>0)})).then(()=>new Promise(r=>setTimeout(r,300)))");
+    await png(name, { x: 0, y: g.y, width: w, height: g.h });
+  } else if (mode === "footer") {
     // hide the fixed phone bar for the crop: it is not part of the footer (frame 25 shows the two together)
     const g = JSON.parse(await ev(`(() => { const s = document.querySelector(".sticky"); if (s) s.style.display = "none"; const f = document.querySelector("footer.site-f").getBoundingClientRect(); return JSON.stringify({ y: Math.max(0, f.top + scrollY - 96), h: f.height + 96 }); })()`));
     await png(name, { x: 0, y: g.y, width: w, height: g.h });
