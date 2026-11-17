@@ -50,6 +50,7 @@ STROLLER = "Pranie wózków i&nbsp;fotelików w&nbsp;Poznaniu"
 FILES = {
   "og-template.html": page("photo", STROLLER),                       # photo variant, empty slot
   "og-template-no-photo.html": page("nophoto", STROLLER),            # no-photo variant = the stroller page's launch image
+  "og-photo-stroller.html": page("photo", STROLLER, photo="../../../handoff/pages/stroller-counter/photos/og-photo.jpg"),  # photo variant with the owner's og-photo (stroller-v1.4 draft)
   "og-test-long-title.html": page("nophoto", "[Dłuższy tytuł strony w&nbsp;czterech wierszach – próba]", long=True),  # length test only, not a real page
 }
 for name, html in FILES.items():

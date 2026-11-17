@@ -127,5 +127,15 @@ Final Polish copy, keyed. `{...}` = comes from the database, never hard-coded. V
 ## Cookie banner
 - Title *Ciasteczka* · text *Używamy niezbędnych ciasteczek, żeby strona działała. Za Twoją zgodą także analitycznych, żeby wiedzieć, co poprawić.* · link *Szczegóły* → the cookies section of the privacy page *(v1.1; was `/cookies`)* · buttons *Akceptuję* / *Odrzucam* (identical style and size).
 
-## Alt texts (photos supplied by the owner; plain Polish, describe the picture, no keywords lists)
+## Alt texts: final (stroller-v1.4 draft; the same strings are in `photos/photos.json`)
+- `headache-1` — Pusta gondola wózka z szarą wyściółką, na dnie widać żółtawe plamy.
+- `headache-2` — Szary fotelik samochodowy dla niemowląt z plamami i okruchami na siedzisku, na podłodze w salonie.
+- `headache-3` — Granatowy wózek spacerowy w przedpokoju, siedzisko i osłona nóg w brązowych i zielonych plamach.
+- `headache-4` — Pokój dziecięcy: szary wózek spacerowy i fotelik samochodowy obok łóżeczka.
+- `carseat` — Jasnoszary fotelik samochodowy dla niemowląt z czystym obiciem i pasami, na brzegu siedziska leży zielona ściereczka.
+- `og-photo` (share image, photo variant only) — Pusty zielony wózek spacerowy w jasnym przedpokoju, w świetle poranka.
+- `process` (no slot yet) — Dłoń trzyma końcówkę odkurzacza piorącego nad wyściółką gondoli, na tkaninie widać pianę.
+- Before/after: hidden, no alt (reference image only).
+
+## Alt texts, earlier plan (superseded)
 - Slots: `gondola-podszewka` · `fotelik-baza` · `spacerowka-szwy` · `wozek-i-fotelik` · `fotelik-samochodowy` · before/after pairs. Example: "Gondola wózka przed praniem – żółta plama po oliwce na podszewce". Decorative stand-ins get `alt=""`. File names Polish, hyphenated (`pranie-gondoli-wozka-przed-po.webp`).

@@ -1,5 +1,7 @@
 # Share image (Open Graph), 1200 × 630
 
+> Draft 2026-11-17 (stroller-v1.4): the photo variant was rendered with the owner's `og-photo` (`pages/stroller-counter/assets/og-pranie-wozkow-i-fotelikow-photo-1200x630.png`, `screens/31`). It looks good at full size and is readable at 400px for the title, but the line (24px) is too small at 400px, and the centre-square crop cuts the logo, the title and half of the photo. **Verdict: it still does not hold; the no-photo variant stays final.**
+
 > Approved 2026-11-17 (tags `stroller-v1.3`, `homepage-v0`): stroller `og.line` is now "U Ciebie w domu · Poznań i okolice"; homepage v0 image added (`pages/homepage-v0/assets/`), 64px title and a two-line, dot-less line (the one-line version is 637px and leaves the centre-square crop; 80px gives 4 lines).
 
 > Approved by the owner with `stroller-v1.2` (2026-11-16).

@@ -1,0 +1,110 @@
+{
+ "note": "Stroller page photos, stroller-v1.4 draft. All images are generated (supplied by the owner) and must be labelled as such. JPG, sRGB, quality 82, metadata stripped.",
+ "images": [
+  {
+   "slot": "headache-1",
+   "file": "headache-1.jpg",
+   "ratio": "4:5",
+   "size": "1200x1500",
+   "section": "Headache, card 1 (large): Gondola żółta od oliwki",
+   "alt": "Pusta gondola wózka z szarą wyściółką, na dnie widać żółtawe plamy.",
+   "objectPosition": "50% 60%",
+   "source_file": "Empty stroller bassinet with subtle stains.png",
+   "crop": "none needed (source is exactly 4:5, 1122x1402, scaled up 7%)",
+   "status": "final",
+   "source": "owner-supplied; generated image (labelled as generated, not a photograph of the owner's own work); originals in /photos (not committed)"
+  },
+  {
+   "slot": "headache-2",
+   "file": "headache-2.jpg",
+   "ratio": "16:10",
+   "size": "1200x750",
+   "section": "Headache, card 2: Fotelik po podróży",
+   "alt": "Szary fotelik samochodowy dla niemowląt z plamami i okruchami na siedzisku, na podłodze w salonie.",
+   "objectPosition": "50% 62%",
+   "source_file": "Gently Used Grey Infant Car Seat.png",
+   "crop": "none needed (exactly 16:10). 2:1 crop at 390px keeps the seat and the stains with this position",
+   "status": "final",
+   "source": "owner-supplied; generated image (labelled as generated, not a photograph of the owner's own work); originals in /photos (not committed)"
+  },
+  {
+   "slot": "headache-3",
+   "file": "headache-3.jpg",
+   "ratio": "16:10",
+   "size": "1200x750",
+   "section": "Headache, card 3: Spacerówka po lecie",
+   "alt": "Granatowy wózek spacerowy w przedpokoju, siedzisko i osłona nóg w brązowych i zielonych plamach.",
+   "objectPosition": "50% 78%",
+   "source_file": "Summer-worn navy stroller in hallway.png",
+   "crop": "none needed (exactly 16:10). At 2:1 (390px) the position 78% keeps the stained seat and footrest; the top of the hood is cropped",
+   "status": "final",
+   "source": "owner-supplied; generated image (labelled as generated, not a photograph of the owner's own work); originals in /photos (not committed)"
+  },
+  {
+   "slot": "headache-4",
+   "file": "headache-4.jpg",
+   "ratio": "4:3",
+   "size": "800x600",
+   "section": "Headache, card 4 (wide): Drugie dziecko w drodze",
+   "alt": "Pokój dziecięcy: szary wózek spacerowy i fotelik samochodowy obok łóżeczka.",
+   "objectPosition": "50% 50%",
+   "source_file": "Tidy nursery with stroller and car seat.png",
+   "crop": "none needed (4:3)",
+   "status": "final",
+   "source": "owner-supplied; generated image (labelled as generated, not a photograph of the owner's own work); originals in /photos (not committed)"
+  },
+  {
+   "slot": "carseat",
+   "file": "carseat.jpg",
+   "ratio": "4:3",
+   "size": "1200x900",
+   "section": "Foteliki według marek (car seats)",
+   "alt": "Jasnoszary fotelik samochodowy dla niemowląt z czystym obiciem i pasami, na brzegu siedziska leży zielona ściereczka.",
+   "objectPosition": "50% 50%",
+   "source_file": "Freshly cleaned infant car seat.png",
+   "crop": "none needed (4:3)",
+   "status": "final",
+   "source": "owner-supplied; generated image (labelled as generated, not a photograph of the owner's own work); originals in /photos (not committed)"
+  },
+  {
+   "slot": "og-photo",
+   "file": "og-photo.jpg",
+   "ratio": "440:518",
+   "size": "440x518",
+   "section": "Share image, photo variant",
+   "alt": "Pusty zielony wózek spacerowy w jasnym przedpokoju, w świetle poranka.",
+   "objectPosition": "50% 50%",
+   "source_file": "Empty stroller in golden morning light.png",
+   "crop": "cover crop of 1155x1362 (0.848) to 0.849, almost nothing lost",
+   "status": "final (but see share-image verdict: the no-photo variant stays the share image)",
+   "source": "owner-supplied; generated image (labelled as generated, not a photograph of the owner's own work); originals in /photos (not committed)"
+  },
+  {
+   "slot": "process",
+   "file": "process.jpg",
+   "ratio": "4:3",
+   "size": "1200x900",
+   "section": "Optional process shot (no slot on the page yet; candidate: Jak to działa or Foteliki)",
+   "alt": "Dłoń trzyma końcówkę odkurzacza piorącego nad wyściółką gondoli, na tkaninie widać pianę.",
+   "objectPosition": "50% 50%",
+   "source_file": "Hand Cleaning a Stroller Bassinet Lining.png",
+   "crop": "none needed (4:3)",
+   "status": "final, not placed",
+   "source": "owner-supplied; generated image (labelled as generated, not a photograph of the owner's own work); originals in /photos (not committed)"
+  },
+  {
+   "slot": "before-after",
+   "file": "before-after-reference.jpg",
+   "ratio": "8:3",
+   "size": "2048x768",
+   "section": "Before/after slot (STAYS HIDDEN)",
+   "alt": "Dwa zdjęcia wyściółki gondoli obok siebie: z lewej z żółtymi plamami, z prawej czysta.",
+   "objectPosition": "50% 50%",
+   "source_file": "Bassinet lining, before and after.png",
+   "crop": "not cropped, not wired",
+   "status": "reference",
+   "note": "One combined generated image, not a same-angle pair of real photos. Project rules forbid invented before/after photos. Do not publish.",
+   "source": "owner-supplied; generated image (labelled as generated, not a photograph of the owner's own work); originals in /photos (not committed)"
+  }
+ ]
+}

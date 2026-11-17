@@ -4,3 +4,6 @@ node_modules
 .claude/skills/impeccable/scripts/bin/
 .claude/settings.local.json
 __pycache__/
+
+# owner's original source images (about 19 MB); the handover uses the exported JPGs in handoff/
+/photos/
